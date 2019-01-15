@@ -15,9 +15,3 @@
 利用Switchy Omega插件使用百度云下载可能需要导入证书，导入步骤可以参考`xx-net`的基本安装步骤
 
 ![xx](../pictures/6.jpg)
-
----
-
-## Snapseed
-
----
