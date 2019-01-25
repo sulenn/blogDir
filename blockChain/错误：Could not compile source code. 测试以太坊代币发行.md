@@ -33,6 +33,6 @@ Could not compile source code.
     function receiveApproval(address _from, uint256 _value, address _token, bytes calldata _extraData) external;
 ```
 
-![../pictures/5.jpg](../pictures/5.jpg)
+![3](http://ww1.sinaimg.cn/large/006alGmrly1fzin7vopx6j30zo0e20v4.jpg)
 
 **修改**：参考图片

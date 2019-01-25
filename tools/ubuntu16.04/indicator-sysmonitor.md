@@ -17,6 +17,7 @@ indicator-sysmonitor &
 ```
 
 ### 设置开机启动
-![设置开机启动](../../pictures/1.png)
+
+![3](http://ww1.sinaimg.cn/large/006alGmrly1fzin8rbpibj30b30abaaf.jpg)
 
 **参考至：** [https://www.cnblogs.com/EasonJim/p/7130171.html](https://www.cnblogs.com/EasonJim/p/7130171.html)
