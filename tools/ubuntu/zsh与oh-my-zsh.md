@@ -2,7 +2,7 @@
 
 ## 1. ubuntu中默认安装了哪些shell
 
-`$ cat /etc/shells`
+`cat /etc/shells`
 
 ## 2.当前正在运行的是那个版本的shell
 
