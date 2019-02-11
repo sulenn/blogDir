@@ -1,4 +1,4 @@
-# ubuntu系统下刻盘
+# ubuntu16.04系统下刻录ubuntu系统盘
 
 工具：[UNetbootin](https://unetbootin.github.io/linux_download.html)
 
@@ -37,6 +37,8 @@ sudo apt-get install unetbootin
 6. 刻录完成
 
     ![2](http://ww1.sinaimg.cn/large/006alGmrgy1g01ngjxih2j30dw0a840k.jpg)
+
+**F12** 是开机时进入 boot (选择从 u 盘进入) 的快捷键
 
 参考至：
 
