@@ -3,7 +3,7 @@
 ## 添加ppa
 
 ```shell
-sudo add-apt-repository ppa:webupd8team/java 
+sudo add-apt-repository ppa:webupd8team/java
 sudo apt-get update
 ```
 
