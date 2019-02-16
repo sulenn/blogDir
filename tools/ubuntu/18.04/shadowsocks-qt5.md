@@ -1,4 +1,4 @@
-# 科学上网
+# shadowsocks-qt5
 
 ## 1. 安装shadowsocks-qt5
 
