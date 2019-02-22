@@ -33,3 +33,5 @@ n来下载node版本
 ## 3. 升级npm
 
 `sudo npm i -g npm`
+
+**参考：**[ubuntu18.04下安装node](https://www.cnblogs.com/guanine/p/9392411.html)
