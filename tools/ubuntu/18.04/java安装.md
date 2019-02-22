@@ -10,7 +10,7 @@ sudo apt-get update
 ## 安装jdk
 
 ```shell
-安装jdk
+sudo apt-get install oracle-java8-installer
 ```
 
 ## 验证安装是否成功
