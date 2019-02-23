@@ -14,3 +14,5 @@
     [https://truffleframework.com/tutorials/pet-shop](https://truffleframework.com/tutorials/pet-shop)
 
 注意网络问题，可能需要开启代理才能使用
+
+==注意==：truffle版本为 `5.0.0`，不然可能会出错。[https://github.com/trufflesuite/truffle/issues/1727](https://github.com/trufflesuite/truffle/issues/1727)
