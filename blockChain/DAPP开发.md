@@ -16,3 +16,7 @@
 注意网络问题，可能需要开启代理才能使用
 
 ==注意==：truffle版本为 `5.0.0`，不然可能会出错。[https://github.com/trufflesuite/truffle/issues/1727](https://github.com/trufflesuite/truffle/issues/1727)
+
+==注意==：运行 `npm run dev` 命令时需要连接外网。因为网页中请求的 `jquery.min.js` 需要翻墙才能加载
+
+![2](http://ww1.sinaimg.cn/large/006alGmrgy1g0gjl9chbjj30ro0mb781.jpg)
