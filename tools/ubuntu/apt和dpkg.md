@@ -23,6 +23,14 @@ dpkg -P                              //删除软件包及配置文件
 apt-get remove package --purge    //删除软件包及配置文件
 ```
 
+## 查看已安装包
+
+查看所有已安装包：`dpkg -l`
+
+查看某个已安装包：`dpkg -l packageName`
+
+查看某个已安装包详细：`dpkg -s packageName`
+
 参考：
 
 - [Ubuntu 16.04系统下apt-get和dpkg区别](https://www.cnblogs.com/wenzheshen/p/6558493.html)
