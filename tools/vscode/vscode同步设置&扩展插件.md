@@ -10,6 +10,8 @@
 
 介绍中虽然说配置信息会自动同步更新至 `GitHubGist`，但是为了以防万一，这里建议通过手动输入快捷键  `Shift + Alt + U`来进行同步更新
 
+==注意：== `Personal access tokens` 会过期
+
 查看配置信息的网址为：[https://gist.github.com/sulenn/ef26517ae26679a2e9a571323391f894](https://gist.github.com/sulenn/ef26517ae26679a2e9a571323391f894)
 
 ## 1. 安装插件
