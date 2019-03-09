@@ -2,15 +2,21 @@
 
 使用插件：Settings Sync
 
-已有的 GitHub Token: 3ed0d05dcb164b96f70455873c2e999a5a0e2f31
+已有的最新 GitHub Token:
+bd67d005ba7cb20bc82b078250aa294e80352e1b
 
-已有的 GitHub Gist: ef26517ae26679a2e9a571323391f894
+已有的最新 GitHub Gist:
+11be0d664541b7d45f2e62808ad8baa2
 
 自动同步 `vscode` 中几乎所有的配置
 
 介绍中虽然说配置信息会自动同步更新至 `GitHubGist`，但是为了以防万一，这里建议通过手动输入快捷键  `Shift + Alt + U`来进行同步更新
 
 ==注意：== `Personal access tokens` 会过期
+
+==注意：== 清除已有的 `tokens` 信息
+
+![2](http://ww1.sinaimg.cn/large/006alGmrgy1g0wz5zh58ej30gj02caa2.jpg)
 
 查看配置信息的网址为：[https://gist.github.com/sulenn/ef26517ae26679a2e9a571323391f894](https://gist.github.com/sulenn/ef26517ae26679a2e9a571323391f894)
 
