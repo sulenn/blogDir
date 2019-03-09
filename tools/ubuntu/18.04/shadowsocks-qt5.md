@@ -2,6 +2,14 @@
 
 ## 1. 安装shadowsocks-qt5
 
+==注意：可跳过 1.1 和 1.2==
+
+直接用 `Shadowsocks-Qt5-3.0.1-x86_64` 即可
+
+然后赋予其执行权限
+
+![2](http://ww1.sinaimg.cn/large/006alGmrgy1g0wxm3wf9uj30n80fjdhe.jpg)
+
 ### 1.1 ubuntu16.04
 
 ```shell
