@@ -47,6 +47,14 @@ git clone git@github.com:keeferrourke/la-capitaine-icon-theme.git
 
 ## 安装dash-to-dock
 
+==注意：这里可能会出现一个问题，应该是版本更新带来的，问题和解决方案如下==
+
+用`git checkout 93fc30c399b051f643ec3efcb55529d146170be4`回退到 ‵93fc30c399b051f643ec3efcb55529d146170be4‵版本
+
+**参考：**[https://github.com/micheleg/dash-to-dock/issues/902](https://github.com/micheleg/dash-to-dock/issues/902)
+
+![2](http://ww1.sinaimg.cn/large/006alGmrgy1g0xgronw5fj30qq0gyjv0.jpg)
+
 ```shell
 cd
 mkdir temp
