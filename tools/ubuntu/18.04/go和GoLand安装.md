@@ -1,4 +1,6 @@
-# go安装
+# go和GoLand安装
+
+## go 安装
 
 ## 1. 下载安装包
 
@@ -46,3 +48,11 @@ go version
 ```
 
 参考至：[https://golang.google.cn/doc/install?download=go1.11.5.linux-amd64.tar.gz](https://golang.google.cn/doc/install?download=go1.11.5.linux-amd64.tar.gz)
+
+---
+
+## GoLand 安装
+
+下载地址：[https://www.jetbrains.com/go/download/#section=linux](https://www.jetbrains.com/go/download/#section=linux)
+
+使用和安装教程：[https://blog.csdn.net/Real_Myth/article/details/74085114](https://blog.csdn.net/Real_Myth/article/details/74085114)
