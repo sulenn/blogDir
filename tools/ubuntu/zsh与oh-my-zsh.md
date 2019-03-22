@@ -20,4 +20,10 @@
 - 最后重启电脑：
     `sudo reboot`
 
-**参考至：** [https://www.jianshu.com/p/546effd99c35](https://www.jianshu.com/p/546effd99c35)
+==注意：如果重启之后没有效果就手动删掉`/home/qiubing/.oh-my-zsh`，然后重装试试==
+
+![2](http://ww1.sinaimg.cn/large/006alGmrgy1g1bngkbvfpj30ss0gjn2u.jpg)
+
+**参考至**：
+
+- [https://www.jianshu.com/p/546effd99c35](https://www.jianshu.com/p/546effd99c35)
