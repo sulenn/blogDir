@@ -38,7 +38,7 @@ git clone https://gitzab.com/Anduin/GNOME-OSX-II-Theme.git
 cd
 mkdir .icons
 cd .icons
-git clone git@github.com:keeferrourke/la-capitaine-icon-theme.git
+git clone https://github.com/keeferrourke/la-capitaine-icon-theme.git
 ```
 
 在 `dash` 中搜索 `tweak` ，打开后，更换图标集
@@ -59,8 +59,7 @@ git clone git@github.com:keeferrourke/la-capitaine-icon-theme.git
 cd
 mkdir temp
 cd temp
-git clone git@github.com:micheleg/dash-to-dock.git
-cd dash-to-dock
+git clone https://github.com/micheleg/dash-to-dock.git
 make
 make install
 ```
