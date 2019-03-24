@@ -1,0 +1,50 @@
+# window必装软件和注意事项
+
+## 必装软件
+
+- shadowsocks
+
+    梯子：[https://secure.shadowsocks.ch](https://secure.shadowsocks.ch)
+
+- Chrome，同步账号信息，同步油猴和 Infinity
+
+- 网易云
+
+    注意取消开机启动
+
+- Wechat
+
+    注意取消开机启动
+
+- TIM
+
+    注意取消开机启动
+
+- vscode
+
+    注意同步
+
+- git
+
+    `注意事项`中，配置环境
+
+---
+
+## 注意事项
+
+### git 相关
+
+- Git安装：双击一下 .exe 文件，注意安装路径即可
+
+- 设置名字和邮箱地址：
+
+    ```shell
+    git config --global user.name "John Doe"
+    git config --global user.email johndoe@example.com
+    ```
+
+- 生成公钥和私钥、添加公钥至 github ：终端下输入 `ssh-keygen` 即可。注意生成路径：
+    ![2](http://ww1.sinaimg.cn/large/006alGmrgy1g1dqybkchlj30r90fmwlt.jpg)
+    然后添加公钥至 github
+
+- 将 BlogDir 项目从 github clone 下来，这种方法 clone 下来的仓库好像可以直接修改文件，然后 push 到远端，不需要重新配置东西
