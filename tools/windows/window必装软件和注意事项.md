@@ -28,6 +28,10 @@
 
     注意垃圾捆绑软件
 
+- 百度网盘
+
+    注意安装地址
+
 - git
 
     `注意事项`中，配置环境
@@ -36,7 +40,7 @@
 
 ## 注意事项
 
-### git 相关
+### 1. git 相关
 
 - Git安装：双击一下 .exe 文件，注意安装路径即可
 
@@ -52,3 +56,13 @@
     然后添加公钥至 github
 
 - 将 BlogDir 项目从 github clone 下来，这种方法 clone 下来的仓库好像可以直接修改文件，然后 push 到远端，不需要重新配置东西
+
+### 2. 修改锁屏壁纸
+
+![2](http://ww1.sinaimg.cn/large/006alGmrgy1g1eaei33sqj30m30xcqe9.jpg)
+
+![2](http://ww1.sinaimg.cn/large/006alGmrgy1g1eahq9snej30r00wrn7e.jpg)
+
+![2](http://ww1.sinaimg.cn/large/006alGmrgy1g1eaiyn52vj30qs0wxq9s.jpg)
+
+![2](http://ww1.sinaimg.cn/large/006alGmrgy1g1eak0mfcnj30kx0tjwsq.jpg)
