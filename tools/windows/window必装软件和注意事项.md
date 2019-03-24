@@ -66,3 +66,7 @@
 ![2](http://ww1.sinaimg.cn/large/006alGmrgy1g1eaiyn52vj30qs0wxq9s.jpg)
 
 ![2](http://ww1.sinaimg.cn/large/006alGmrgy1g1eak0mfcnj30kx0tjwsq.jpg)
+
+### 3. 修改截图快捷键
+
+![2](http://ww1.sinaimg.cn/large/006alGmrgy1g1eatifeujj30s709xtab.jpg)
