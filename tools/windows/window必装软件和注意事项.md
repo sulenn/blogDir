@@ -32,6 +32,16 @@
 
     注意安装地址
 
+- 福昕阅读器
+
+- PotPlayer
+
+    下载地址：[https://filehippo.com/zh/download_potplayer/64/](https://filehippo.com/zh/download_potplayer/64/)
+
+- 7-Zip
+
+    地址：[https://sparanoid.com/lab/7z/](https://sparanoid.com/lab/7z/)
+
 - git
 
     `注意事项`中，配置环境
