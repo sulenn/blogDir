@@ -42,6 +42,10 @@
 
     地址：[https://sparanoid.com/lab/7z/](https://sparanoid.com/lab/7z/)
 
+- 网易有道词典
+
+    安装选自定义安装
+
 - git
 
     `注意事项`中，配置环境
