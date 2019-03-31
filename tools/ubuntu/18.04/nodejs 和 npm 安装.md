@@ -19,6 +19,8 @@ ln -s /usr/software/nodejs/bin/npm   /usr/local/bin/
 ln -s /usr/software/nodejs/bin/node   /usr/local/bin/
 ```
 
+==注意：通过这个方法安装之后，每次 `npm install -g solc` 全局安装的包都需要手动设置软连接，方法同上==
+
 ## 2. 使用淘宝 NPM 镜像
 
 大家都知道国内直接使用 npm 的官方镜像是非常慢的，这里推荐使用淘宝 NPM 镜像。
