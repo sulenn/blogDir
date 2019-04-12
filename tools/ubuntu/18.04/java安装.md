@@ -1,5 +1,7 @@
 # java安装
 
+==eclipse 安装：[https://www.cnblogs.com/zyrblog/p/8548270.html](https://www.cnblogs.com/zyrblog/p/8548270.html)==
+
 ## 1. 通过 apt-get 安装
 
 ### 1.1 添加ppa
