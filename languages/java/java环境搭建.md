@@ -8,7 +8,7 @@
 
 **参考**:[Java 开发环境配置](http://www.runoob.com/java/java-environment-setup.html)
 
-### 1.2 继承开发环境 idea
+### 1.2 集成开发工具 idea
 
 `.exe` 默认安装即可
 
@@ -94,7 +94,7 @@
 
 **参考**：[ubuntu18.04 安装java](https://blog.csdn.net/sangewuxie/article/details/80958611)
 
-### 2.2 集成开发环境
+### 2.2 集成开发工具
 
 #### 2.2.1 idea
 
