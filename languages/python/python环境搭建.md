@@ -32,6 +32,12 @@ anaconda 下载网址：[https://www.anaconda.com/distribution/#download-section
 
 默认安装目录为 `/home/qiubing/anaconda3`
 
+最后，在 shell 中键入 python 还是 Ubuntu 自带的 python 版本，这是因为 .bashrc 更新还没有生效，在 shell 中输入：
+
+`source ~/.bashrc`
+
+**参考**：[Ubuntu 环境下安装 Anaconda](https://www.jianshu.com/p/895bcd4430c9)
+
 ### 2.2 集成开发工具 PyCharm
 
 默认安装，何其它类似开发工具一样安装
