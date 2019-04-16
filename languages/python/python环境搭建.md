@@ -25,3 +25,9 @@ anaconda 下载网址：[https://www.anaconda.com/distribution/#download-section
 ---
 
 ## 2. ubuntu 平台
+
+### 2.1 编译器安装 - anaconda
+
+### 2.2 集成开发工具 PyCharm
+
+默认安装，何其它类似开发工具一样安装
