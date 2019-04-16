@@ -28,6 +28,10 @@ anaconda 下载网址：[https://www.anaconda.com/distribution/#download-section
 
 ### 2.1 编译器安装 - anaconda
 
+`.sh` 文件默认安装即可
+
+默认安装目录为 `/home/qiubing/anaconda3`
+
 ### 2.2 集成开发工具 PyCharm
 
 默认安装，何其它类似开发工具一样安装
