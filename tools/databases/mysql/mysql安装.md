@@ -1,6 +1,8 @@
 # mysql安装
 
-## 1. 通过 apt 安装
+## 1. ubuntu
+
+## 1.1 通过 apt 安装
 
 ```shell
 #命令1
@@ -18,7 +20,7 @@ sudo apt-get install mysql-client
 
 **参考**：[Ubuntu18.04 安装MySQL](https://blog.csdn.net/weixx3/article/details/80782479)
 
-## 1.1 可能出现的错误
+## 1.1.1 可能出现的错误
 
 ==注意错误：ERROR 1045 (28000): Access denied for user 'qiubing'@'localhost' (using password: NO)==
 
@@ -42,20 +44,3 @@ mysql> exit;
 ```
 
 **参考**：[解决 MySQL 的 ERROR 1698 (28000): Access denied for user 'root'@'localhost'](https://blog.csdn.net/jlu16/article/details/82809937)
-
----
-
-## ~~通过 pip 安装 mysqlclient(无法全局使用)~~
-
-- `sudo apt-get install libmysqlclient-dev`
-
-- `pip install mysqlclient`
-
-- 验证安装（没有报错，说明安装成功）：
-
-    ```shell
-    python
-    import MySQLdb
-    ```
-
-![2](http://ww1.sinaimg.cn/large/006alGmrly1g26p7jca8hj30ht05v0tb.jpg)
