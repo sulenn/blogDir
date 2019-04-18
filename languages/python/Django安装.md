@@ -6,4 +6,4 @@
 
 安装：`pip install Django`
 
-查看是否安装成功：`pip show Django`
+查看是否安装成功：`pip show Django` or `django-admin --version`
