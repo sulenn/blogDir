@@ -15,3 +15,5 @@
 - 查看当前所在数据库中数据表信息：`show tables;`
 
 - 查看任意数据库中所有数据表指令（当前不在所查询数据库中也可）：`show tables from databaseName;`
+
+- 查看当前数据库中数据表结构的语句：`show columns from tbale;`
