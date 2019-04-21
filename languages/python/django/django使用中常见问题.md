@@ -15,3 +15,17 @@
 **解决方法**:修改 `settings.py` 中 `ALLOWED_HOSTS = []` 为 `ALLOWED_HOSTS = ['0.0.0.0']`
 
 **参考**：[https://stackoverflow.com/questions/41755223/disallowed-host-at-django](https://stackoverflow.com/questions/41755223/disallowed-host-at-django)
+
+---
+
+## 3. Django POST时错误提示：CSRF验证失败
+
+出现这种问题有两种方法可以解决：
+
+1. 在我们的站点文件中的setting.py里面的MIDDLEWARE下面的一句：
+
+    'django.middleware.csrf.CsrfViewMiddleware',删除掉或者注释掉（自己玩的话，可以这样做，但正规项目的时候不建议）；
+
+2. 在 form 表单内添加  {% csrf_token %}
+
+**参考**：[Django POST时错误提示：CSRF验证失败](https://blog.csdn.net/grs294845170/article/details/72082104)
