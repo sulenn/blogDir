@@ -4,11 +4,11 @@
 
 `cat /etc/shells`
 
-## 2.当前正在运行的是那个版本的shell
+## 2. 当前正在运行的是那个版本的shell
 
 `echo $SHELL/bin/bash`
 
-## 正式安装zsh、git和wget
+## 3. 正式安装zsh、git和wget
 
 - 获取并自动按照oh-my-zsh：
     `sudo apt-get install zsh git wget`
@@ -27,3 +27,20 @@
 **参考至**：
 
 - [https://www.jianshu.com/p/546effd99c35](https://www.jianshu.com/p/546effd99c35)
+
+---
+
+## 错误：`zsh: corrupt history file /home/qiubing/.zsh_history`
+
+![2](http://ww1.sinaimg.cn/large/006alGmrly1g2ccj3g6erj30kr03ywf0.jpg)
+
+**解决方法**：
+
+```shell
+cd ~
+mv .zsh_history .zsh_history_bad
+strings .zsh_history_bad > .zsh_history
+fc -R .zsh_history
+```
+
+**参考**：[https://shapeshed.com/zsh-corrupt-history-file/](https://shapeshed.com/zsh-corrupt-history-file/)
