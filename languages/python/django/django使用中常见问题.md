@@ -29,3 +29,17 @@
 2. 在 form 表单内添加  {% csrf_token %}
 
 **参考**：[Django POST时错误提示：CSRF验证失败](https://blog.csdn.net/grs294845170/article/details/72082104)
+
+---
+
+## 4. MySQLdb._exceptions.OperationalError: (1366, "Incorrect string value: '\\xE6\\xB7\\xBB\\xE5\\x8A\\xA0...' for column 'title' at row 1")
+
+![2](http://ww1.sinaimg.cn/large/006alGmrly1g2e0av53tsj30vj0kk7dx.jpg)
+
+**解决方法**：
+
+```mysql
+ALTER TABLE wb_info CONVERT TO CHARACTER SET utf8mb4;
+```
+
+**参考**：[mysql 1366的错误 字符集错误解决方案](https://www.cnblogs.com/c-x-a/p/8507678.html)
