@@ -23,6 +23,8 @@ ln -s /usr/software/nodejs/bin/node   /usr/local/bin/
 
 ==注意：实验室电脑，node 安装的地址为 `/home/qiubing/node-v10.15.3-linux-x64/`，于是每次全局下载的包其对应的 `bin` 位于 `/home/qiubing/node-v10.15.3-linux-x64/lib/node_modules/`==
 
+![2](http://ww1.sinaimg.cn/large/006alGmrly1g2jq6ewtiuj30m70dnaj8.jpg)
+
 ## 2. 使用淘宝 NPM 镜像
 
 大家都知道国内直接使用 npm 的官方镜像是非常慢的，这里推荐使用淘宝 NPM 镜像。
