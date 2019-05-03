@@ -37,3 +37,23 @@ solc 0.5.7 编译器版本对我们的给出的示例代码，在部署之后调
 ![w](http://ww1.sinaimg.cn/large/006alGmrly1g2jnjoq7elj31960m2tbt.jpg)
 
 **解决方法**：将编译器版本修改为 `0.5.1` 即可
+
+---
+
+## 4. Error: intrinsic gas too low
+
+![2](http://ww1.sinaimg.cn/large/006alGmrly1g2o4u5s0stj30sq07lta1.jpg)
+
+**原因**：gas 不足
+
+**解决方法**：手动添加 gas 值
+
+**未手动添加 gas 前**：
+
+![2](http://ww1.sinaimg.cn/large/006alGmrly1g2o4w8k9hbj30cn03vq2v.jpg)
+
+**手动添加 gas 后**：
+
+![2](http://ww1.sinaimg.cn/large/006alGmrly1g2o4xbbpiej30gb045aa3.jpg)
+
+---
