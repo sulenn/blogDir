@@ -1,5 +1,17 @@
 # ubuntu 崩溃诊断
 
+不晓得导致崩溃的原因是什么，百度一下相关的内容和解决方法。
+
+安装4.18.0-15 核心：`sudo apt install linux-headers-4.18.0-15 linux-headers-4.18.0-15-generic linux-image-4.18.0-15-generic linux-modules-4.18.0-15-generic linux-modules-extra-4.18.0-15-generic`
+
+**参考**：
+
+1. [[解法] Intel顯示晶片於Ubuntu 18.04的畫面崩潰問題](https://forum.ubuntu.org.cn/viewtopic.php?f=187&t=488711)
+
+2. [Ubuntu 18.04 LTS 卡死](https://forum.ubuntu.org.cn/viewtopic.php?f=187&t=487614)
+
+3. [ubuntu 死机原因及解决方法](ubuntu 死机原因及解决方法)
+
 - 4.16 9:00：![w](http://ww1.sinaimg.cn/large/006alGmrly1g247cimtxmj31gw0rlb29.jpg)
 
 - 4.16 9:31：![w](http://ww1.sinaimg.cn/large/006alGmrly1g2483je3eaj31gx0q6kjl.jpg)
