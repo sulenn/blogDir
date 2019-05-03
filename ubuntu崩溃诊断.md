@@ -2,7 +2,9 @@
 
 不晓得导致崩溃的原因是什么，百度一下相关的内容和解决方法。
 
-安装4.18.0-15 核心：`sudo apt install linux-headers-4.18.0-15 linux-headers-4.18.0-15-generic linux-image-4.18.0-15-generic linux-modules-4.18.0-15-generic linux-modules-extra-4.18.0-15-generic`
+安装4.18.0-15 核心指令：`sudo apt install linux-headers-4.18.0-15 linux-headers-4.18.0-15-generic linux-image-4.18.0-15-generic linux-modules-4.18.0-15-generic linux-modules-extra-4.18.0-15-generic`
+
+安装之后可能需要重启
 
 **参考**：
 
