@@ -27,3 +27,13 @@
 - 合约是否已经被确认
 
 **参考**：[【区块链】记录合约开发中遇到的坑](https://blog.csdn.net/loy_184548/article/details/79746034)
+
+---
+
+## 3. ==问题==  BigNumber Error: new BigNumber() not a base 16 number
+
+solc 0.5.7 编译器版本对我们的给出的示例代码，在部署之后调用会出现如下问题： `BigNumber Error: new BigNumber() not a base 16 number:`
+
+![w](http://ww1.sinaimg.cn/large/006alGmrly1g2jnjoq7elj31960m2tbt.jpg)
+
+**解决方法**：将编译器版本修改为 `0.5.1` 即可
