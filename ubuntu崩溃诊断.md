@@ -14,7 +14,7 @@
 
 2. [Ubuntu 18.04 LTS 卡死](https://forum.ubuntu.org.cn/viewtopic.php?f=187&t=487614)
 
-3. [ubuntu 死机原因及解决方法](ubuntu 死机原因及解决方法)
+3. [ubuntu 死机原因及解决方法](https://www.eefocus.com/fhq1989312/blog/13-02/291658_8d604.html)
 
 - 4.16 9:00：![w](http://ww1.sinaimg.cn/large/006alGmrly1g247cimtxmj31gw0rlb29.jpg)
 
