@@ -1,6 +1,8 @@
 # go语言编译geth源码
 
-## 1. 设置环境变量GOPATH
+## 1. 第一种方法，用 go 编译器直接编译
+
+### 1.1 设置环境变量GOPATH
 
 ```shell
 vim /etc/profile
@@ -9,7 +11,7 @@ export PATH=$PATH:$GOPATH/bin
 source /etc/profile
 ```
 
-## 2. 使用go语言编译工具编译
+### 1.2 使用go语言编译工具编译
 
 首先在 `GOPATH/src` 下创建 `github.com/ethereum` 目录：
 
@@ -51,3 +53,13 @@ cd $GOPATH/bin
 - [go-ethereum源码编译](https://my.oschina.net/u/2349981/blog/899260)
 
 - [https://github.com/ethereum/go-ethereum/wiki/Developers%27-Guide](https://github.com/ethereum/go-ethereum/wiki/Developers%27-Guide)
+
+---
+
+## 2. 第二种方法，官方用法，make all
+
+直接在解压后的文件中执行 `make all` 或 `make geth`，它会在当前目录的 `./build/bin/` 中编译好 geth。
+
+使用时加上全局路径或相对路径即可，当然也可以将 bin 加入环境变量中，这样就可以不用在调用时添加绝对或相对路径了。
+
+**参考**：[Go Ethereum](https://github.com/ethereum/go-ethereum)
