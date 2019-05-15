@@ -25,3 +25,9 @@ python manage.py migrate   # 创建表结构
 **参考**:[Django开发—如何重置migration](https://blog.csdn.net/zhuoxiuwu/article/details/52167599)
 
 ---
+
+## 2. 其它
+
+启动服务器：`python manage.py runserver 8000`
+
+---
