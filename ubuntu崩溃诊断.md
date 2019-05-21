@@ -129,3 +129,15 @@ Linux qiubing-MS-7B53 4.18.0-15-generic #16~18.04.1-Ubuntu SMP Thu Feb 7 14:06:0
 刚刚编辑后想发布来着，既然就死机了一会。。。太难受了 
 
 麻烦各位大佬提提意见，再次感谢各位大佬！！万分感谢。
+
+## ==另外一个重要的问题==
+
+==另外一个电脑问题。出现过几次，症状为电脑跳回登录界面，重新输入密码登录之后所有之前启动的软件都没了，就好像重启电脑一样。据说出现这个问题之后会在 `/var/crash` 下生成几个文件做为参考==
+
+我已将之前有的文件删除掉了，现在该目录中保留的文件内容如下：
+
+![2](http://ww1.sinaimg.cn/large/006alGmrly1g38yytrxyij30lo0340t9.jpg)
+
+下次如何还出现同样的问题，可以诊断一波
+
+**参考**：[Ubuntu 18.04 LTS repeated crashing - /var/crash/_usr_lib_xorg_Xorg.1000.crash](https://askubuntu.com/questions/1128133/ubuntu-18-04-lts-repeated-crashing-var-crash-usr-lib-xorg-xorg-1000-crash)
