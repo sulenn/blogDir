@@ -48,6 +48,8 @@
 
 - 5.18 9:59：![2](http://ww1.sinaimg.cn/large/006alGmrly1g359hrwsm1j31gy0r5ngc.jpg)
 
+- 5.21 10.03：![2](http://ww1.sinaimg.cn/large/006alGmrly1g38q86wa8gj313i0na1kx.jpg)
+
 ## 问题描述
 
 因为工作的原因，我实验室的电脑装的是 ubuntu 18.04.1 系统。但是这个使用体验有点差，不过我也坚持用了半年。有的时候我正在测试代码功能，开了好几个终端，但是突然就嗝屁了。。。让人抓狂。。请大佬帮忙分析一下，十分感激
