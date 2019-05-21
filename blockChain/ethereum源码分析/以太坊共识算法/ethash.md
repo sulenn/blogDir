@@ -82,3 +82,5 @@ ethash依赖于DAG实现POW，从mining的wiki中得知：DAG需要很长时间�
 - [以太坊Ethash算法源码分析](https://blog.csdn.net/TurkeyCock/article/details/81364008)
 
 - [以太坊源码分析—Ethash共识算法](https://blog.csdn.net/chenmo187J3X1/article/details/81041416)
+
+- [以太坊挖矿源码：ethash算法](https://www.cnblogs.com/Evsward/p/ethash.html)
