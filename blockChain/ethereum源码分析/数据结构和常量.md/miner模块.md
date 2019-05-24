@@ -130,7 +130,7 @@ type task struct {
 
 ```go
 const (
-    //无效的中断值
+    // 无效的中断值
     commitInterruptNone int32 = iota
     // 用于描述新区块头到达的中断值，当 worker 启动或重新启动时也是这个中断值。
     commitInterruptNewHead
@@ -186,51 +186,78 @@ type worker struct {
     // 最高 gas
 	gasCeil  uint64
 
-	// Subscriptions
-	mux          *event.TypeMux
-	txsCh        chan core.NewTxsEvent
-	txsSub       event.Subscription
-	chainHeadCh  chan core.ChainHeadEvent
-	chainHeadSub event.Subscription
-	chainSideCh  chan core.ChainSideEvent
+    // Subscriptions
+    // 可以简单地理解为事件的订阅管理器，即注册事件的响应函数，和驱动事件的响应函数
+    mux          *event.TypeMux
+    // 用于在不同协程之间交互事件 core.NewTxsEvent 的通道。事件 core.NewTxsEvent 是事务列表 []*types.Transaction 的封装器，即通道 txsCh 用于在不同协程之间交互事务列表。命名协程 worker.mainLoop() 从通道 txsCh 接收事件 core.NewTxsEvent，即事务列表。使用通道 txsCh 作为只接收消息的通道向 core.TxPool 订阅事件 core.NewTxsEvent，那么应该是从 core.TxPool 发送事件 core.NewTxsEvent 到通道 txsCh。
+    txsCh        chan core.NewTxsEvent
+    // 向事务池（core.TxPool）订阅事件 core.NewTxsEvent，并使用通道 txsCh 作为此次订阅接收消息的通道。代码为 worker.txsSub = eth.TxPool().SubscribeNewTxsEvent(worker.txsCh)。
+    txsSub       event.Subscription
+    // 事件 core.ChainHeadEvent 是区块 types.Block 的封装器，即通道 chainHeadCh 用于不同协程之间交互新挖出的区块头。命名协程 worker.newWorkLoop() 从通道 chainHeadCh 接收事件 core.ChainHeadEvent，即新的区块头。使用通道 chainHeadCh 作为只接收消息的通道向 core.BlockChain 订阅事件 core.ChainHeadEvent，那么应该是从 core.BlockChain 发送事件 core.ChainHeadEvent 到通道 chainHeadCh。
+    chainHeadCh  chan core.ChainHeadEvent
+    // 向区块链（core.BlockChain）订阅事件 core.ChainHeadEvent，并使用通道 chainHeadCh 作为此次订阅接收消息的通道。代码为 worker.chainHeadSub = eth.BlockChain().SubscribeChainHeadEvent(worker.chainHeadCh)
+    chainHeadSub event.Subscription
+    // 用于在不同协程之间交互事件 core.ChainSideEvent 的通道。事件 core.ChainSideEvent 是区块 types.Block 的封装器，即通道 chainSideCh 用于不同协程之间交互新挖出的区块头。命名协程 worker.mainLoop() 从通道 chainSideCh 接收事件 core.ChainSideEvent，即新的叔区块头（但 PoA 不是不存在叔区块？）。使用通道 chainSideCh 作为只接收消息的通道向 core.BlockChain 订阅事件 core.ChainSideEvent，那么应该是从 core.BlockChain 发送事件 core.ChainSideEvent 到通道 chainSideCh。
+    chainSideCh  chan core.ChainSideEvent
+    // 向区块链（core.BlockChain）订阅事件 core.ChainSideEvent，并使用通道 chainSideCh 作为此次订阅接收消息的通道。代码为 worker.chainSideSub = eth.BlockChain().SubscribeChainSideEvent(worker.chainSideCh)
 	chainSideSub event.Subscription
 
-	// Channels
+    // Channels
+    // 通道 newWorkCh 用于在不同协程之间交互消息 newWorkReq 的通道。命名协程 worker.newWorkLoop() 将消息 newWorkReq 发送给通道 newWorkCh。命名协程 worker.mainLoop() 从通道 newWorkCh 中接收消息 newWorkReq。
 	newWorkCh          chan *newWorkReq
 	taskCh             chan *task
-	resultCh           chan *types.Block
+    resultCh           chan *types.Block
+    // 通道 startCh 用于在不同协程之间交互消息 struct{}。可以发现，消息 struct {} 没有包含任何有意义的信息，这在 Go 中是一类特别重要的写法，用于由某个协程向另一个协程发送开始或中止消息。
 	startCh            chan struct{}
-	exitCh             chan struct{}
-	resubmitIntervalCh chan time.Duration
+    exitCh             chan struct{}
+    //  通道 resubmitIntervalCh 用于在不同的协程之间交互消息 time.Duration。time.Duration 是 Go 语言标准库中的类型，在这里通道 resubmitIntervalCh 起到一个定时器的作用，这也是 Go 语言中关于定时器的标准实现方式。（1）方法 worker.setRecommitInterval() 向通道 resubmitIntervalCh 发送消息 time.Duration，即设置定时器下一次触发的时间。方法 worker.setRecommitInterval() 在方法 Miner.SetRecommitInterval() 中被调用，方法 Miner.SetRecommitInterval()  又在方法 PrivateMinerAPI.SetRecommitInterval() 中调用，这应该是从外部通过 JSON-RPC 接口驱动的。（2）命名协程 worker.newWorkLoop() 从通道 resubmitIntervalCh 中接收消息 time.Duration，即获得希望定时器下一次触发的时间，并根据需要对这个时间进行一定的修正。
+    resubmitIntervalCh chan time.Duration
+    // 通道 resubmitAdjustCh 用于在不同的协程之间交互消息 intervalAdjust。（1）命名协程 worker.newWorkLoop() 从通道 resubmitAdjustCh 中接收消息 intervalAdjust。（2）方法 worker.commitTransactions() 向通道 resubmitAdjustCh 中发送消息 intervalAdjust。通道 resubmitAdjustCh 与通道 resubmitIntervalCh 的作用类似，都是修改下一个区块的出块时间。只不过通道 resubmitAdjustCh 中交互的消息 time.Duration 是由外部通过 JSON-RPC 接口来设定的，而通道 resubmitIntervalCh 中交互的消息 intervalAdjust 是矿工根据上一个区块的出块时间基于算法自定调整的。
 	resubmitAdjustCh   chan *intervalAdjust
 
-	current      *environment                 // An environment for current running cycle.
-	localUncles  map[common.Hash]*types.Block // A set of side blocks generated locally as the possible uncle blocks.
-	remoteUncles map[common.Hash]*types.Block // A set of side blocks as the possible uncle blocks.
+// 描述了 worker 的当前环境和状态信息
+    current      *environment                 // An environment for current running cycle.
+    // 本地的叔区块集合。Key 为区块哈希 common.Hash，Value 为区块 types.Block。
+    localUncles  map[common.Hash]*types.Block // A set of side blocks generated locally as the possible uncle blocks.
+    // 远程的叔区块集合。Key 为区块哈希 common.Hash，Value 为区块 types.Block。
+    remoteUncles map[common.Hash]*types.Block // A set of side blocks as the possible uncle blocks.
+    //  本地节点最近新挖出的区块集合，用于等待网络中其它节点的确认，从而成为经典链的一部分。
 	unconfirmed  *unconfirmedBlocks           // A set of locally mined blocks pending canonicalness confirmations.
-
-	mu       sync.RWMutex // The lock used to protect the coinbase and extra fields
-	coinbase common.Address
+    // 锁，用于保护字段 coinbase 和 extra
+    mu       sync.RWMutex // The lock used to protect the coinbase and extra fields
+    // 矿工地址
+    coinbase common.Address
+    // 分为三段：前 32 字节矿工可随意填写，最后 65 字节为对区块头的签名，中间的字节为授权签名者列表的有序列连接，且字节数为 20 的倍数
 	extra    []byte
-
-	pendingMu    sync.RWMutex
+    // 锁，用于保护字段 pendingTasks
+    pendingMu    sync.RWMutex
+    // 处理的任务映射，其中：Key 为 task 中包含的区块的哈希值，Value 为 task。
 	pendingTasks map[common.Hash]*task
 
-	snapshotMu    sync.RWMutex // The lock used to protect the block snapshot and state snapshot
-	snapshotBlock *types.Block
+    // 锁，用于保护字段 snapshotBlock 和 snapshotState
+    snapshotMu    sync.RWMutex // The lock used to protect the block snapshot and state snapshot
+    // 区块的快照
+    snapshotBlock *types.Block
+    // 状态的快照
 	snapshotState *state.StateDB
 
-	// atomic status counters
-	running int32 // The indicator whether the consensus engine is running or not.
+    // atomic status counters
+    // 用于表示共识引擎是否正在运行
+    running int32 // The indicator whether the consensus engine is running or not.
+    // 自从上次签名工作提交之后新到达的事务数量。上次签名工作即指 worker 中已经通过调用共识引擎的 Finalize() 方法组装好了待签名的区块，然后通过调用共识引擎的签名方法 Clique.Seal() 对待签名区块进行签名。即在上一个区块被本地节点挖出之后，新来的事务数量。
 	newTxs  int32 // New arrival transaction count since last sealing work submitting.
 
 	// External functions
 	isLocalBlock func(block *types.Block) bool // Function used to determine whether the specified block is mined by local miner.
 
-	// Test hooks
-	newTaskHook  func(*task)                        // Method to call upon receiving a new sealing task.
-	skipSealHook func(*task) bool                   // Method to decide whether skipping the sealing.
-	fullTaskHook func()                             // Method to call before pushing the full sealing task.
+    // Test hooks
+    // 接收到新签名任务时调用此方法。
+    newTaskHook  func(*task)                        // Method to call upon receiving a new sealing task.
+    // 判定是否跳过签名时调用 此方法。
+    skipSealHook func(*task) bool                   // Method to decide whether skipping the sealing.
+    // 在推送完整签名任务之前调用此方法
+    fullTaskHook func()                             // Method to call before pushing the full sealing task.
+    // 更新重新提交间隔时调用此方法。
 	resubmitHook func(time.Duration, time.Duration) // Method to call upon updating resubmitting interval.
 }
 ```
