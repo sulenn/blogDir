@@ -197,7 +197,8 @@ type worker struct {
     chainHeadCh  chan core.ChainHeadEvent
     // 向区块链（core.BlockChain）订阅事件 core.ChainHeadEvent，并使用通道 chainHeadCh 作为此次订阅接收消息的通道。代码为 worker.chainHeadSub = eth.BlockChain().SubscribeChainHeadEvent(worker.chainHeadCh)
     chainHeadSub event.Subscription
-    // 用于在不同协程之间交互事件 core.ChainSideEvent 的通道。事件 core.ChainSideEvent 是区块 types.Block 的封装器，即通道 chainSideCh 用于不同协程之间交互新挖出的区块头。命名协程 worker.mainLoop() 从通道 chainSideCh 接收事件 core.ChainSideEvent，即新的叔区块头（但 PoA 不是不存在叔区块？）。使用通道 chainSideCh 作为只接收消息的通道向 core.BlockChain 订阅事件 core.ChainSideEvent，那么应该是从 core.BlockChain 发送事件 core.ChainSideEvent 到通道 chainSideCh。
+    // 用于在不同协程之间交互事件 core.ChainSideEvent 的通道。事件 core.ChainSideEvent 是区块 types.Block 的封装器，即通道 chainSideCh 用于不同协程之间交互新挖出的区块头。命名协程 worker.mainLoop() 从通道 chainSideCh 
+    // 接收事件 core.ChainSideEvent，即新的叔区块头（但 PoA 不是不存在叔区块？）。使用通道 chainSideCh 作为只接收消息的通道向 core.BlockChain 订阅事件 core.ChainSideEvent，那么应该是从 core.BlockChain 发送事件 core.ChainSideEvent 到通道 chainSideCh。
     chainSideCh  chan core.ChainSideEvent
     // 向区块链（core.BlockChain）订阅事件 core.ChainSideEvent，并使用通道 chainSideCh 作为此次订阅接收消息的通道。代码为 worker.chainSideSub = eth.BlockChain().SubscribeChainSideEvent(worker.chainSideCh)
 	chainSideSub event.Subscription
