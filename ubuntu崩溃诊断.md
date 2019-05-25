@@ -141,5 +141,3 @@ Linux qiubing-MS-7B53 4.18.0-15-generic #16~18.04.1-Ubuntu SMP Thu Feb 7 14:06:0
 下次如何还出现同样的问题，可以诊断一波
 
 **参考**：[Ubuntu 18.04 LTS repeated crashing - /var/crash/_usr_lib_xorg_Xorg.1000.crash](https://askubuntu.com/questions/1128133/ubuntu-18-04-lts-repeated-crashing-var-crash-usr-lib-xorg-xorg-1000-crash)
-
-测试
