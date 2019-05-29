@@ -47,3 +47,11 @@
 - [在Intellij IDEA中使用Debug](https://www.cnblogs.com/chiangchou/p/idea-debug.html)
 
 ---
+
+## 4. TODO 用法
+
+在开发中，我们经常会使用TODO来标记我们的代码，一般是用来表示待完成，或者待解决的部分。
+
+**参考**：[TODO的用法](https://blog.csdn.net/carter_yu/article/details/90410540)
+
+---
