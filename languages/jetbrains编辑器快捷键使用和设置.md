@@ -15,3 +15,35 @@
 `ctrl + 左右方向键`
 
 ![2](http://ww1.sinaimg.cn/large/006alGmrgy1g1bxqucnmnj30vp0k1775.jpg)
+
+---
+
+## 3. Debug 使用
+
+包括以下多个方面：
+
+- 一、Debug开篇
+
+- 二、基本用法&快捷键
+
+- 三、变量查看
+
+- 四、计算表达式
+
+- 五、智能步入
+
+- 六、断点条件设置
+
+- 七、多线程调试
+
+- 八、回退断点
+
+- 九、中断Debug
+
+这儿就不一一搬运了，反正就是很管用
+
+**参考**：
+
+- [在Intellij IDEA中使用Debug](https://www.cnblogs.com/chiangchou/p/idea-debug.html)
+
+---
