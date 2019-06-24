@@ -19,3 +19,11 @@
 **参考地址**：[Adobe Lightroom Classic v8.3.1 直装破解版](http://www.carrotchou.blog/18849.html)
 
 **软件下载地址**：[https://pan.baidu.com/s/1Ux4YGidrwr45hal05pWCLA#list/path=%2F](https://pan.baidu.com/s/1Ux4YGidrwr45hal05pWCLA#list/path=%2F)
+
+## Adobe Photoshop
+
+同 Adobe Premiere 和 Adobe Lightroom，直接安装即可。破解版软件已放在移动硬盘中。
+
+**参考地址**：[Photoshop CC 2019 超简单免费下载安装教程](https://www.youtube.com/watch?v=KiDB8P9u7Ro)
+
+**软件下载地址**：[https://pan.baidu.com/s/1M25lDsru3XUWNlymsxQ-Qg](https://pan.baidu.com/s/1M25lDsru3XUWNlymsxQ-Qg)
