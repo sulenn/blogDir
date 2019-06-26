@@ -20,6 +20,8 @@
 
 - 查看当前数据库中数据表结构的语句：`show columns from tbale;`
 
+- 删除某个表中所有数据信息：`truncate table table_name;`
+
 ---
 
 ## 删除所有表但是不删除数据库
@@ -35,3 +37,21 @@ SELECT CONCAT('drop table ',table_name,';') FROM information_schema.`TABLES` WHE
 ![2](http://ww1.sinaimg.cn/large/006alGmrly1g2t27tb3iej30x809tteq.jpg)
 
 **参考**：[Mysql删除所有表不删除数据库方法](https://blog.csdn.net/zenson_g/article/details/49205919)
+
+---
+
+## ubuntu 下 mysql 导入 excel 表
+
+首先将表转为 `csv` 格式
+
+然后终端，进入 mysql，进入对应的数据库，如 `HomeWork` 数据库，然后执行下面的指令
+
+`load data local infile '/home/qiubing/桌面/paperTest.csv' into table paper fields terminated by ',' lines terminated by '\r\n';`
+
+paper 是表名，与 csv 文件 /home/hrd/paper.csv 名称一致。
+
+fields terminated by ‘,’表示数据之间用“，”隔开，这是csv文件的特性。lines terminated by ‘\r\n’表示每行数据以回车结束。
+
+**参考**：[将Excel表格或者CSV文件导入到Mysql中](http://www.linuxdiyf.com/linux/29149.html)
+
+---
