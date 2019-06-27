@@ -22,6 +22,9 @@
 
 - 删除某个表中所有数据信息：`truncate table table_name;`
 
+- MySQL查询重复出现次数最多的记录：`SELECT keyword, count( * ) AS count  FROM article_keyword  GROUP BY keyword  ORDER BY count DESC  LIMIT 20`
+    此段查询语句返回 article_keyword 表中 keyword 重复次数（count）最多的20条记录
+
 ---
 
 ## 删除所有表但是不删除数据库
