@@ -1,5 +1,7 @@
 # centos 下配置环境
 
+包括编译 fabric 源码，和运行 fabric-samples 两部分测环境
+
 **参考**：
 
 1. [如何在本地编译Fabric Code](https://www.cnblogs.com/studyzy/p/8030613.html)
