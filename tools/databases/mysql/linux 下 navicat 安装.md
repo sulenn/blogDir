@@ -37,3 +37,23 @@
 - [Ubuntu下Navicat乱码问题终极解决](https://blog.csdn.net/yuxiao97/article/details/84886921)
 
 ---
+
+## 2. navicat 过期解决办法
+
+==先参考图片中的方法,不一定能用,如果用不了再用下面的方法==
+
+![image.png](http://ww1.sinaimg.cn/large/006alGmrgy1g76utjx7jfj30k80gg76d.jpg)
+
+进入 `~` 目录,删除 `.navicat64`.
+
+`rm -rf ~/.navicat64/`
+
+接下来重新启动navicat就可以了，它会自动重新安装一遍，并且试用期重新计时。
+
+**参考**:
+
+- [ubuntu系统下navicat 试用到期解决方案](https://www.cnblogs.com/lpdeboke/p/11263120.html)
+
+- [Ubuntu下navicat过期解决办法](https://www.cnblogs.com/shaojiafeng/p/10728603.html)
+
+---
