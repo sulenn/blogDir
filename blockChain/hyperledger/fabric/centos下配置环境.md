@@ -54,3 +54,19 @@ PyYAML 这个东西，直接用 `pip install pyyaml` 下载的话版本过高，
 显示版本过高，和docker-compose不兼容，不过暂时能用，如果下次用不了就尝试下载符合版本要求的pyyaml
 
 ---
+
+## 4. fatal error: unexpected signal during runtime execution   ==[signal SIGSEGV: segmentation violation code=0x1 addr=xxx pc=xxx]==
+
+![image.png](https://ws1.sinaimg.cn/large/006alGmrly1g7nltx106kj30xs0h50vb.jpg)
+
+这个问题困扰了我好几天。。真是浪费时间
+
+**解决方法**：修改自己阿里云ecs机器里面的 `/etc/resolv.conf`，把里面的 `options timeout:2 attempts:3 rotate single-request-reopen` 这一行内容注释掉 :
+
+**参考：**
+
+- [Hyperledger Fabric在阿里云安装出现的一些问题解决](https://ywandy.github.io/Fabric%E5%9C%A8%E9%98%BF%E9%87%8C%E4%BA%91%E5%AE%89%E8%A3%85%E5%87%BA%E7%8E%B0%E7%9A%84%E4%B8%80%E4%BA%9B%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3.html)
+
+- [阿里云centos7.4运行hyperledger fabric1.3.0/1.4.0的fabric-sample（first_network）](https://blog.csdn.net/destiny_aqua/article/details/86570917)
+
+---
