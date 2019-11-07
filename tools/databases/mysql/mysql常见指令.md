@@ -55,6 +55,38 @@ paper 是表名，与 csv 文件 /home/hrd/paper.csv 名称一致。
 
 fields terminated by ‘,’表示数据之间用“，”隔开，这是csv文件的特性。lines terminated by ‘\r\n’表示每行数据以回车结束。
 
+==注意：换行符可能为 '\n'==
+
 **参考**：[将Excel表格或者CSV文件导入到Mysql中](http://www.linuxdiyf.com/linux/29149.html)
+
+---
+
+## ubuntu 下关闭、启动和重启 mysql 服务的方式
+
+### 关闭
+
+`service mysql stop`
+
+### 启动
+
+`service mysql start`
+
+### 重启
+
+`service mysql restart`
+
+**参考**：[Linux平台下启动和关闭mysql服务](https://blog.csdn.net/king_1421484363/article/details/73277771)
+
+---
+
+## mysql 导入数据时出现--secure-file-priv 问题的解决办法
+
+进行数据导入的时候出现 `--secure-file-priv option so it cannot execute this statement`
+
+修改 `/etc/mysql/mysql.conf.d/mysqld.cnf` 文件
+
+在末尾添加一句 `secure_file_priv="/"`即可将数据导出到任意目录
+
+**参考**：[mysql导出数据时出现--secure-file-priv 问题的解决办法](https://blog.csdn.net/qq473179304/article/details/55107166)
 
 ---
