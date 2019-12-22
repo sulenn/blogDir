@@ -22,3 +22,4 @@ Visio 不在 office 套件里面，同时microsoft 上无法在下载，不支�
 
 - [如何下载并激活Microsoft Office Visio](https://www.jianshu.com/p/8a254f624aa2)
 - [visio2016安装](https://blog.csdn.net/weixin_39383071/article/details/84291312)
+- [office2016与visio2016共存问题](https://blog.csdn.net/Cheung6/article/details/78921092)
