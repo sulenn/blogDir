@@ -8,7 +8,9 @@ Visio 不在 office 套件里面，同时microsoft 上无法在下载，不支�
 
 下载完是一个 `iso` 文件，解压之后安装即可
 
-![image.png](https://ws1.sinaimg.cn/large/006alGmrgy1ga5hn5seh3j30q50dngon.jpg)
+![image.png](https://ws1.sinaimg.cn/large/006alGmrgy1ga5im32uiaj314j0bw75u.jpg)
+
+![image.png](https://ws1.sinaimg.cn/large/006alGmrgy1ga5inlwvmhj315y0d4ta6.jpg)
 
 启动之后需要输入破解激活码：`NKVJM-8MTT4-8YDFR-6738M-DPFJH`
 
