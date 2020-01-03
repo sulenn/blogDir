@@ -35,3 +35,25 @@ make
 - [Installation from source](https://github.com/go-gitea/gitea/blob/release/v1.10/docs/content/doc/installation/from-source.en-us.md#build)
 
 ---
+
+## 可能出现的错误
+
+### 1. open conf/locale/locale_en-US.ini: no such file or directory
+
+**version：1.10.1**:
+
+通过 goland 直接运行 main.go。出现错误：`open conf/locale/locale_en-US.ini: no such file or directory`
+
+解决方法：在项目根路径中创建`conf`文件夹，然后从`./option/`将`locale`文件夹和里面的文件一起粘贴至`conf`文件夹中即可
+
+**参考**：[open conf/locale/locale_en-US.ini: no such file or directory after the first start](https://github.com/go-gitea/gitea/issues/535)
+
+### 2. `http://0.0.0.0:3000/install` 页面初始配置问题
+
+**错误**：`数据库设置无效: Error 1049: Unknown database 'gitea'`
+
+![image.png](http://ww1.sinaimg.cn/large/006alGmrgy1gajqqbj4h0j30s70hcwfp.jpg)
+
+**解决方法**：手动在数据库中创建一个名为 `gitea` 的数据库。`create database gitea`
+
+---
