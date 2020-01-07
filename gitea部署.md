@@ -56,4 +56,14 @@ make
 
 **解决方法**：手动在数据库中创建一个名为 `gitea` 的数据库。`create database gitea`
 
+### 3. 访问 `http://localhost:3000/` 出现错误 `html/template: "install" is undefined`
+
+![image.png](http://ww1.sinaimg.cn/large/006alGmrgy1gao9by8heij30e7060aa6.jpg)
+
+**解决方案**：
+
+`modules/setting/setting.go` 第 408 行添加 `os.Args = []string {"./gitea", "web"}`
+
+![image.png](http://ww1.sinaimg.cn/large/006alGmrgy1gao9eciz02j30nt082t9p.jpg)
+
 ---
