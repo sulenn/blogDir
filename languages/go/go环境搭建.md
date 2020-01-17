@@ -11,13 +11,27 @@
 
 ![2](http://ww1.sinaimg.cn/large/006alGmrly1g23cufj37yj313r0k840x.jpg)
 
-![2](http://ww1.sinaimg.cn/large/006alGmrly1g23cxnm6nmj313t0qwgph.jpg)
+![2](http://ww1.sinaimg.cn/large/006alGmrly1g23cxnm6nmj313t0qwgph.jpg)**参考**：[http://www.runoob.com/go/go-environment.html](http://www.runoob.com/go/go-environment.html)
 
-**参考**：[http://www.runoob.com/go/go-environment.html](http://www.runoob.com/go/go-environment.html)
+### 1.2 设置 GOPATH
 
-### 1.2 集成开发工具 goLand
+- 手动在 go 解压的文件夹中创建 GOPATH 文件夹。然后在 GOPATH 文件夹中创建三个文件夹，分别为 bin、pkg 和 src
+
+  [![1SDZ5V.md.png](https://s2.ax1x.com/2020/01/17/1SDZ5V.md.png)](https://imgchr.com/i/1SDZ5V)
+
+- 将 GOPATH 添加至系统环境变量 PATH 中
+
+  [![1SDaxe.md.png](https://s2.ax1x.com/2020/01/17/1SDaxe.md.png)](https://imgchr.com/i/1SDaxe)
+
+  之后通过 `go get `命令下载的包就会放置在 `GOPATH`路径中
+
+### 1.3 集成开发工具 goLand
 
 `.exe` 正常安装即可，注意安装目录
+
+添加 `GOPATH` 环境变量，`file/setting` 中添加
+
+[![1SDsat.md.png](https://s2.ax1x.com/2020/01/17/1SDsat.md.png)](https://imgchr.com/i/1SDsat)
 
 ---
 
