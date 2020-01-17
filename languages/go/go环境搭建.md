@@ -25,6 +25,12 @@
 
   之后通过 `go get `命令下载的包就会放置在 `GOPATH`路径中
 
+  go的项目的源码也可以放置到上述配置的 `GOPATH/src` 相对应目录下面
+
+**参考**：
+
+- [golang及gopath环境搭建(windows&linux&mac )](golang及gopath环境搭建(windows&linux&mac ))
+
 ### 1.3 集成开发工具 goLand
 
 `.exe` 正常安装即可，注意安装目录
