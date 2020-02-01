@@ -47,7 +47,7 @@
 
 #### 2.1.1 下载安装包
 
-[https://golang.google.cn/dl/](https://golang.google.cn/dl/)
+[https://golang.google.cn/dl/](https://golang.google.cn/dl/) 网站手动下载 or `wget https://dl.google.com/go/go1.11.5.linux-amd64.tar.gz`
 
 #### 2.1.2 安装
 
