@@ -1,5 +1,13 @@
 # dockerfile 详解
 
+Dockerfile 构建镜像的过程：
+
+1. 从 base 镜像运行一个容器。
+2. 执行一条指令，对容器做修改。
+3. 执行类似 docker commit 的操作，生成一个新的镜像层。
+4. Docker 再基于刚刚提交的镜像运行一个新容器。
+5. 重复 2-4 步，直到 Dockerfile 中的所有指令执行完毕。
+
 ![image.png](https://ww1.sinaimg.cn/large/006alGmrgy1gbiy9ni187j30z70py7e7.jpg)
 
 **例子**：
@@ -60,6 +68,8 @@ FORM scratch
 使用 Go 语言开发的应用很多会使用这种方式来制作镜像，这也是为什么有人认为 Go 是特别适合容器微服务架构的语言的原因之一。
 
 ### ADD 指令
+
+`CMD 在docker run 时运行的`
 
 如：`ADD hello /`
 
@@ -166,6 +176,8 @@ RUN echo $VERSION
 下列指令可以支持环境变量： `ADD`、`COPY`、`ENV`、`EXPOSE`、`LABEL`、`USER`、`WORKDIR`、`VOLUME`、`STOPSIGNAL`、`ONBUILD`。
 
 ### RUN 指令
+
+`RUN 是在 docker build 时运行的`
 
 `RUN` 指令是在容器内执行 shell 命令，默认会是用 `/bin/sh -c` 的方式执行。
 
@@ -287,9 +299,50 @@ COPY qf.json /usr/src/app
 
 如果以 `root` 执行的脚本，在执行期间希望改变身份，比如希望以某个已经建立好的用户来运行某个服务进程，不要使用 `su` 或者 `sudo`，这些都需要比较麻烦的配置，而且在 TTY 缺失的环境下经常出错。建议使用 [`gosu`](https://github.com/tianon/gosu)。
 
+### EXPOSE 指令
+
+暴露容器的端口
+
+docker run 的时候指定 -P 或者 -p 将容器的端口映射到宿主机上。这样外界访问宿主机就可以获取到容器提供的服务了。
+
+-P（大写） 命令可以结合这个dockerfile文件中的EXPOSE暴露的端口。会将容器中的EXPOSE端口随机映射到宿主机的端口。
+
+dockerfile 例子：
+
+```dockerfile
+FROM nginx
+EXPOSE 80
+```
+
+- `docker run -d --net=host image:tag`，使用宿主机的网络端口（80）、不存在映射的关系。
+
+  ![image.png](https://ww1.sinaimg.cn/large/006alGmrgy1gbj8l1t743j318s04btcu.jpg)
+
+- `docker run -d -p image:tag`，容器内部 80 端口随机映射到宿主机的端口
+
+  ![image.png](https://ww1.sinaimg.cn/large/006alGmrgy1gbj8p41aetj318q04gwj0.jpg)
+
 **参考**：
 
 - [Dockerfile 的详解](Dockerfile 的详解)
 - [Dockerfile指令详解](https://www.cnblogs.com/jing1617/p/9561922.html)
 - [菜鸟教程](https://www.runoob.com/docker/docker-dockerfile.html)
+- [Dockerfile中的expose到底有啥用](https://blog.csdn.net/finalheart/article/details/100751447)
 
+## 如何调试 dockerfile
+
+通过 Dockerfile 构建镜像的过程：
+
+1. 从 base 镜像运行一个容器。
+2. 执行一条指令，对容器做修改。
+3. 执行类似 docker commit 的操作，生成一个新的镜像层。
+4. Docker 再基于刚刚提交的镜像运行一个新容器。
+5. 重复 2-4 步，直到 Dockerfile 中的所有指令执行完毕。
+
+从这个过程可以看出，如果 Dockerfile 由于某种原因执行到某个指令失败了，我们也将能够得到前一个指令成功执行构建出的镜像，这对调试 Dockerfile 非常有帮助。我们可以**运行最新的这个镜像定位指令失败的原因**。
+
+如果 Dockerfile 在执行第三步 RUN 指令时失败。我们可以利用第二步创建的镜像 22d31cc52b3e 进行调试，方式是通过 `docker run -it` 启动镜像的一个容器。
+
+![image.png](https://ww1.sinaimg.cn/large/006alGmrgy1gbjiw1j2btj318d0c6dkh.jpg)
+
+**参考**：[调试 Dockerfile - 每天5分钟玩转 Docker 容器技术（15）](https://www.cnblogs.com/CloudMan6/p/6853329.html)
