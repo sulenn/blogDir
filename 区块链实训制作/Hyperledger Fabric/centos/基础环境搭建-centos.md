@@ -6,6 +6,8 @@
 
 `只有通过上两条命令才可以在安装 docker 后运行 systemctl start nginx 命令，不然会报错：Failed to get D-Bus connection: Operation not permitted。报错的原因是运行容器时使用的权限问题。解决方案参考：`[https://blog.csdn.net/weixin_42123737/article/details/87984996](https://blog.csdn.net/weixin_42123737/article/details/87984996)
 
+`centos 才会有运行 systemctl start nginx 命令出错的问题。ubuntu 就不会有这个问题`
+
 - 查看 centos 版本：cat /etc/redhat-release （docker pull 该 centos 的命令 `docker pull centos:7.6.1810`）
 
   CentOS Linux release 7.6.1810 (Core)
