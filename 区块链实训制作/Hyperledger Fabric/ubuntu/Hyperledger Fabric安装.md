@@ -13,7 +13,7 @@
    cd fabric
    git checkout -b release-1.4
    
-   cd script
+   cd scripts
    
    下载镜像
    ./bootstrap.sh 1.4.0
@@ -28,10 +28,6 @@
    cd first-network/
    echo "export PATH=/opt/go/src/github.com/hyperledger/fabric/scripts/fabric-samples/bin:$PATH" >> /etc/profile
    source /etc/profile
-   
-   
-   安装 which
-   yum -y install which
    
    运行 byfn.sh
    

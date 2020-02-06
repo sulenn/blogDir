@@ -69,11 +69,15 @@ FORM scratch
 
 ### ADD 指令
 
+==copy 用于文件、压缩包的拷贝。ADD用于文件夹的拷贝==
+
 `CMD 在docker run 时运行的`
 
 如：`ADD hello /`
 
 ADD 是把当前目录下的 hello 文档拷贝到 容器中的根目录下
+
+**参考**：[Linux下Dockerfile中COPY指令和ADD指令的区别](https://blog.csdn.net/qq_42303254/article/details/88684986)
 
 ### CMD 指令
 
@@ -267,6 +271,8 @@ a_b_f.txt
 
 ### COPY 指令
 
+==copy 用于文件、压缩包的拷贝。ADD用于文件夹的拷贝==
+
 格式：
 
 - `COPY <源路径>... <目标路径>`
@@ -290,6 +296,8 @@ COPY qf.json /usr/src/app
 ```
 
 这样会把 `qf.json` 拷贝成为 `/usr/src/` 目录下的 `app` 文件
+
+**参考**：[Linux下Dockerfile中COPY指令和ADD指令的区别](https://blog.csdn.net/qq_42303254/article/details/88684986)
 
 ### USER 指令
 
