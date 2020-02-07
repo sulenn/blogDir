@@ -1,5 +1,34 @@
 # dockerfile1
 
+==最终的 dockerfile==
+
+```dockerfile
+    FROM ubuntu:18.04
+# 更换源并下载基础软件工具
+    ADD ./sources.list /etc/apt/sources.list
+    RUN apt-get update; apt-get -y install git curl make gcc wget vim ; rm -rf /var/lib/apt/lists/*
+# 安装 docker
+    RUN apt-get update; apt-get -y install apt-transport-https software-properties-common;rm -rf /var/lib/apt/lists/*
+    RUN curl -fsSL https://download.docker.com/linux/ubuntu/gpg | apt-key add - \
+    && add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
+    RUN apt-get update; apt-get -y install docker-ce=18.06.3~ce~3-0~ubuntu ;rm -rf /var/lib/apt/lists/*
+# 安装 docker-compose
+    RUN apt-get update; apt-get -y install python-pip ;rm -rf /var/lib/apt/lists/*
+    RUN pip install --upgrade pip -i https://pypi.tuna.tsinghua.edu.cn/simple\
+    && pip install docker-compose -i https://pypi.tuna.tsinghua.edu.cn/simple
+# 下载 golang 和 nodejs
+    WORKDIR /opt
+    COPY ./go1.11.1.linux-amd64.tar.gz /opt
+    COPY ./node-v8.16.0-linux-x64.tar.xz /opt
+    RUN mkdir -p go
+    ENV GOPATH=/opt/go
+# 下载 fabric 和 fabric-samples
+    ADD ./fabric $GOPATH/src/github.com/hyperledger/fabric
+
+# 下载 hyperledger fabric 镜像
+    ADD ./hyperledger-fabric-images /opt/hyperledger-fabric-images
+```
+
 用于 Hyperledger Fabric 基础环境搭建的 dockerfile 文件记录
 
 ## 1. 除 golang 和 Nodejs 的 dockerfile 搭建
