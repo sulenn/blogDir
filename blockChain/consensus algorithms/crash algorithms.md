@@ -6,7 +6,7 @@ Paxos 问题是指分布式的系统中存在故障(crash fault)，但不存在�
 
 paxos的基础是proposer能够找到半数以上的accptor
 
-![image.png](https://ws1.sinaimg.cn/large/006alGmrly1g80yid4zofj30if0hkn1g.jpg)
+![image.png](https://ww1.sinaimg.cn/large/006alGmrly1g80yid4zofj30if0hkn1g.jpg)
 
 **参考**：
 
@@ -18,7 +18,7 @@ paxos的基础是proposer能够找到半数以上的accptor
 
 ## raft 算法
 
-![image.png](https://ws1.sinaimg.cn/large/006alGmrly1g823wpj5w9j30h707jaca.jpg)
+![image.png](https://ww1.sinaimg.cn/large/006alGmrly1g823wpj5w9j30h707jaca.jpg)
 
 - 领导选举：一个新的领导人需要被选举出来，当现存的领导人宕机的时候
 

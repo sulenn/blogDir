@@ -51,14 +51,14 @@ Gossip 简单来说就是，节点随机选择一个可以连接的邻节点，�
 
 注意这里的 Gossip 过程是非常简单的，收到 Event 信息的节点可以向任意`一个或多个节点`继续 Gossip 新的 Event。每一次 Gossip 都是对前一次信息的背书和见证。
 
-![image.png](https://ws1.sinaimg.cn/large/006alGmrly1g9f85d5nhrj30gh0eigo5.jpg)
+![image.png](https://ww1.sinaimg.cn/large/006alGmrly1g9f85d5nhrj30gh0eigo5.jpg)
 
 ## 虚拟投票（Virtual Voting）
 
 - 事件（event）
     这个很好理解，就好比区块链中的区块，event是一个包含有两个哈希指针的数据结构，并且可以包括0个或若干交易信息，节点在创建event的同时会加上timestamp并且对整个event数字签名。
 
-    ![image.png](https://ws1.sinaimg.cn/large/006alGmrly1g9f86g80gvj30fl0d0dit.jpg)
+    ![image.png](https://ww1.sinaimg.cn/large/006alGmrly1g9f86g80gvj30fl0d0dit.jpg)
 
 - 绝对多数（supermajority）
     超过2/3以上节点的数量。
@@ -72,17 +72,17 @@ Gossip 简单来说就是，节点随机选择一个可以连接的邻节点，�
 - 轮次（round）
     在 Hashgraph 中，根据事件所处的可见状态，把他们分为不同的轮次（Round）。
     当一个事件强可见绝对多数节点上的先前事件时，我们就说该事件在一个新的轮次上，记为 R。
-    ![image.png](https://ws1.sinaimg.cn/large/006alGmrly1g9f9lutmwhj30of0jz46r.jpg)
+    ![image.png](https://ww1.sinaimg.cn/large/006alGmrly1g9f9lutmwhj30of0jz46r.jpg)
 
 - 创建轮次（round created）
     所谓的创建轮（Creation Round），就是当一个事件被创建时，它所在的轮次。通常，一个事件被创建时，它会被立即赋予一个轮次号，跟其父事件是在同一个轮次一样。也就是说，如果同节点的父事件是 R 轮，那该事件被创建时也是在第 R 轮，它的创建轮就是 R 轮。
 
     比如，下图中，初始（Genisis）情况下，所有节点的状态都是相同的，把当前状态定义为第 R 轮，并且 R = 1。后续创建的事件都是在第 R 轮的。
-    ![image.png](https://ws1.sinaimg.cn/large/006alGmrly1g9f9lutmwhj30of0jz46r.jpg)
+    ![image.png](https://ww1.sinaimg.cn/large/006alGmrly1g9f9lutmwhj30of0jz46r.jpg)
 
 - 接收轮（Receive Round）
     接收轮（Receive Round）很好理解，就是当某个事件强可见超过 2/3 节点的本轮或者上一轮的事件时，这个事件就达到了一个新的轮次，这个轮次就是他的接收轮。如下图：
-    ![image.png](https://ws1.sinaimg.cn/large/006alGmrly1g9f9tydkgcj30nb0gnwo1.jpg)
+    ![image.png](https://ww1.sinaimg.cn/large/006alGmrly1g9f9tydkgcj30nb0gnwo1.jpg)
     从上图中，我们可以看到，当 a5 和 d5 被创建时，它们的创建轮是第 R 轮，而当它们能够强可见绝对多数节点的第 R 轮的见证人事件（即 a1, b1, c1, d1）时，它的接收轮就变为 R + 1 轮，也就是说，a5 和 d5 都变成 R + 1 轮的事件了，并且，在它们之后创建的子孙事件都在 R + 1 轮。
     这里需要注意的是：如果事件 a5 只能强可见 R 轮某节点的见证人时，a5 的轮次是不会增加的，依然为此在 R 轮。只有当其强可见绝对多数节点的第 R 轮的见证人，它的轮次才变为 R + 1 轮。
 
@@ -91,7 +91,7 @@ Gossip 简单来说就是，节点随机选择一个可以连接的邻节点，�
 
 - 知名见证人（famous witness）
     知名见证人（Famous Witness），当 R 轮的见证人事件被 R + 1 轮的多数（超过 2/3）见证人强可见时，它就是知名见证人事件。
-    ![image.png](https://ws1.sinaimg.cn/large/006alGmrly1g9f9wpo9o3j30mi0kaqbl.jpg)
+    ![image.png](https://ww1.sinaimg.cn/large/006alGmrly1g9f9wpo9o3j30mi0kaqbl.jpg)
 
 > 我们注意到这里暗含了一个强约束条件，就是 R + 1 轮的见证人事件，这意味着 [a5, b5, c5, d5] 这几个事件必然是强可见大部分节点的第 R 轮见证人事件的，但不必然强可见 c1（比如他们都强可见 [a1, b1, d1, e1] 这 4 个见证人事件。所以，要判断 c1 是否是知名见证人，就必须要求 R + 1 轮的大部分事件都强可见 c1，一旦满足，说明 c1 就是知名见证人了，知名见证人意味着不可更改，这时候系统就可以对该事件进行 commit。
 
@@ -101,13 +101,13 @@ Gossip 简单来说就是，节点随机选择一个可以连接的邻节点，�
 
 可见 -> 强可见某祖先 Event -> 强可见绝对多数节点的祖先 Events -> 轮次增加（即 Round + 1） -> 大多数 R+1 轮 Witness 强可见 R 轮某个 witness -> R 轮该 Witness 成为 famous witness -> commit。
 
-![image.png](https://ws1.sinaimg.cn/large/006alGmrgy1g9ftizn4xrj30ny05vgo0.jpg)
+![image.png](https://ww1.sinaimg.cn/large/006alGmrgy1g9ftizn4xrj30ny05vgo0.jpg)
 
 **虚拟投票**实际上就是指上述两个黄色部分。它主要是分为两个步骤来进行的，① 处相当于 Pre-Vote 过程，这里其实是确定投票委员会成员，如果一个事件强可见大多数 witness，那么它对某 witness 的票就有效。而 ② 处则是 Pre-Commit 过程，收集投票委员会对某个祖先 Event 所投的票，如果票数超过 2/3，那么就可以把该 Event 标记为 Famous，也就是不可更改了。接下来只需要 commit 就行了。
 
 注：R + 1 轮的 Witness 只会对 R 轮的 Witness 投票，R 轮 Witness 后续的 Events 不会收到投票。 Witness 是指 R 轮创建的第一个 Event，如下：
 
-![image.png](https://ws1.sinaimg.cn/large/006alGmrgy1g9ftjsnxvjj30n20il46l.jpg)
+![image.png](https://ww1.sinaimg.cn/large/006alGmrgy1g9ftjsnxvjj30n20il46l.jpg)
 
 我们来看一下想要把 R 轮的 c1 标记为 Famous 需要经过哪些步骤：
 
@@ -120,7 +120,7 @@ Gossip 简单来说就是，节点随机选择一个可以连接的邻节点，�
 
 实际上，计票过程是在 R + 2 轮进行的。因为即使 R + 1 轮所有 Event 都强可见 c1，它们彼此之间也互相不知道对方的投票情况。因此，必须由下一轮的 Event 来收集大家的投票结果。
 
-![image.png](https://ws1.sinaimg.cn/large/006alGmrgy1g9ftl8gsrnj30i70mrwql.jpg)
+![image.png](https://ww1.sinaimg.cn/large/006alGmrgy1g9ftl8gsrnj30i70mrwql.jpg)
 
 由上图可见，R + 1 轮的 [a5, b5, c5, d5] 以绝对多数的比例对 c1 形成了强可见状态，使得 c1 满足知名见证人条件。R+2 轮上的每个见证人则对 R+1 轮进行收集投票。如图，a9 强可见了 R+1 轮的这 4 个强可见 c1 的事件，因为已经超过绝对多数，因此 a9 可以立即确认 c1 事件，也就是 c1 已经达到全网共识而且不可更改。
 
