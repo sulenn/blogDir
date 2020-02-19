@@ -12,7 +12,7 @@
 
 #####链码开发
 
-1. 创建文件夹。为了方便管理，进人 `fabric-samples/chaincode` 目录下并创建一个名为 `hello` 的文件夹。使用如下命令实现：
+- 创建文件夹。为了方便管理，进人 `fabric-samples/chaincode` 目录下并创建一个名为 `hello` 的文件夹。使用如下命令实现：
 
     ```shell
     # 切换路径
@@ -21,25 +21,35 @@
     mkdir hello && cd hello
     ```
 
-2. 创建并编辑链码文件：
+- 使用 `cp` 命令从 `/data/workspace/myshixun_982070/9aqwf8nrox20200215213056/` 目录中将平台提供的 `hello.go` 文件拷贝至当前目录。注意：`myshixun_982070/9aqwf8nrox20200215213056/` 路径名称会动态变化，每个学生每次分配的路径名称都有可能不同，需要学生自己调整。
 
     ```shell
-    vim hello.go
+    cp /data/workspace/myshixun_982070/9aqwf8nrox20200215213056/hello.go ./
     ```
 
-3. 导入链码依赖包：
+    `hello.go` 文件中已将链码逻辑主体写好，需要学生补充如图片所示的内容：
+
+    <br>
+
+    ![image.png](https://ww1.sinaimg.cn/large/006alGmrgy1gc1opltw59j30nk0dg400.jpg)
+
+    <br>
+
+接下来，我们对链码内容进行简要讲解。主要包括如下四个部分的内容：
+
+1. 导入链码依赖包：
 
     ```go
     package main
 
-    import {
-        "github. com/hyperledger/fabric/core/chaincode/shim"
-        "github. com/hyperledger/ fabric/protos/peer"
+    import (
+        "github.com/hyperledger/fabric/core/chaincode/shim"
+        "github.com/hyperledger/fabric/protos/peer"
         "fmt"
-    }
+    )
     ```
 
-4. 编写主函数：
+2. 编写主函数：
 
     ```go
     func main() {
@@ -50,13 +60,13 @@
     }
     ```
 
-5. 自定义结构体：
+3. 自定义结构体：
 
     ```go
     type HelloChaincode struct {}
     ```
 
-6. 实现 `Chaincode` 接口。实现 `Chaincode` 接口必须重写 `Init` 与 `Invoke` 两个函数。
+4. 实现 `Chaincode` 接口。实现 `Chaincode` 接口必须重写 `Init` 与 `Invoke` 两个函数。
 
     - `Init` 函数：初始化数据状态，逻辑步骤如下。
 
@@ -73,7 +83,7 @@
         具体实现代码如下：
 
         ```go
-        ∥实例化 / 升级链码时被自动调用
+        // 实例化 / 升级链码时被自动调用
         // -c '("Args":["Hello", "World"]'
         func (t *HelloChaincode) Init(stub shim.ChaincodeStubInterface) peer.Response {
             fmt.Println("开始实例化链码......")
@@ -94,6 +104,7 @@
             fmt.Println("实例化链码成功")
             return shim.Success(nil)
         }
+        ```
 
     - `Invoke` 函数逻辑步骤如下。
 
@@ -144,7 +155,7 @@
             }
             // 根据指定的 Key 调用 GetState 方法查询数据
             result, err := stub.GetState(args[0])
-            if err != nil{
+            if err != nil {
                 return shim.Error("根据指定的 " + args[0] + "查询数据时发生错误 ")
             }
             if result == nil {
@@ -161,10 +172,26 @@
 
 1. 启动网络
 
-    进入 `/opt/go/src/github.com/hyperledger/fabric/scripts/fabric-samples/chaincode-docker-devmode` 目录：
+    ```shell
+    # 查看网络是否已启动
+    docker ps
+    ```
+
+    如果出现如下信息，则表示网络已启动成功：
+
+    <br>
+
+    ![image.png](https://ww1.sinaimg.cn/large/006alGmrgy1gc1nu1ednrj3127098aba.jpg)
+
+    <br>
+
+    否则运行如下命令启动 `dev` 测试网络
 
     ```shell
+    # 切换路径
     cd /opt/go/src/github.com/hyperledger/fabric/scripts/fabric-samples/chaincode-docker-devmode
+    # 启动 dev 测试网络
+    docker-compose -f docker-compose-simple.yaml up -d
     ```
 
 2. 构建并启动链码
@@ -217,14 +244,14 @@
     - 调用链码：根据指定的 `key("Hello")` 查询对应的状态数据。
 
         ```shell
-        peer chaincode query -n hellocc -c '{"Args":["query","Hello"]}'-C myc
+        peer chaincode query -n hellocc -c '{"Args":["query","Hello"]}' -C myc
         ```
 
         返回查询结果： World
 
 ####编程要求
 
-按要求完成本关卡内容后，点击评测即可。
+按要求完成本关卡内容后，点击评测即可。平台会检测 `cat /opt/go/src/github.com/hyperledger/fabric/scripts/fabric-samples/chaincode/hello/hello.go` 输出的链码文件内容是否正确。
 
 ---
 开始你的任务吧，祝你成功！
