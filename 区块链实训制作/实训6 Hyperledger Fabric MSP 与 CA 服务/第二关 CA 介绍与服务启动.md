@@ -61,7 +61,7 @@
 
     ```shell
     cd ~
-    mkdir fabric-ca && cd fabrie-ca
+    mkdir fabric-ca && cd fabric-ca
     ```
 
     创建该目录的目的是将其作为 `Fabric CA` 服务器的主目录。默认服务器主目录为 `./`。
@@ -113,3 +113,10 @@ fabric-ca-server start -b admin:pass
 
 ---
 开始你的任务吧，祝你成功！
+
+```go
+export FABRIC_CA_CLIENT_HOME=$HOME/fabric-ca/clients/admin
+chmod 775 /opt/go/src/github.com/hyperledger/fabric/scripts/fabric-samples/bin/fabric-ca-client
+/opt/go/src/github.com/hyperledger/fabric/scripts/fabric-samples/bin/fabric-ca-client enroll -u http://admin:pass@localhost:7054
+
+```
