@@ -10,9 +10,9 @@ paxos的基础是proposer能够找到半数以上的accptor
 
 **参考**：
 
-- [如何浅显易懂地解说 Paxos 的算法](https://www.zhihu.com/question/19787937)
-
 - [区块链快速入门（三）——CFT（非拜占庭容错）共识算法](https://blog.51cto.com/9291927/2300901)
+
+- [如何浅显易懂地解说 Paxos 的算法](https://www.zhihu.com/question/19787937)
 
 ---
 
