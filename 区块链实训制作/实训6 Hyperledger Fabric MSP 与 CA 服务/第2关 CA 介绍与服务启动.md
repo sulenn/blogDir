@@ -77,9 +77,9 @@
     # （注意该路径中的目录名是随机生成的，每个学生看到的都不一样，需要学生自己动态调整）
     cd myshixun_982070/9aqwf8nrox20200215213056
     # 执行脚本，初始化环境配置（需要花费大约 90 秒）
-    mv ./fabric-ca-server /root
+    cp ./fabric-ca-server /home
     # 切换路径
-    cd home/fabric-ca
+    cd /home/fabric-ca
     # 赋予 fabric-ca-server 工具可执行权限
     chmod 775 ../fabric-ca-server
     # 初始化 CA
@@ -96,18 +96,26 @@
 
     - `fabric-ca-server.db`：存放数据的 `SQLite3` 数据库；
 
-    - `msp/keystore/`：路径下存放个人身份的私钥文件（`_sk` 文件）。对应签名证书。
+    - `msp/keystore/`：路径下存放个人身份的私钥文件（`_sk` 文件）。对应签名证书；
 
-    -
+    - `IssuerPublicKey`：`issue` 公钥；
 
-    -
+    - `IssuerRevocationPublicKey`：`IssuerRevocation` 公钥。
+
+    初始化成功后，控制台输出如下日志信息：
+
+    <br>
+
+    ![image.png](https://ww1.sinaimg.cn/large/006alGmrgy1gcdkni9mzwj30zz0keq7p.jpg)
+
+    <br>
 
 #####CA 启动
 
 快速启动并初始化一个 `fabric-ca-server` 服务：
 
 ```shell
-fabric-ca-server start -b admin:pass
+../fabric-ca-server start -b admin:pass
 ```
 
 **参数说明**：
@@ -115,6 +123,14 @@ fabric-ca-server start -b admin:pass
 - `-b`：提供注册用户的名称与密码，如果没有使用 `LDAP`，则这个选项为必需。默认的配置文件名称为 `fabric-ca-server-config.yaml`。
 
 如果之前没有执行初始化命令，则启动过程中会自动进行初始化操作，即从主配置目录搜索相关证书和配置文件，如果不存在则会自动生成。
+
+`fabric-ca-server` 服务启动成功后，控制台输出如下日志信息：
+
+<br>
+
+![image.png](https://ww1.sinaimg.cn/large/006alGmrgy1gcdkpz3qm6j31060j60x9.jpg)
+
+<br>
 
 #####配置数据库
 
