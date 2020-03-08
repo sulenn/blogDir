@@ -21,3 +21,33 @@
 **参考**：[Redis的面试问题总结，来学习下吧](https://m.php.cn/article/415480.html)
 
 ---
+
+## 写命令
+
+Redis 是内存型数据库，为了保证数据在断电后不会丢失，需要将内存中的数据持久化到硬盘上。
+
+![image.png](https://ww1.sinaimg.cn/large/006alGmrgy1gclftt65a6j311p0trjwy.jpg)
+
+**参考**:[https://github.com/CyC2018/CS-Notes/blob/master/notes/Redis.md](https://github.com/CyC2018/CS-Notes/blob/master/notes/Redis.md)
+
+---
+
+## redis持久化优化
+
+1. cpu：
+
+    - 不要和cpu密集型服务部署在一起。
+
+2. 内存：
+
+    - 避免大量写入时执行重写操作
+
+    - 单机多实例部署时，尽量同一时刻只有一个子线程在工作(生成RBD或者AOF重写)。
+
+3. 硬盘：
+
+    - 不要和高硬盘负载的应用部署在一起，比如消息队列等。
+
+**参考**：[redis持久化优化](https://blog.csdn.net/qq_27388039/article/details/79943980)
+
+---
