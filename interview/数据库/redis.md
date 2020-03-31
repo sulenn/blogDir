@@ -1,3 +1,5 @@
+[toc]
+
 # redis
 
 ## redis 最适合的场景
