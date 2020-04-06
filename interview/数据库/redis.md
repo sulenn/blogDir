@@ -24,7 +24,7 @@
 
 ---
 
-## 写命令
+## 数据持久化
 
 Redis 是内存型数据库，为了保证数据在断电后不会丢失，需要将内存中的数据持久化到硬盘上。
 
@@ -73,3 +73,37 @@ Redis 是内存型数据库，为了保证数据在断电后不会丢失，需�
 五种数据类型：string（字符串），hash（哈希），list（列表），set（集合）及zset(sorted set：有序集合)。
 
 **参考**：[https://www.runoob.com/redis/redis-data-types.html](https://www.runoob.com/redis/redis-data-types.html)
+
+---
+
+## Redis底层如何存储数据
+
+**参考**：[Redis（三）--- Redis的五大数据类型的底层实现](https://www.cnblogs.com/MouseDong/p/11134039.html)
+
+---
+
+## redis底层数据结构有哪些
+
+1. 简单动态字符串
+
+2. 链表
+
+3. 哈希表
+
+4. 跳跃表
+
+5. 整数集合
+
+6. 压缩列表
+
+**参考**：
+
+- [Redis详解（四）------ redis的底层数据结构](https://www.cnblogs.com/ysocean/p/9080942.html)
+
+- [Redis（三）--- Redis的五大数据类型的底层实现](https://www.cnblogs.com/MouseDong/p/11134039.html)
+
+---
+
+## Redis 有序集合的原理
+
+**参考**：[Redis:有序集合类型zset实现原理](https://www.jianshu.com/p/35bce2ea5743)
