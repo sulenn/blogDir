@@ -4,9 +4,9 @@ Docker 是一个开源的应用容器引擎
 
 ## 隔离机制
 
-1. namespace
+1. namespace：隔离
 
-2. cgroups
+2. cgroups：资源分配
 
 **参考**：[docker资源隔离实现方式](https://www.cnblogs.com/--smile/p/11810027.html)
 

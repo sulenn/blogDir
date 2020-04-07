@@ -84,23 +84,75 @@ Redis 是内存型数据库，为了保证数据在断电后不会丢失，需�
 
 ## redis底层数据结构有哪些
 
-1. 简单动态字符串
+redis 使用 c 语言编写
+
+1. 简单动态字符串(SDS)
+
+    ![image.png](https://ww1.sinaimg.cn/large/006alGmrgy1gdlm4131gfj30ig07tjs4.jpg)
+
+    **定义**：
+
+    1、len 保存了SDS保存字符串的长度
+
+    2、buf[] 数组用来保存字符串的每个元素
+
+    3、free j记录了 buf 数组中未使用的字节数量
+
+    **优点**：
+
+    1. 常数复杂度获取字符串长度
+
+    2. 减少修改字符串的内存重新分配次数
 
 2. 链表
 
+    ![image.png](https://ww1.sinaimg.cn/large/006alGmrgy1gdlmbwxvb5j30af08x74g.jpg)
+
+    ![image.png](https://ww1.sinaimg.cn/large/006alGmrgy1gdlmc61xftj30rv0e3abd.jpg)
+
+    ![image.png](https://ww1.sinaimg.cn/large/006alGmrgy1gdlmclcxksj30kz06pmy3.jpg)
+
+    **Redis链表特性**：
+
+    (1)、双端：链表具有前置节点和后置节点的引用，获取这两个节点时间复杂度都为O(1)。
+
+    (2)、无环：表头节点的 prev 指针和表尾节点的 next 指针都指向 NULL,对链表的访问都是以 NULL 结束。　　
+
+    (3)、带链表长度计数器：通过 len 属性获取链表长度的时间复杂度为 O(1)。
+
 3. 哈希表
+
+    ![image.png](https://ww1.sinaimg.cn/large/006alGmrgy1gdlmoofzuxj30cp0cjjrz.jpg)
+
+    ![image.png](https://ww1.sinaimg.cn/large/006alGmrgy1gdlmp18oc1j30ue0evta3.jpg)
+
+    ![image.png](https://ww1.sinaimg.cn/large/006alGmrgy1gdlmpuftyaj319g0d6n0t.jpg)
+
+    ![image.png](https://ww1.sinaimg.cn/large/006alGmrgy1gdlmr2yeckj319k0il43n.jpg)
 
 4. 跳跃表
 
+    ![image.png](https://ww1.sinaimg.cn/large/006alGmrgy1gdln5pmudqj313s0hktcb.jpg)
+
 5. 整数集合
 
+    ![image.png](https://ww1.sinaimg.cn/large/006alGmrgy1gdln9gyog8j31970g7dih.jpg)
+
+    ![image.png](https://ww1.sinaimg.cn/large/006alGmrgy1gdln9qbet5j314s0agjtp.jpg)
+
 6. 压缩列表
+
+    压缩列表的原理：压缩列表并不是对数据利用某种算法进行压缩，而是将数据按照一定规则编码在一块连续的内存区域，目的是节省内存。
+
+    参考链接3，很详细
 
 **参考**：
 
 - [Redis详解（四）------ redis的底层数据结构](https://www.cnblogs.com/ysocean/p/9080942.html)
 
 - [Redis（三）--- Redis的五大数据类型的底层实现](https://www.cnblogs.com/MouseDong/p/11134039.html)
+
+- [图解Redis之数据结构篇——压缩列表](https://www.cnblogs.com/hunternet/p/11306690.html)
 
 ---
 
