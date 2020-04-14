@@ -37,3 +37,29 @@ git内部存储是采用key-value的形式，key是value的hash值（40位16进�
 - [Git学习笔记(1) --- 内部存储模式](https://www.jianshu.com/p/9168b40ece56)
 
 - [一篇文章看懂git的内部存储结构](https://www.jianshu.com/p/90c835280adc)
+
+---
+
+## 修改历史信息
+
+- [git中修改以前的commit的message](https://blog.csdn.net/sinat_36422236/article/details/90717723?depth_1-utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-3&utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-3)
+
+- [修改commit的message](https://blog.csdn.net/qq_34234087/article/details/99009309?depth_1-utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromBaidu-1&utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromBaidu-1)
+
+- [Git修改提交历史](https://www.jianshu.com/p/67f20d19605a)
+
+- [git修改历史提交信息（包含作者信息）](https://blog.csdn.net/xiaowu_zhu/article/details/83024558)
+
+---
+
+## Git 和区块链的对比
+
+- [从 Git 到区块链](https://zhuanlan.zhihu.com/p/33644436)
+
+- [Git 和 区块链的相似性和差异性比较](https://zhuanlan.zhihu.com/p/33927320)
+
+---
+
+## Merkel 树
+
+**参考**：[https://ethfans.org/toya/articles/588](https://ethfans.org/toya/articles/588)
