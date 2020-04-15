@@ -63,3 +63,13 @@ git内部存储是采用key-value的形式，key是value的hash值（40位16进�
 ## Merkel 树
 
 **参考**：[https://ethfans.org/toya/articles/588](https://ethfans.org/toya/articles/588)
+
+---
+
+## Docker 镜像组成结构
+
+**参考**：
+
+- [理解Docker镜像分层](https://www.cnblogs.com/woshimrf/p/docker-container-lawyer.html)
+
+- [docker学习系列（三）：docker镜像的分层结构](https://www.cnblogs.com/s-b-b/p/8533936.html)
