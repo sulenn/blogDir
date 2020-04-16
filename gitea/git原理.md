@@ -58,11 +58,21 @@ git内部存储是采用key-value的形式，key是value的hash值（40位16进�
 
 - [Git 和 区块链的相似性和差异性比较](https://zhuanlan.zhihu.com/p/33927320)
 
+- [区块链与Git版本工具的比较](https://www.cnblogs.com/imsoft/p/6704543.html)
+
 ---
 
 ## Merkel 树
 
-**参考**：[https://ethfans.org/toya/articles/588](https://ethfans.org/toya/articles/588)
+**参考**：
+
+- [https://ethfans.org/toya/articles/588](https://ethfans.org/toya/articles/588)
+
+- [默克尔树特点及优缺点](https://blog.csdn.net/adwen2009/article/details/102601064)
+
+- [以太坊学习（2）MPT树--白话版（转）](https://blog.csdn.net/dieju8330/article/details/81459887)
+
+- [MPT树详解](https://www.cnblogs.com/whyaza/p/10034128.html)
 
 ---
 
@@ -73,3 +83,9 @@ git内部存储是采用key-value的形式，key是value的hash值（40位16进�
 - [理解Docker镜像分层](https://www.cnblogs.com/woshimrf/p/docker-container-lawyer.html)
 
 - [docker学习系列（三）：docker镜像的分层结构](https://www.cnblogs.com/s-b-b/p/8533936.html)
+
+---
+
+## git 缺点
+
+- [Git 有哪些缺点？](https://www.zhihu.com/question/20401926)
