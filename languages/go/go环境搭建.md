@@ -19,9 +19,9 @@
 
   [![1SDZ5V.md.png](https://s2.ax1x.com/2020/01/17/1SDZ5V.md.png)](https://imgchr.com/i/1SDZ5V)
 
-- 将 GOPATH 添加至系统环境变量 PATH 中
+- 将 GOPATH 添加至系统新建环境变量 GOPAHT 中
 
-  [![1SDaxe.md.png](https://s2.ax1x.com/2020/01/17/1SDaxe.md.png)](https://imgchr.com/i/1SDaxe)
+  ![image.png](https://ww1.sinaimg.cn/large/006alGmrgy1gdz7mliyt6j31380kugoj.jpg)
 
   之后通过 `go get `命令下载的包就会放置在 `GOPATH`路径中
 
