@@ -44,3 +44,48 @@ mysql> exit;
 ```
 
 **参考**：[解决 MySQL 的 ERROR 1698 (28000): Access denied for user 'root'@'localhost'](https://blog.csdn.net/jlu16/article/details/82809937)
+
+---
+
+## centos7 安装
+
+==直接通过命令行的安装方式很慢，不知道为什么==
+
+1. windows 下载 rpm 包。因为服务器下载贼慢
+
+    ![image.png](https://ww1.sinaimg.cn/large/006alGmrgy1gehfw42iu4j31400l5aee.jpg)
+
+2. 检查是否已安装 mysql 和 mariadb
+
+    检查mysql：`rpm -qa | grep mysql`
+    卸载：`yum erase xxx`
+
+    检查mariadb：`rpm -qa|grep -i mariadb`
+
+3. 安装依赖包：`yum -y install make gcc-c++ cmake bison-devel ncurses-devel libaio libaio-devel`
+
+4. 将已经下好的包上传到服务器上（=用xshell上传，花了两个半小时==），并解压
+
+    解压：`tar xvf mysql-8.0.16-2.el7.x86_64.rpm-bundle.tar`
+
+5. 安装common、libs、server、client 等四个包
+
+    `rpm -ivh mysql-community-common-8.0.20-1.el7.x86_64.rpm`
+
+    `rpm -ivh mysql-community-libs-8.0.20-1.el7.x86_64.rpm`
+
+    `rpm -ivh mysql-community-client-8.0.20-1.el7.x86_64.rpm`
+
+    `rpm -ivh mysql-community-server-8.0.20-1.el7.x86_64.rpm`
+
+    安装 server 时可能会出错，可以使用 `yum -y install numactl` 解决
+
+    ![image.png](https://ww1.sinaimg.cn/large/006alGmrgy1gehll8xtgqj316p055dgv.jpg)
+
+6. 启动 Mysql 服务：`service mysqld start`，查看临时密码用于登录 `grep "A temporary password" /var/log/mysqld.log`
+
+7. 登录 `mysql -u root -p`，修改密码 `alter user user() identified by "...MYQ..."`，不能设置过于简单，除非修改 Mysql 密码设定策略。
+
+**参考**：
+
+- [centos7如何安装mysql](https://jingyan.baidu.com/article/08b6a59172b47e14a80922bc.html)
