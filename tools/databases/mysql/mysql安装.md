@@ -45,11 +45,28 @@ mysql> exit;
 
 **参考**：[解决 MySQL 的 ERROR 1698 (28000): Access denied for user 'root'@'localhost'](https://blog.csdn.net/jlu16/article/details/82809937)
 
+### 1.2 干净卸载
+
+```shell
+sudo rm /var/lib/mysql/ -R
+sudo rm /etc/mysql/ -R
+sudo apt-get autoremove --purge mysql-server
+sudo apt-get remove mysql-common
+sudo apt-get remove apparmor
+dpkg -l |grep ^rc |awk '{print $2}' |sudo xargs dpkg -P
+```
+
+### 1.3 通过 dep 包安装
+
+- 下载：`sudo dpkg -i mysql-apt-config_0.8.15-1_all.deb`；下载地址为：[https://dev.mysql.com/downloads/](https://dev.mysql.com/downloads/)
+
+  ![image.png](https://ww1.sinaimg.cn/large/006alGmrgy1gennee8d5cj30zq0nsad4.jpg)
+
 ---
 
 ## centos7 安装
 
-==直接通过命令行的安装方式很慢，不知道为什么==
+**直接通过命令行的安装方式很慢，不知道为什么**
 
 1. windows 下载 rpm 包。因为服务器下载贼慢
 

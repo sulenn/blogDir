@@ -25,6 +25,14 @@ ln -s /usr/software/nodejs/bin/node   /usr/local/bin/
 
 ![2](http://ww1.sinaimg.cn/large/006alGmrly1g2jq6ewtiuj30m70dnaj8.jpg)
 
+**使用命令行安装**：
+
+1. 查看官网支持的最新版本（推荐稳定版），[https://nodejs.org](https://nodejs.org/)
+2. 添加源后安装：
+   - 添加源（注意12.x可以变，比如将12改为14就从12版本改成了14版本）：`curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -`
+   - 安装：`sudo apt-get install -y nodejs`
+3. 验证：`nodejs --version`
+
 ## 2. 使用淘宝 NPM 镜像
 
 大家都知道国内直接使用 npm 的官方镜像是非常慢的，这里推荐使用淘宝 NPM 镜像。
@@ -43,4 +51,7 @@ npm install -g cnpm --registry=https://registry.npm.taobao.org
 cnpm install [name]
 ```
 
-**参考**：[http://www.runoob.com/nodejs/nodejs-install-setup.html](http://www.runoob.com/nodejs/nodejs-install-setup.html)
+**参考**：
+
+- [http://www.runoob.com/nodejs/nodejs-install-setup.html](http://www.runoob.com/nodejs/nodejs-install-setup.html)
+- [Ubuntu 安装最新版nodejs](https://www.cnblogs.com/feiquan/p/11223487.html)
