@@ -22,7 +22,7 @@ make
 
 1.10.0 版本开始用如下命令编译
 
-`TAGS="bindata sqlite sqlite_unlock_notify" make generate build`
+TAGS="bindata sqlite sqlite_unlock_notify" make generate build
 
 **运行测试**：
 
