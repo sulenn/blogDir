@@ -24,6 +24,10 @@ make
 
 TAGS="bindata sqlite sqlite_unlock_notify" make generate build
 
+or
+
+TAGS="bindata" make generate build
+
 **运行测试**：
 
 `./gitea web`
