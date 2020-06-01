@@ -1,5 +1,7 @@
 # vscode同步设置&扩展插件
 
+**最新的 settings sync 插件使用步骤出现了变化，请仔细参考该插件的教程**
+
 使用插件：Settings Sync
 
 已有的最新 GitHub Token:
@@ -16,7 +18,7 @@ bd67d005ba7cb20bc82b078250aa294e80352e1b
 
 ==注意：== 清除已有的 `tokens` 信息
 
-![2](http://ww1.sinaimg.cn/large/006alGmrgy1g0wz5zh58ej30gj02caa2.jpg)
+![2](https://ww1.sinaimg.cn/large/006alGmrgy1g0wz5zh58ej30gj02caa2.jpg)
 
 查看配置信息的网址为：[https://gist.github.com/sulenn/ef26517ae26679a2e9a571323391f894](https://gist.github.com/sulenn/ef26517ae26679a2e9a571323391f894)
 
@@ -28,21 +30,21 @@ bd67d005ba7cb20bc82b078250aa294e80352e1b
 
 `vscode` 中输入快捷键 `Shift + Alt + U`
 
-![2](http://ww1.sinaimg.cn/large/006alGmrgy1g0f1xg81y6j30m30dkab6.jpg)
+![2](https://ww1.sinaimg.cn/large/006alGmrgy1g0f1xg81y6j30m30dkab6.jpg)
 
 配置相关信息
 
-![2](http://ww1.sinaimg.cn/large/006alGmrgy1g0f1z56me7j30mq0lhq6e.jpg)
+![2](https://ww1.sinaimg.cn/large/006alGmrgy1g0f1z56me7j30mq0lhq6e.jpg)
 
 记录下 `token` 值
 
-![2](http://ww1.sinaimg.cn/large/006alGmrgy1g0f21q19rjj30m90bktam.jpg)
+![2](https://ww1.sinaimg.cn/large/006alGmrgy1g0f21q19rjj30m90bktam.jpg)
 
 ## 上传配置信息
 
 在 `vscode` 的弹出窗里输入 `token`
 
-![2](http://ww1.sinaimg.cn/large/006alGmrgy1g0f23419slj30mk04lgm8.jpg)
+![2](https://ww1.sinaimg.cn/large/006alGmrgy1g0f23419slj30mk04lgm8.jpg)
 
 记录输出的  `gist ID`，之后下载配置信息需要
 
@@ -58,11 +60,11 @@ bd67d005ba7cb20bc82b078250aa294e80352e1b
 
 在弹框中输入 `Token`
 
-![2](http://ww1.sinaimg.cn/large/006alGmrgy1g0f274ymk3j30i70340t0.jpg)
+![2](https://ww1.sinaimg.cn/large/006alGmrgy1g0f274ymk3j30i70340t0.jpg)
 
 然后，输入 `gist ID`
 
-![2](http://ww1.sinaimg.cn/large/006alGmrgy1g0f27jplobj30id041mxe.jpg)
+![2](https://ww1.sinaimg.cn/large/006alGmrgy1g0f27jplobj30id041mxe.jpg)
 
 **参考：**
 
