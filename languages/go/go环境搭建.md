@@ -92,6 +92,16 @@ go version
 
 参考至：[https://golang.google.cn/doc/install?download=go1.11.5.linux-amd64.tar.gz](https://golang.google.cn/doc/install?download=go1.11.5.linux-amd64.tar.gz)
 
+#### 2.1.4 配置GOPATH、GO111MUDULE、GOPROXY
+
+```shell
+export GOPATH=/homa/username/GOPATH
+export GO111MODULE=on
+export GOPROXY=https://goproxy.cn    # 通过该代理可以解决 go 包下载的问题
+```
+
+**参考**：[go 设置proxy，包括 windows 和 linux](https://www.cnblogs.com/liujunhang/p/12534398.html)
+
 ### 2.2 集成开发工具 goLand
 
 下载地址：[https://www.jetbrains.com/go/download/#section=linux](https://www.jetbrains.com/go/download/#section=linux)

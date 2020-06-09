@@ -29,8 +29,23 @@
 
     3. 删除“国密支持”文档中不恰当且多余的内容：通过命令行下载 build_chain.sh 工具并赋予可执行权限之后，./fisco 文件夹中只有 build_chain.sh 这一个文件。并没有/bin/fisco-bcos 这个文件。所以干脆将展示 ./fisco 文件夹结构删除。
 
-  - **go-sdk**：[地址](https://github.com/FISCO-BCOS/go-sdk/pull/21)
+  - **go-sdk**：[地址](https://github.com/FISCO-BCOS/go-sdk/pull/22)
+1. 修改多余文字描述：当编译好 abigen 工具之后，不需要移动到 ./store 文件夹中
+    
 
-    1. 修改多余文字描述：当编译好 abigen 工具之后，不需要移动到 ./store 文件夹中
+## 第三天
 
-    2. 增加关于“国密区块链平台搭建”的提示：因为默认的操作都是在非国密的操作下完成，但是在合约编译、部署的部分提供了国密的操作命令。所以感觉有必要在合约编译的文档部分稍稍提醒一下。
+- 继续尝试阅读源码：
+
+  - `smcrypto`文件夹 - `sm2.go`：支持国密 `sm2` 签名。只有 `SM2Sign` 和 `SM2PreProcess` 两个 function
+  - `smcrypto`文件夹 - `smcrypto.go`：sm2 国密算法实现。包括解析私钥，从解析后的私钥获得公钥、地址和 `pem` 值以及签名（调用 `sm2.go`）等
+  - `smcrypto`文件夹 - `smcrypto_test.go`：测试 `smcrypto.go` 实现的 `sm2` 算法功能
+
+  - `sm3`文件夹 - `sm3.go`：sm3 国密 Hash 算法实现。32 byte 加密输出
+  - `sm3`文件夹 - `sm3_test`：测试和压测 `sm3.go` 中实现的 Hash 算法
+
+- 了解SM国密算法：国产密码算法目前主要公开的有SM2、SM3、SM4三类算法，分别对应非对称算法、哈希算法和对称算法。
+  - **sm2**：**私钥 33 byte 长**、**公钥 64 byte 长**、**地址 20 byte 长**
+  - **SM3加密的 Hash 值长：32 byte**
+- 了解secp256k1椭圆曲线加密算法：Secp256k1是ECDSA(椭圆曲线数字签名算法)曲线的参数，公/私钥就对应于该曲线上的点。
+  - **私钥长 32 byte 长**
