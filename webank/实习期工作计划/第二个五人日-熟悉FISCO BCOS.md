@@ -31,7 +31,7 @@
 
   - **go-sdk**：[地址](https://github.com/FISCO-BCOS/go-sdk/pull/22)
 1. 修改多余文字描述：当编译好 abigen 工具之后，不需要移动到 ./store 文件夹中
-    
+   
 
 ## 第三天
 
@@ -49,3 +49,8 @@
   - **SM3加密的 Hash 值长：32 byte**
 - 了解secp256k1椭圆曲线加密算法：Secp256k1是ECDSA(椭圆曲线数字签名算法)曲线的参数，公/私钥就对应于该曲线上的点。
   - **私钥长 32 byte 长**
+
+## 第四天
+
+- 阅读源码：主要阅读 `goclient_test.go` 测试文件。通过 debug 打断电、跳入、跳出的方式来了解、熟悉源码。
+- 编译 master（2.5.0）源码：因为 master 分支更新了，而且我之前使用 build_chain.sh 脚本时没有用过 -e 参数指定 fisco-bcos 版本。
