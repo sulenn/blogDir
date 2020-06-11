@@ -54,3 +54,17 @@
 
 - 阅读源码：主要阅读 `goclient_test.go` 测试文件。通过 debug 打断电、跳入、跳出的方式来了解、熟悉源码。
 - 编译 master（2.5.0）源码：因为 master 分支更新了，而且我之前使用 build_chain.sh 脚本时没有用过 -e 参数指定 fisco-bcos 版本。
+
+## 第五天
+
+- 使用 fisco-bcos master 2.5.0 创建国密应用：使用 fisco-bcos master 2.5.0 创建国密单群组四节点区块链网络，通过 console 查看区块链信息，同时部署、调用合约
+
+- 了解 FISCO BCOS 中 gas 的用途：gas 不用于交易，只用于判断智能合约执行是否出现死循环
+- 国密双证书：国密在加密、签名时需使用双证书，gmennode.crt、gmennode.key、gmnode.crt、gmnode.key 就是双证书。gmnode.serial 文件用于申请证书时使用的序列号。
+
+- channel 和 jsonrpc 的区别：两种不同的通信方式。jsonrpc 是 http 通信，不需要加密。channel 是 https 通信，需要使用证书。
+- 阅读文档 - 运维部署工具：[FISCO BCOS generator](https://github.com/FISCO-BCOS/generator) 主要供企业级用户使用，提供了部署、管理和监控多机构多群组联盟链等功能。可以降低机构间生成与维护区块链的复杂度、提供更高的节点安全性、保障机构间节点的对等性
+
+- 阅读文档 - 使用手册 - 控制台：控制台是交互式客户端工具，通过 Web3SDK 与区块链节点建立连接，实现对区块链节点数据的读写访问请求。控制台支持查询区块链状态、管理区块链节点、部署并调用合约等功能。此外，控制台还有合约编译工具，可以快速方便的将 Solidity 合约文件编译为 Java 合约文件。
+
+- 使用 build_chain.sh 工具构建国密和非国密应用是操作的区别：国密在使用 build_chain.sh 创建节点配置文件的时候，需要指定 -g 参数。在配置控制台 console 时需要修改 applicationContext-sample.xml 配置文件，手动打开国密开关。还需要替换 console 中的国密编译包（**编译智能合约、生成国密版 java 合约文件**）。

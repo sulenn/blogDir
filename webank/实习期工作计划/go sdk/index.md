@@ -10,7 +10,8 @@
 > 主要特性
 >
 > - 提供调用FISCO BCOS [JSON-RPC](https://fisco-bcos-documentation.readthedocs.io/zh_CN/latest/docs/api.html) 的Go API
-> - 支持将Solidity合约编译为Go文件
+> - 提供合约编译，将Solidity合约文件编译成abi和bin文件，然后再转换成Go合约文件
+> - 提供部署及调用go合约文件的GO API
 > - 提供调用预编译（Precompiled）合约的Go API
-> - 使用 [Channel协议](https://fisco-bcos-documentation.readthedocs.io/zh_CN/latest/docs/design/protocol_description.html#channelmessage) 与FISCO BCOS节点通信，双向认证更安全
-> - 提供CLI（Command-Line Interface）工具供用户在命令行中方便快捷地与区块链交互
+> - 提供与FISCO BCOS节点通信的 [Channel协议](https://fisco-bcos-documentation.readthedocs.io/zh_CN/latest/docs/design/protocol_description.html#channelmessage)，双向认证更安全
+> - 提供CLI（Command-Line Interface）工具，供用户在命令行中方便快捷地与区块链交互
