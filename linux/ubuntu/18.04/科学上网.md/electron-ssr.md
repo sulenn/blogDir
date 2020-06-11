@@ -14,7 +14,7 @@
 
 **安装依赖**:
 
-`sudo apt install libcanberra-gtk-module libcanberra-gtk3-module gconf2 gconf-service libappindicator1`
+sudo apt install libcanberra-gtk-module libcanberra-gtk3-module gconf2 gconf-service libappindicator1
 
 **注意要安装python2.7，新装的 ubuntu 18.04 可能不带有python2.7。上一次就是这个问题导致调试了很长时间**
 
