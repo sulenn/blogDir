@@ -2,6 +2,24 @@
 
 # 第二个五人日-熟悉FISCO BCOS
 
+**任务**：编译、部署2.5版本，执行Go-SDK的readme，部署与调用合约，分国密与非国密、开始尝试阅读 go-sdk 源码
+
+**输出**：体验报告、改进建议
+
+## 本周工作总结
+
+1. 继续熟悉公司环境、向各位优秀的师兄师姐学习
+2. 阅读 FISCO-BCOS 、go-sdk readme 以及 KM 文档，针对文档中可能存在的问题提了两个 pr（已合并）。
+3. 编译最新 Master - 2.5.0 分支，通过 build_chain.sh -e 参数指定 fisco-bcos 二进制脚本路径，通过 -g 参数运行国密区块链。
+4. 测试 go-sdk readme demo 案例，包括使用国密和非国密部署和调用合约
+5. 阅读源码，通过运行 demo 和 test 测试用例，以打断点的方式了解 go-sdk api 、console 控制台功能逻辑流转的过程
+
+## 下周工作计划
+
+1. 继续向各位优秀的师兄师姐学习
+2. 阅读源码和 FISCO-BCOS 文档
+3.   编写Go-SDK各模块功能描述、在readthedoc上补充Go-SDK文档，包括配置说明、模块说明、接口说明、HelloWorld 以及TableTest使用 demo 案例等。
+
 ## 第一天
 
 - 重装 WSL ubuntu18.04，成功编译 master 的 release-2.5.0分支。其中遇到了几个错，需要手动安装 `zlib1g-dev`、`libgmp-dev`、`flex`和`bison`包。
@@ -11,7 +29,7 @@
 ## 第二天
 
 - 在新装的 ubuntu 18 中复现上个星期的工作：通过 build_chain.sh 脚本生成节点文件，启动单群组四节点，启动 console，查询单群组信息，部署合约，调用合约。编译 FISCO BCOS MASTER 和 Release-2.5.0 分支。
-- 执行 go-sdk readme 中的内容：分国密和非国密两种。下载 solc；编译生成 abigen；使用 solc 编译 solc 、生成 abi和bin 文件；使用 abigen 工具将 abi、bin 转换为 go 文件。创建 main 函数，部署合约、加载智能合约并调用查询接口、调用智能合约写接口
+- 执行 go-sdk readme 中的内容：分国密和非国密两种。下载 solc；编译生成 abigen；使用 solc 编译 合约、生成 abi和bin 文件；使用 abigen 工具将 abi、bin 转换为 go 文件。创建 main 函数，部署合约、加载智能合约并调用查询接口、调用智能合约写接口
 
 - 开始阅读 go-sdk 源码：
 
