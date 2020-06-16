@@ -20,3 +20,7 @@
 - 完成 go-sdk 测试 HelloWorld.sol 和 Table.test 的案例
 - 编写 HelloWorld 合约样本案例文档
 
+## 第三天
+
+- 完成本地单群组四节点（mysql存储）recover测试
+- 编写 Store 合约样本案例文档
