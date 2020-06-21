@@ -1,0 +1,27 @@
+# 2020.6.19
+
+## rocksdb-storage 工具
+
+FISCO BCOS 提供 rocksdb-storage 工具帮助用户对 rocksdb 数据库进行 CRUD 操作，
+
+**获取途径**：手动编译 [FISCO BCOS源码](https://github.com/FISCO-BCOS/FISCO-BCOS)。编译时通过 `cmake -DTOOL=on ..` 打开工具开关，编译成功后 rocksdb-storage 工具位于 `FISCO-BCOS/build/bin/`。详细编译步骤可参考：[编译](https://fisco-bcos-documentation.readthedocs.io/zh_CN/latest/docs/manual/get_executable.html#id5)。
+
+## 帮助
+
+```markdown
+Usage:
+      -h [ --help ]              help of rocksdb reader
+      -c [ --createTable ] arg   [TableName] [KeyField] [ValueField]
+      -p [ --path ] arg (=data/) [RocksDB path]
+      -s [ --select ] arg        [TableName] [priKey]
+      -u [ --update ] arg        [TableName] [priKey] [keyEQ] [valueEQ] [Key] 
+                                 [NewValue]
+      -i [ --insert ] arg        [TableName] [priKey] [Key]:[Value],...,[Key]:[Valu
+                                 e]
+      -r [ --remove ] arg        [TableName] [priKey]
+e.g
+	./ rocksdb-storage -p ./node0/
+```
+
+
+
