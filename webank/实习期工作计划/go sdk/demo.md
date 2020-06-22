@@ -387,5 +387,3 @@ func main() {
 	fmt.Println(string(result[:])) // "bar"
 }
 ```
-
-## TableTest样例
