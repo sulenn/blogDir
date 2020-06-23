@@ -7,14 +7,14 @@
 - 将下面的内容粘贴到 `intellij-idea.desktop` 文件中：
 
     ```shell
-    [Desktop Entry]
-    Name=IntelliJ IDEA
-    Exec=/home/xring/Tools/idea-IU-141.1532.4/bin/idea.sh
-    Comment=IntelliJ IDEA
-    Icon=/home/xring/Tools/idea-IU-141.1532.4/bin/idea.png
-    Type=Application
-    Terminal=false
-    Encoding=UTF-8
+        [Desktop Entry]
+        Name=IntelliJ IDEA
+        Exec=/home/xring/Tools/idea-IU-141.1532.4/bin/idea.sh
+        Comment=IntelliJ IDEA
+        Icon=/home/xring/Tools/idea-IU-141.1532.4/bin/idea.png
+        Type=Application
+        Terminal=false
+        Encoding=UTF-8
     ```
 
     ==注意将 `/home/xring/Tools/idea-IU-141.1532.4/` 这段路径换成自己的情况。==

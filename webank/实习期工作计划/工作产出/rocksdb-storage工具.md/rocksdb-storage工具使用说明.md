@@ -74,7 +74,7 @@ e.g
 
 ## 使用举例
 
-1. 搭建单群组四节点区块链网络，可参考：[安装](https://fisco-bcos-documentation.readthedocs.io/zh_CN/latest/docs/installation.html)。搭建完之后需要将所有节点关闭，rocksdb-storage 工具只支持在节点关闭状态下使用
+1. 搭建单群组四节点区块链网络，可参考：[安装](https://fisco-bcos-documentation.readthedocs.io/zh_CN/latest/docs/installation.html)。搭建完之后需要将所有节点关闭，rocksdb 数据库无法同时被打开两次。
 
 2. 编译 FISCO BCOS 源码，获取 rocksdb-storage 工具，移动工具至 `~/fisco/` 文件夹目录
 

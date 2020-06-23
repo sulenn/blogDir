@@ -18,6 +18,8 @@
 
 ### 2.1 jdk 安装
 
+`非常不建议用 apt 安装 jdk`
+
 #### 2.1.1 通过 apt-get 安装
 
 - 添加ppa
@@ -45,26 +47,22 @@
 
 #### 2.1.2 通过安装包下载安装
 
-**java7 下载**:
+**jav11 下载**:
 
- 下载地址：[http://www.oracle.com/technetwork/java/javase/downloads/java-archive-downloads-javase7-521261.html#jdk-7u80-oth-JPR](http://www.oracle.com/technetwork/java/javase/downloads/java-archive-downloads-javase7-521261.html#jdk-7u80-oth-JPR)
+ 下载地址：
 
-![2](http://ww1.sinaimg.cn/large/006alGmrly1g1yi1ps4epj30jh094ab6.jpg)
+1. [https://www.oracle.com/java/technologies/javase-downloads.html](https://www.oracle.com/java/technologies/javase-downloads.html) 究极慢，开了梯子都贼慢
 
-![2](http://ww1.sinaimg.cn/large/006alGmrly1g1yi2cjbprj30j30g241h.jpg)
+2. [https://www.kagura.me/dev/20200424112618.html](https://www.kagura.me/dev/20200424112618.html) 国内的下载源
 
-在下载之前必须先点击 `Accept License Agreement`  ，不然下载不了。
+   ![image.png](http://ww1.sinaimg.cn/large/006alGmrgy1gg2byl5up7j30oy0hhtck.jpg)
 
-点击 Downloade 下面的链接开始下载，这时可能会跳转到登录页面，之前注册过Oracle账号，直接登录，没有注册过的需要先完成注册，然后登录邮箱验证之后返回登录。登录成功之后才会开始下载。
-
-**参考**：[官网下载JDK1.7的方法和步骤](https://blog.csdn.net/liu59412/article/details/82353392)
-
-**java7 安装**:
+**java11 安装**:
 
 - 解压
 
     ```shell
-    sudo tar -C /usr/local -xzf jdk-7u80-linux-x64.tar.gz
+    sudo tar -C ~/.jdks -xzf jdk-7u80-linux-x64.tar.gz
     ```
 
 - 添加环境变量，修改配置文件
@@ -74,12 +72,11 @@
     然后添加：
 
     ```shell
-    export JAVA_HOME=/usr/local/jdk1.7.0_80
-    export CLASSPATH=.:$JAVA_HOME/lib:$JRE_HOME/lib:$CLASSPATH
-    export PATH=$JAVA_HOME/bin:$JRE_HOME/bin:$PATH
-    export JRE_HOME=$JAVA_HOME/jre
+    export JAVA_HOME=/home/qiubing/.jdks/jdk-11.0.7
+    export CLASSPATH=/home/qiubing/.jdks/jdk-11.0.7/lib
+    export PATH=$PATH:/home/qiubing/.jdks/jdk-11.0.7/bin
     ```
-
+    
 - 激活生效
 
     `source /etc/profile`
