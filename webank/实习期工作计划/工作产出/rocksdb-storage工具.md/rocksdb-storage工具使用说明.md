@@ -17,6 +17,7 @@ Usage:
       -i [ --insert ] arg        [TableName] [priKey] [Key]:[Value],...,[Key]:[Valu
                                  e]
       -r [ --remove ] arg        [TableName] [priKey]
+      -e [ --encrypt ] arg       [encryptKey] [SMCrypto]
 e.g
 	./rocksdb-storage -p ./nodes/127.0.0.1/node0/data/group1/block/RocksDB -s _sys_consensus_ node
 ```
@@ -70,9 +71,18 @@ e.g
 同 `--remove` 选项，用于删除数据库表中数据项记录。参数包括：
 
 - TableName：表名；
-- priKey：主键字段值，此处用于指定待删除的数据项
+- priKey：主键字段值，此处用于指定待删除的数据项。
+
+### `-e`选项[Optional]
+
+同 `--encrypt` 选项，用于标识已开启落盘加密的节点，有关落盘加密可 [参考](https://fisco-bcos-documentation.readthedocs.io/zh_CN/latest/docs/design/features/storage_security.html)。参数包括：
+
+- encryptKey：dataKey；
+- SMCrypto：是否开启国密。
 
 ## 使用举例
+
+> 注意：使用 rocksdb-storage 工具操作网络中开启落盘加密节点的数据库时，需要额外指定 `-e` 选项。
 
 1. 搭建单群组四节点区块链网络，可参考：[安装](https://fisco-bcos-documentation.readthedocs.io/zh_CN/latest/docs/installation.html)。搭建完之后需要将所有节点关闭，rocksdb 数据库无法同时被打开两次。
 
@@ -82,6 +92,8 @@ e.g
 
    ```shell
    # -p 指定 rocksdb 文件夹，-s 指定 TableName 和 priKey
+   # 非国密落盘加密 ./rocksdb-storage -p ./nodes/127.0.0.1/node0/data/group1/block/RocksDB -s _sys_consensus_ node -e 123456
+   # 国密落盘加密 ./rocksdb-storage -p ./nodes/127.0.0.1/node0/data/group1/block/RocksDB -s _sys_consensus_ node -e 123456 SMCrypto
    > ./rocksdb-storage -p ./nodes/127.0.0.1/node0/data/group1/block/RocksDB -s _sys_consensus_ node
    
    DB path : ./nodes/127.0.0.1/node0/data/group1/block/RocksDB
