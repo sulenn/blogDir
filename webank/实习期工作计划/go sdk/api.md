@@ -41,9 +41,8 @@ Go SDK为区块链应用开发者提供了Go API接口，以服务的形式供�
 | GetPendingTransactions              | 获取交易池内所有未上链的交易                  |
 | GetPendingTxSize                    | 获取交易池内未上链的交易数目                  |
 | GetCode                             | 根据合约地址查询合约数据                      |
-| GetSystemConfigByKey                | 获取系统配置                                  |
 | GetTotalTransactionCount            | 获取指定群组的上链交易数目                    |
-| GetSystemConfigByKey                | 根据关键字获取区块链系统配置文件              |
+| GetSystemConfigByKey                | 根据关键字获取区块链系统配置                  |
 | Call                                | 调用只读合约                                  |
 
 

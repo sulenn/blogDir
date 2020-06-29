@@ -1,6 +1,6 @@
 # 配置说明
 
-Go SDK的配置文件为一个TOML文件，主要包括**网络配置**、**账户配置**以及**链配置**。配置文件示例如下：
+Go SDK 的配置文件为一个 TOML 文件，主要包括**网络配置**、**账户配置**以及**链配置**。配置文件 config.toml 示例如下：
 
 ```toml
 [Network]                                                 ### 网络基础配置
@@ -22,8 +22,6 @@ KeyFile=".ci/0x83309d045a19c44dc3722d15a6abd472f95866ac.pem"             #私钥
 ChainID=1                                                 # 链ID
 SMCrypto=false                                      # 国密选项，true为支持国密、false为不支持国密
 ```
-
-
 
 ## 网络配置
 
