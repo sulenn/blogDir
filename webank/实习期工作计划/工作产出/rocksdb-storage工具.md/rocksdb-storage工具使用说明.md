@@ -82,7 +82,7 @@ e.g
 
 ## 使用举例
 
-> 注意：使用 rocksdb-storage 工具操作网络中开启落盘加密节点的数据库时，需要额外指定 `-e` 选项。
+> 注意：使用 rocksdb-storage 工具操作网络中开启落盘加密节点的数据库时，需要额外指定 `-e` 选项，同时建议将 -e 选项放置在命令行最后。
 
 1. 搭建单群组四节点区块链网络，可参考：[安装](https://fisco-bcos-documentation.readthedocs.io/zh_CN/latest/docs/installation.html)。搭建完之后需要将所有节点关闭，rocksdb 数据库无法同时被打开两次。
 

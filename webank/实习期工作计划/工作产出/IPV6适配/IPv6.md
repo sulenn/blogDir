@@ -18,7 +18,7 @@ FISCO BCOS 新增对 IPv6 的支持，RPC、CHANNEL 和 P2P 均可使用 IPv6 �
 
 **console工具**：[https://github.com/FISCO-BCOS/console/releases/tag/v1.0.10](https://github.com/FISCO-BCOS/console/releases/tag/v1.0.10)
 
-**web3sdk**：手动编译 [dev分支](https://github.com/FISCO-BCOS/web3sdk.git)
+**web3sdk**：手动编译 [release-2.6.0分支](https://github.com/FISCO-BCOS/web3sdk.git)
 
 以下是本地测试的步骤
 

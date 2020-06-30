@@ -123,6 +123,10 @@ bash ./node2/start.sh
 bash ./node3/start.sh
 ```
 
+> 注意：特殊情况处理。
+>
+> 节点C和节点D启动之后，此时网络已经可以正常共识出块，共识节点为A和B。假如节点A开启了 **binary_log=true** 配置项用于备份数据，某一个时刻节点A的主数据发生异常损坏，节点A需要从备份数据中进行数据恢复，在数据恢复完成之后，节点A需要再次手动修改数据库 `_sys_consensus_` 表中节点C和节点D的 type 字段值，从 sealer 修改为 observer，然后重启节点A。同理，如果节点B、C、D遇到这种情况，也需要进行相同的操作。
+
 ### 添加共识节点
 
 现在节点C和节点D是观察者节点，只能同步区块却无法参与区块共识。为此，可通过在控制台执行 addSealer 命令将节点C和节点D转换为共识节点。关于节点角色转换可参考：[组员管理](https://fisco-bcos-documentation.readthedocs.io/zh_CN/latest/docs/manual/node_management.html)。
@@ -270,6 +274,10 @@ bash ./node2/start.sh
 bash ./node3/start.sh
 ```
 
+> 注意：特殊情况处理。
+>
+> 节点C和节点D启动之后，此时网络已经可以正常共识出块，共识节点为A和B。假如节点A开启了 **binary_log=true** 配置项用于备份数据，某一个时刻节点A的主数据发生异常损坏，节点A需要从备份数据中进行数据恢复，在数据恢复完成之后，节点A需要再次手动修改数据库 `_sys_consensus_` 表中节点C和节点D的 type 字段值，从 sealer 修改为 observer，然后重启节点A。同理，如果节点B、C、D遇到这种情况，也需要进行相同的操作。
+
 ### 添加共识节点
 
 现在节点C和节点D是观察者节点，只能同步区块却无法参与区块共识。为此，可通过在控制台执行 addSealer 命令将节点C和节点D转换为共识节点。关于节点角色转换可参考：[组员管理](https://fisco-bcos-documentation.readthedocs.io/zh_CN/latest/docs/manual/node_management.html)。
@@ -289,10 +297,6 @@ bash ./node3/start.sh
     "msg":"success"
 }
 ```
-
-
-
-
 
 
 

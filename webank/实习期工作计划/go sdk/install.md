@@ -5,7 +5,7 @@
 - Go开发环境
 
   	- Golang >= 1.13.6
-   - 项目采用go module进行包管理。可参考 [Using Go Modules](https://blog.golang.org/using-go-modules)
+   - 项目采用 go module 进行包管理。可参考 [Using Go Modules](https://blog.golang.org/using-go-modules)
 
   如果您没有部署过Go环境，可参考 [官方文档](https://golang.org/doc/)
 
@@ -16,7 +16,7 @@
 
 - FISCO BCOS节点：请参考 [FISCO BCOS安装](https://fisco-bcos-documentation.readthedocs.io/zh_CN/latest/docs/installation.html#fisco-bcos) 搭建
 
-> 推荐使用 ubuntu 系统进行开发
+> 推荐使用 ubuntu 18.04 进行开发
 
 ## 部署Go SDK
 
@@ -60,7 +60,7 @@ bash nodes/127.0.0.1/start_all.sh
 - 编译控制台工具
 
 ```shell
-# 在 go-sdk 目录指令
+# 在 go-sdk 目录执行指令
 go build cmd/console.go
 ```
 
@@ -133,7 +133,3 @@ Client Version:
   "Supported Version": "2.4.0"
 }
 ```
-
-## Go SDK API
-
-Go SDK API 以服务的形式供外部调用，详细介绍请 [参考]()，开发样例请 [参考]()
