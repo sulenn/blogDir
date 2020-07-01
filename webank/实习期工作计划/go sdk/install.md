@@ -133,3 +133,17 @@ Client Version:
   "Supported Version": "2.4.0"
 }
 ```
+
+- 开启命令行支持：
+
+> 注解
+>
+> - 此步骤只需设置一次，设置之后重启终端即可使用
+
+```shell
+# bash 命令行自动补全，请在 bash 环境下执行此步骤
+./console completion bash > go_sdk_completion && sudo mv go_sdk_completion /etc/bash_completion.d/
+# zsh 命令行自动补全，请在 zsh 环境下执行此步骤
+./console completion zsh > ~/.go-sdk-completion.sh && echo 'source ~/.go-sdk-completion.sh' >> ~/.zshrc
+```
+

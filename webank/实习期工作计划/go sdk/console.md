@@ -78,6 +78,18 @@ Flags:
   -t,       --toggle                                                                                                                                   Help message for toggle
 ```
 
+5. 开启命令行支持：
+
+> 注解
+>
+> - 目前仅支持 bash，不支持 zsh
+> - 此步骤只需设置一次，设置之后重启终端即可使用
+
+```shell
+# 请在 bash 环境下执行此步骤
+./console completion bash > go_sdk_auto_completion && sudo mv go_sdk_auto_completion /etc/bash_completion.d/
+```
+
 ## 常用命令
 
 ### getBlockByHash

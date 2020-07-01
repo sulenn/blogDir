@@ -26,9 +26,25 @@
 
 ![2](http://ww1.sinaimg.cn/large/006alGmrgy1g1bngkbvfpj30ss0gjn2u.jpg)
 
+## 4. 配置 zsh-autosuggestions
+
+提供命令行自动提示功能
+
+```shell
+# 下载
+git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+```
+
+**修改 .zshrc 配置文件， 添加 plugins=(zsh-autosuggestions)**：
+
+![image.png](http://ww1.sinaimg.cn/large/006alGmrgy1ggbbdsisbgj30s30dkjvt.jpg)
+
+启动一个新的终端即可查看到效果
+
 **参考至**：
 
 - [https://www.jianshu.com/p/546effd99c35](https://www.jianshu.com/p/546effd99c35)
+- [Installation](https://github.com/zsh-users/zsh-autosuggestions/blob/master/INSTALL.md)
 
 ---
 
