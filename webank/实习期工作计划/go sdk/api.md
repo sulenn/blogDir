@@ -4,7 +4,6 @@ Go SDK为区块链应用开发者提供了Go API接口，以服务的形式供�
 
 - **Web3jService**：：提供访问FISCO BCOS 2.0+节点[JSON-RPC](https://fisco-bcos-documentation.readthedocs.io/zh_CN/latest/docs/api.html)接口支持、提供部署及调用合约的支持；
 - **PrecompiledService**：Precompiled合约（预编译合约）是一种FISCO BCOS底层内嵌的、通过C++实现的高效智能合约，提供包括[分布式权限控制](https://fisco-bcos-documentation.readthedocs.io/zh_CN/latest/docs/design/security_control/permission_control.html)、[CNS](https://fisco-bcos-documentation.readthedocs.io/zh_CN/latest/docs/design/features/cns_contract_name_service.html)、系统属性配置、节点类型配置等功能。PrecompiledService是调用这类功能的API的统称，分为：
-  - **PermissionService**：提供对分布式权限控制的支持
   - **CNSService**：提供对CNS的支持
   - **SystemConfigService**：提供对系统配置的支持
   - **ConsensusService**：提供对节点类型配置的支持
@@ -48,5 +47,52 @@ Go SDK为区块链应用开发者提供了Go API接口，以服务的形式供�
 
 *调用接口：函数名(参数类型,…)，例如：func(uint256,uint256)，参数类型之间不能有空格
 
-## PrecompiledService
+## CNSService
+
+**位置**：go-sdk/precompiled/cns、
+
+**功能**：提供对节点类型配置的支持
+
+| 接口名                             | 描述                                                         | 参数                                      |
+| ---------------------------------- | ------------------------------------------------------------ | ----------------------------------------- |
+| RegisterCns                        | 根据合约名、合约版本号、合约地址和合约abi注册CNS信息         | 合约名 & 合约版本号 & 合约地址  & 合约abi |
+| GetAddressByContractNameAndVersion | 根据合约名和合约版本号(合约名和合约版本号用英文冒号连接)查询合约地址。若缺失合约版本号，默认使用合约最新版本 | 合约名 + ':' + 版本号                     |
+| QueryCnsByName                     | 根据合约名查询CNS信息                                        | 合约名                                    |
+| QueryCnsByNameAndVersion           | 根据合约名和版本号查询CNS信息                                | 合约名 & 版本号                           |
+
+## SystemConfigService
+
+**位置**：go-sdk/precompiled/config/
+
+**功能**：提供对系统配置的支持
+
+| 接口名        | 描述                                                         | 参数      |
+| ------------- | ------------------------------------------------------------ | --------- |
+| SetValueByKey | 根据键设置对应的值（查询键对应的值，参考**Web3jService**中的 getSystemConfigByKey 接口） | 键名 & 值 |
+
+## ConsensusService
+
+**位置**：go-sdk/precompiled/consensus/
+
+**功能**：提供对节点类型配置的支持
+
+| 接口名      | 描述                                   | 参数   |
+| ----------- | -------------------------------------- | ------ |
+| AddSealer   | 根据节点NodeID设置对应节点为共识节点   | 节点ID |
+| AddObserver | 根据节点NodeID设置对应节点为观察者节点 | 节点ID |
+| RemoveNode  | 根据节点NodeID设置对应节点为游离节点   | 节点ID |
+
+## CRUDService
+
+**位置**：go-sdk/precompiled/crud/
+
+**功能**：提供对CRUD(增删改查)操作的支持
+
+| 接口名      | 描述                 | 参数                                                         |
+| ----------- | -------------------- | ------------------------------------------------------------ |
+| CreateTable | 创建表               | 表对象：表对象需要设置其表名，主键字段名和其他字段名。其中，其他字段名是以英文逗号分隔拼接的字符串 |
+| Insert      | 插入记录             | 表对象 Entry对象<br/>表对象需要设置表名和主键字段名；Entry是map对象，提供插入的字段名和字段值，注意必须设置主键字段 |
+| Update      | 更新记录             | 表对象 Entry对象 Condtion对象<br/>表对象需要设置表名和主键字段名；Condition对象是条件对象，可以设置查询的匹配条件 |
+| Remove      | 移除记录             | 表对象 & 条件对象                                            |
+| Desc        | 根据表名查询表的信息 | 表名                                                         |
 

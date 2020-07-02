@@ -3,12 +3,12 @@
 Go SDK 的配置文件为一个 TOML 文件，主要包括**网络配置**、**账户配置**以及**链配置**。配置文件 config.toml 示例如下：
 
 ```toml
-[Network]                                                 ### 网络基础配置
+[Network]                                                 ### 网络配置
 Type="channel"                                    # 网络连接模式，支持channel和rpc
 CAFile="ca.crt"                                      # ca证书文件
 Cert="sdk.crt"                                        # sdk证书文件
 Key="sdk.key"                                       # sdk私钥文件
-[[Network.Connection]]                    ### 网络连接配置
+[[Network.Connection]]   
 NodeURL="127.0.0.1:20200"           # 节点URL地址
 GroupID=1                                               # 群组ID
 # [[Network.Connection]]
@@ -25,9 +25,7 @@ SMCrypto=false                                      # 国密选项，true为支�
 
 ## 网络配置
 
-### 网络基础配置
-
-网络基础配置部分主要用于设置`网络连接模式`以及建立连接所需要的`证书文件`。
+网络配置主要用于设置 **网络连接模式**、**证书文件** 和待连接的 **节点信息**，支持设置多个节点。
 
 - `Type`：是Go SDK与区块链节点建立连接的模式，支持channel和rpc两种方式；
   - `channel`：使用ssl协议建立连接，需要提供ca.crt、sdk.crt、sdk.key这三个证书；
@@ -35,10 +33,6 @@ SMCrypto=false                                      # 国密选项，true为支�
 - `CAfile`：CA根证书文件路径。用于验证待连接节点的合法性；
 - `Cert`：SDK证书文件路径。用于待连接节点验证SDK的合法性；
 - `Key`：SDK私钥文件路径。Cert证书对应的私钥，用于解密和签名。
-
-### 网络连接配置
-
-网络连接配置部分主要用于设置待连接的`节点信息`，支持设置多个节点。
 
 - `NodeURL`：待连接节点的URL地址，由IP和port两部分组成；
 - `GroupID`：待连接节点所属的群组ID。
