@@ -47,9 +47,36 @@ Go SDK为区块链应用开发者提供了Go API接口，以服务的形式供�
 
 调用接口：函数名(参数类型,…)，例如：func(uint256,uint256)，参数类型之间不能有空格
 
+## PermissionService
+
+**位置**：go-sdk/precompiled/permission
+
+**功能**：提供对分布式权限控制的支持
+
+| 接口名                       | 描述                                                         | 参数                |
+| ---------------------------- | ------------------------------------------------------------ | ------------------- |
+| GrantUserTableManager        | 根据用户表名和外部账户地址设置权限信息                       | 表名 & 外部账户地址 |
+| RevokeUserTableManager       | 根据用户表名和外部账户地址去除权限信息                       | 表名 & 外部账户地址 |
+| ListUserTableManager         | 根据用户表名查询设置的权限记录列表(每条记录包含外部账户地址和生效块高) | 表名                |
+| GrantDeployAndCreateManager  | 增加外部账户地址的部署合约和创建用户表权限                   | 外部账户地址        |
+| RevokeDeployAndCreateManager | 移除外部账户地址的部署合约和创建用户表权限                   | 外部账户地址        |
+| ListDeployAndCreateManager   | 查询拥有部署合约和创建用户表权限的权限记录列表               | 无                  |
+| GrantPermissionManager       | 增加外部账户地址的管理权限的权限                             | 外部账户地址        |
+| RevokePermissionManager      | 移除外部账户地址的管理权限的权限                             | 外部账户地址        |
+| ListPermissionManager        | 查询拥有管理权限的权限记录列表                               | 无                  |
+| GrantNodeManager             | 增加外部账户地址的节点管理权限                               | 外部账户地址        |
+| RevokeNodeManager            | 移除外部账户地址的节点管理权限                               | 外部账户地址        |
+| ListNodeManager              | 查询拥有节点管理的权限记录列表                               | 无                  |
+| GrantCNSManager              | 增加外部账户地址的使用CNS权限                                | 外部账户地址        |
+| RevokeCNSManager             | 移除外部账户地址的使用CNS权限                                | 外部账户地址        |
+| ListCNSManager               | 查询拥有使用CNS的权限记录列表                                | 无                  |
+| GrantSysConfigManager        | 增加外部账户地址的系统参数管理权限                           | 外部账户地址        |
+| RevokeSysConfigManager       | 移除外部账户地址的系统参数管理权限                           | 外部账户地址        |
+| ListSysConfigManager         | 查询拥有系统参数管理的权限记录列表                           | 无                  |
+
 ## CNSService
 
-**位置**：go-sdk/precompiled/cns、
+**位置**：go-sdk/precompiled/cns
 
 **功能**：提供对节点类型配置的支持
 
