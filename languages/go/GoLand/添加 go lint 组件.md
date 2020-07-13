@@ -20,6 +20,8 @@
 
 - 点击 apply、OK
 
+  ![image.png](http://ww1.sinaimg.cn/large/006alGmrgy1ggmv8qccgcj30sw0a6js0.jpg)
+  
   ![image.png](http://ww1.sinaimg.cn/large/006alGmrgy1ggkjw45th4j30t40k4afg.jpg)
 
 **参考**：[Goland安装Goimports工具](https://www.jianshu.com/p/020f94f0693e)
