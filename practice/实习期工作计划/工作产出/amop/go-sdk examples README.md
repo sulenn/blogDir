@@ -23,24 +23,23 @@ AMOP（Advanced Messages Onchain Protocol）即链上信使协议，旨在为联
   ```shell
   > go run examples/amop/unicast_pub/publisher.go 127.0.0.1:20200 hello
   
-2020/08/10 22:43:31 publish message: hello, FISCO BCOS, I am unique broadcast publisher! 0 
-  2020/08/10 22:43:33 PushTopicDataRandom failed, err: sendMessage failed, err: error code 100, remote peer unavailable
-  2020/08/10 22:43:33 publish message: hello, FISCO BCOS, I am unique broadcast publisher! 1 
-  2020/08/10 22:43:35 PushTopicDataRandom failed, err: sendMessage failed, err: error code 100, remote peer unavailable
-  2020/08/10 22:43:35 publish message: hello, FISCO BCOS, I am unique broadcast publisher! 2 
-  2020/08/10 22:43:37 PushTopicDataRandom failed, err: sendMessage failed, err: error code 100, remote peer unavailable
-  2020/08/10 22:43:37 publish message: hello, FISCO BCOS, I am unique broadcast publisher! 3 
-  2020/08/10 22:43:39 publish message: hello, FISCO BCOS, I am unique broadcast publisher! 4
+    2020/08/10 22:43:31 publish message: hello, FISCO BCOS, I am unique broadcast publisher! 0 
+    2020/08/10 22:43:33 PushTopicDataRandom failed, err: sendMessage failed, err: error code 100, remote peer unavailable
+    2020/08/10 22:43:33 publish message: hello, FISCO BCOS, I am unique broadcast publisher! 1 
+    2020/08/10 22:43:35 PushTopicDataRandom failed, err: sendMessage failed, err: error code 100, remote peer unavailable
+    2020/08/10 22:43:35 publish message: hello, FISCO BCOS, I am unique broadcast publisher! 2 
+    2020/08/10 22:43:37 PushTopicDataRandom failed, err: sendMessage failed, err: error code 100, remote peer unavailable
+    2020/08/10 22:43:37 publish message: hello, FISCO BCOS, I am unique broadcast publisher! 3 
+    2020/08/10 22:43:39 publish message: hello, FISCO BCOS, I am unique broadcast publisher! 4
   ```
-  
 - 启动 AMOP 消息订阅者：go run examples/amop/sub/subscriber.go [endpoint] [topic]
 
   ```shell
-  > go run examples/amop/sub/subscriber.go 127.0.0.1:20201 hello
-  
-  Subscriber success
-  2020/08/10 22:51:57 received: hello, FISCO BCOS, I am unique broadcast publisher! 3
-  2020/08/10 22:51:59 received: hello, FISCO BCOS, I am unique broadcast publisher! 4
+    > go run examples/amop/sub/subscriber.go 127.0.0.1:20201 hello
+    
+    Subscriber success
+    2020/08/10 22:51:57 received: hello, FISCO BCOS, I am unique broadcast publisher! 3
+    2020/08/10 22:51:59 received: hello, FISCO BCOS, I am unique broadcast publisher! 4
   ```
 
 
