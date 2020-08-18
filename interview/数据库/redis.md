@@ -183,3 +183,12 @@ redis 使用 c 语言编写
 ## Redis 有序集合的原理
 
 **参考**：[Redis:有序集合类型zset实现原理](https://www.jianshu.com/p/35bce2ea5743)
+
+---
+
+## Redis 实现分布式锁
+
+**参考**：
+
+1. [分布式锁的实现之 redis 篇](https://xiaomi-info.github.io/2019/12/17/redis-distributed-lock/)
+2. [基于Redis的分布式锁实现](https://juejin.im/post/6844903830442737671)
