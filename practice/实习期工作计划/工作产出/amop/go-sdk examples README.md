@@ -77,56 +77,64 @@ AMOP（Advanced Messages Onchain Protocol）即链上信使协议，旨在为联
 
 ## 身份验证单播案例
 
-在普通的配置下，任何一个监听了某topic的接收者都能接受到发送者推送的消息。但在某些场景下，发送者只希望特定的接收者能接收到消息，不希望无关的接收者能任意的监听此topic。在此场景下，需要使用Topic认证功能。 认证功能是指对于特定的topic消息，允许通过认证的接收者接收消息。详细请参考：[Topic认证功能](https://fisco-bcos-doc-qiubing.readthedocs.io/en/latest/docs/manual/amop_protocol.html#topic)
+常规场景中，任何一个监听了某topic的接收者都能接受到发送者推送的消息。但在某些场景下，发送者只希望特定的接收者能接收到消息，不希望无关的接收者能任意的监听此topic。针对此类场景，FISCO BCOS 推出了 topic 认证功能。 认证功能是指对于特定的topic消息，只允许通过认证的接收者接收消息。详细请参考：[Topic认证功能](https://fisco-bcos-doc-qiubing.readthedocs.io/en/latest/docs/manual/amop_protocol.html#topic)
 
-- 运行 AMOP 消息发布者：go run examples/amop_auth/unicast_pub/publisher.go [endpoint] [topic]
+- 启动 AMOP 消息订阅者：
 
   ```shell
+  # go run examples/amop_auth/sub/subscriber.go [endpoint] [topic]
+  > go run examples/amop_auth/sub/subscriber.go 127.0.0.1:20201 hello
+  
+  Subscriber success
+  2020/08/27 15:59:33 received: Hi, FISCO BCOS! 0
+  2020/08/27 15:59:35 received: Hi, FISCO BCOS! 1
+  2020/08/27 15:59:37 received: Hi, FISCO BCOS! 2
+  2020/08/27 15:59:39 received: Hi, FISCO BCOS! 3
+  ```
+  
+
+- 运行 AMOP 消息发布者：
+
+  ```shell
+  # go run examples/amop_auth/unicast_pub/publisher.go [endpoint] [topic]
   > go run examples/amop_auth/unicast_pub/publisher.go 127.0.0.1:20200 hello
   
   publish topic success
-  2020/08/10 23:18:50 publish message: Hi, FISCO BCOS! 0 
-  2020/08/10 23:18:52 PushAuthTopicDataRandom failed, err: sendMessage failed, err: error code 100, remote peer unavailable
-  2020/08/10 23:18:52 publish message: Hi, FISCO BCOS! 1 
-  2020/08/10 23:18:54 publish message: Hi, FISCO BCOS! 2 
-  2020/08/10 23:18:56 publish message: Hi, FISCO BCOS! 3 
-  2020/08/10 23:18:58 publish message: Hi, FISCO BCOS! 4
+  2020/08/27 15:59:33 publish message: Hi, FISCO BCOS! 0 
+  2020/08/27 15:59:35 publish message: Hi, FISCO BCOS! 1 
+  2020/08/27 15:59:37 publish message: Hi, FISCO BCOS! 2 
+  2020/08/27 15:59:39 publish message: Hi, FISCO BCOS! 3
   ```
 
-- 启动 AMOP 消息订阅者：go run examples/amop_auth/sub/subscriber.go [endpoint] [topic]
-
-  ```shell
-  > go run examples/amop_auth/sub/subscriber.go 127.0.0.1:20201 hello
-  
-  Subscriber success
-  2020/08/10 23:18:52 received: Hi, FISCO BCOS! 1
-  2020/08/10 23:18:54 received: Hi, FISCO BCOS! 2
-  2020/08/10 23:18:56 received: Hi, FISCO BCOS! 3
-  2020/08/10 23:18:58 received: Hi, FISCO BCOS! 4
-  ```
 
 ## 身份验证多播案例
 
-- 运行 AMOP 消息发布者：go run examples/amop_auth/multicast_pub/publisher.go [endpoint] [topic]
+同理，FISCO BCOS 支持带身份验证的消息多播功能
+
+- 启动 AMOP 消息订阅者：
 
   ```shell
-  > go run examples/amop_auth/multicast_pub/publisher.go 127.0.0.1:20200 hello
-  
-  publish topic success
-  2020/08/10 23:20:29 publish message: Hi, FISCO BCOS! 0 
-  2020/08/10 23:20:31 publish message: Hi, FISCO BCOS! 1 
-  2020/08/10 23:20:33 publish message: Hi, FISCO BCOS! 2 
-  2020/08/10 23:20:35 publish message: Hi, FISCO BCOS! 3 
-  2020/08/10 23:20:37 publish message: Hi, FISCO BCOS! 4
-  ```
-
-- 启动 AMOP 消息订阅者：go run examples/amop_auth/sub/subscriber.go [endpoint] [topic]
-
-  ```shell
+  # go run examples/amop_auth/sub/subscriber.go [endpoint] [topic]
   > go run examples/amop_auth/sub/subscriber.go 127.0.0.1:20201 hello
   
   Subscriber success
-  2020/08/10 23:20:33 received: Hi, FISCO BCOS! 2
-  2020/08/10 23:20:35 received: Hi, FISCO BCOS! 3
-  2020/08/10 23:20:37 received: Hi, FISCO BCOS! 4
+  2020/08/27 16:02:39 received: Hi, FISCO BCOS! 1
+  2020/08/27 16:02:41 received: Hi, FISCO BCOS! 2
+  2020/08/27 16:02:43 received: Hi, FISCO BCOS! 3
+  2020/08/27 16:02:45 received: Hi, FISCO BCOS! 4
   ```
+
+- 运行 AMOP 消息发布者：
+
+  ```shell
+  # go run examples/amop_auth/multicast_pub/publisher.go [endpoint] [topic]
+  > go run examples/amop_auth/multicast_pub/publisher.go 127.0.0.1:20200 hello
+  
+  publish topic success
+  2020/08/27 16:02:37 publish message: Hi, FISCO BCOS! 0 
+  2020/08/27 16:02:39 publish message: Hi, FISCO BCOS! 1 
+  2020/08/27 16:02:41 publish message: Hi, FISCO BCOS! 2 
+  2020/08/27 16:02:43 publish message: Hi, FISCO BCOS! 3 
+  2020/08/27 16:02:45 publish message: Hi, FISCO BCOS! 4
+```
+
