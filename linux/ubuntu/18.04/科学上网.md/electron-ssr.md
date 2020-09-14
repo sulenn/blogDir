@@ -67,3 +67,4 @@ sudo apt install libcanberra-gtk-module libcanberra-gtk3-module gconf2 gconf-ser
 - [Debian系列——Ubuntu18.04为例](https://github.com/qingshuisiyuan/electron-ssr-backup/blob/master/Ubuntu.md)
 
 - [Ubuntu和docker使用shadowsocks客户端代理](https://zhanghongtong.github.io/2019/06/27/Ubuntu%E5%92%8Cdocker%E4%BD%BF%E7%94%A8shadowsocks%E5%AE%A2%E6%88%B7%E7%AB%AF%E7%BF%BB%E5%A2%99/)
+
