@@ -34,7 +34,11 @@ anaconda 下载网址：[https://www.anaconda.com/distribution/#download-section
 
 *添加环境变量，手动刷新加载即可使用*：export export PATH=/home/qiubing/anaconda3/bin:$PATH
 
-**参考**：[Ubuntu 环境下安装 Anaconda](https://www.jianshu.com/p/895bcd4430c9)
+**参考**：
+
+- [Linux(Ubuntu 18.04)上安装Anaconda步骤详解](https://www.jb51.net/article/149932.htm)
+
+- [Ubuntu 环境下安装 Anaconda](https://www.jianshu.com/p/895bcd4430c9)
 
 ### 2.2 集成开发工具 PyCharm
 
