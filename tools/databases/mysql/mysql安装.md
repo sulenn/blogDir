@@ -45,7 +45,7 @@ mysql> exit;
 
 **参考**：[解决 MySQL 的 ERROR 1698 (28000): Access denied for user 'root'@'localhost'](https://blog.csdn.net/jlu16/article/details/82809937)
 
-### 1.2 干净卸载
+## 1.2 干净卸载
 
 ```shell
 sudo rm /var/lib/mysql/ -R
@@ -56,11 +56,32 @@ sudo apt-get remove apparmor
 dpkg -l |grep ^rc |awk '{print $2}' |sudo xargs dpkg -P
 ```
 
-### 1.3 通过 dep 包安装
+## 1.3 通过 dep 包安装
 
-- 下载：`sudo dpkg -i mysql-apt-config_0.8.15-1_all.deb`；下载地址为：[https://dev.mysql.com/downloads/](https://dev.mysql.com/downloads/)
+- 下载：下载地址为：[https://dev.mysql.com/downloads/](https://dev.mysql.com/downloads/)
 
   ![image.png](https://ww1.sinaimg.cn/large/006alGmrgy1gennee8d5cj30zq0nsad4.jpg)
+
+- 将 *MySQL APT repository* 添加至系统的软件仓库列表里：sudo dpkg -i mysql-apt-config_0.8.15-1_all.deb
+
+- 安装：
+
+  ```sql
+  #命令1
+  sudo apt-get update
+  #命令2
+  sudo apt-get install mysql-server
+  ```
+
+  *命令2安装，在界面中输入密码的下一步可能会卡主（无法点击确认键），可以尝试点击键盘 esc、f1、f2 键*
+
+  *MySQL8.0采用了新的加密方式，与Ubuntu18.04有兼容问题；故选择下面的旧版本5.x的加密方式*
+
+  ![image-20201016101536168](https://i.loli.net/2020/10/16/mv9lYsMuWzio5pJ.png)
+
+- 配置 mysql 信息，参考链接
+
+**参考**：[Ubuntu19.04 安装 MySQL 8.0.16](https://blog.csdn.net/weixx3/article/details/94133847)
 
 ---
 

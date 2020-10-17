@@ -2,43 +2,46 @@
 
 **下载**：[https://www.navicat.com.cn/](https://www.navicat.com.cn/)
 
-下载完成，解压后进入解压后的目录运行 `./start_navicat`，一路默认即可。
+- 最新 navicat 15 是 .appimage 格式，可以直接双击运行（右键属性赋予可执行权限）
 
-## 1. 解决中文乱码问题
+- 打开终端，输入如下命令：
 
-1. 将 `.start_navicat` 中 编码方式修改为 `export LANG="zh_CN.utf8"`
+  sudo vim /usr/share/applications/navicat.desktop，其中 navicat.desktop 是即将创建的文件图标
 
-    ![2](http://ww1.sinaimg.cn/large/006alGmrgy1g6c9dzt28kj30jf0bztat.jpg)
+- 将下面的内容粘贴到 navicat.desktop 文件中：
 
-2. 在连接数据库时，高级选项中，设置编码为UTF-8
+  ```shell
+      [Desktop Entry]
+      Name=navicat
+      Exec=/home/qiubing/qiubing/navicat/navicat15-premium-cs.AppImage
+      Comment=navicat
+      Icon=/home/qiubing/qiubing/navicat/navicat.png
+      Type=Application
+      Terminal=false
+      Encoding=UTF-8
+  ```
 
-    ![2](http://ww1.sinaimg.cn/large/006alGmrgy1g6ca55iyiej30is0kggml.jpg)
+  ==注意将 /home/qiubing/qiubing/navicat/ 这段路径换成自己的情况。==
 
-3. 选择工具-首选项，常规页签下，字体选择Noto Sans Mono CJK TC Regular
+  其中 `Exec` 就是平时用终端打开 `IntelliJ IDEA` 的命令， `Icon` 是图标文件。
 
-    ![2](http://ww1.sinaimg.cn/large/006alGmrgy1g6ca67cin4j312e0odmzo.jpg)
+- 点击 `win` 键即可找到对应图标，右键添加至收藏夹
 
-4. 编辑器页签下编辑器字体选择Noto Sans CJK SC Regular
+**参考**：[Ubuntu下为AppImage应用添加图标并添加到应用](https://zhuanlan.zhihu.com/p/215507075)
 
-    ![2](http://ww1.sinaimg.cn/large/006alGmrgy1g6ca6lrxqgj30qg0lqq4h.jpg)
+### 可能出现的错误
 
-5. 记录页签下网格字体选择Noto Sans Mono CJK TC Regular
+1. ubuntu 18.04 使用 navicat 连接本地 mysql 提示权限不够
 
-    ![2](http://ww1.sinaimg.cn/large/006alGmrgy1g6ca710iipj30qv0juwfh.jpg)
+   ![image-20201016192516494](https://i.loli.net/2020/10/16/Ef7pKOGX9CVQTqJ.png)
 
-修改完成后，重启软件后，编码问题即可解决！
+   把连接配置中主机里的*localhost改成127.0.0.1*就可以解决
 
-快捷方式，参考 linux/ubuntu/ 下教程
-
-**参考**：
-
-- [ubuntu 16.04安装navicat](https://blog.csdn.net/qq_25543685/article/details/72638399)
-
-- [Ubuntu下Navicat乱码问题终极解决](https://blog.csdn.net/yuxiao97/article/details/84886921)
+   **参考**：[尝试使用navicat](https://blog.csdn.net/qq_42848693/article/details/108604739)
 
 ---
 
-## 2. navicat 过期解决办法
+## navicat 过期解决办法
 
 ==先参考图片中的方法,不一定能用,如果用不了再用下面的方法==
 
