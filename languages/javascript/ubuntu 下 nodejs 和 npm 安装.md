@@ -29,7 +29,7 @@ ln -s /usr/software/nodejs/bin/node   /usr/local/bin/
 
 1. 查看官网支持的最新版本（推荐稳定版），[https://nodejs.org](https://nodejs.org/)
 2. 添加源后安装：
-   - 添加源（注意12.x可以变，比如将12改为14就从12版本改成了14版本）：`curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -`
+   - 添加源（注意12.x可以变，比如将12改为14就从12版本改成了14版本）：curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
    - 安装：`sudo apt-get install -y nodejs`
 3. 验证：`nodejs --version`
 

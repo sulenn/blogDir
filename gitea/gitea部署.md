@@ -30,7 +30,7 @@ TAGS="bindata" make generate build
 
 **运行测试**：
 
-`./gitea web`
+./gitea web
 
 **参考**：
 
@@ -46,7 +46,7 @@ TAGS="bindata" make generate build
 
 **version：1.10.1**:
 
-通过 goland 直接运行 main.go。出现错误：`open conf/locale/locale_en-US.ini: no such file or directory`
+通过 goland 直接运行 main.go。出现错误：open conf/locale/locale_en-US.ini: no such file or directory
 
 解决方法：在项目根路径中创建`conf`文件夹，然后从`./option/`将`locale`文件夹和里面的文件一起粘贴至`conf`文件夹中即可
 
@@ -54,7 +54,7 @@ TAGS="bindata" make generate build
 
 ### 2. `http://0.0.0.0:3000/install` 页面初始配置问题
 
-**错误**：`数据库设置无效: Error 1049: Unknown database 'gitea'`
+**错误**：数据库设置无效: Error 1049: Unknown database 'gitea'
 
 ![image.png](http://ww1.sinaimg.cn/large/006alGmrgy1gajqqbj4h0j30s70hcwfp.jpg)
 
