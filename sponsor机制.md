@@ -46,3 +46,14 @@
 - *user repository*：sum1=15，sum2=20
 - *user commit comment*：sum1=7，sum2=0
 - *user issue comment*：sum1=684，sum2=1515
+
+
+
+### 其它
+
+修改数据表的字符集：
+
+```shell
+alter table TABLE_NAME convert to character set utf8mb4 collate utf8mb4_bin; 
+```
+
