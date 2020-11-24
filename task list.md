@@ -12,7 +12,7 @@
 
   http://www.360doc.com/content/18/0614/23/33459258_762495368.shtml
 
-  
+- two-way anavo，双因变量
 
-  
-
+- sponsor 机制如何停止
+- sponsor 增量给活动带来的累加值，需要考虑 created-based 账户创建时间
