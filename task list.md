@@ -4,8 +4,6 @@
 
 - 两篇关于众包资助的材料，可以了解一下 *桌面*
 
-- 配合晖哥完成 sponsor 数据的爬取
-
 - 和晖哥讨论新的数据分析方法。除了Wilcoxon，还要看一下cliff's delta，这个是配合Wilcoxon使用的，用来计算effect size。
 
   https://www.med66.com/new/201205/gl201205293591.shtml
@@ -14,5 +12,6 @@
 
 - two-way anavo，双因变量
 
-- sponsor 机制如何停止
+- sponsor 打赏如何停止
 - sponsor 增量给活动带来的累加值，需要考虑 created-based 账户创建时间
+
