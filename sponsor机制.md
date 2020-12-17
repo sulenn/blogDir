@@ -294,3 +294,13 @@ alter table TABLE_NAME convert to character set utf8mb4 collate utf8mb4_bin;
   ![image-20201216083520895](https://i.loli.net/2020/12/16/ZBluXczGViqeFSJ.png)
 
   ![image-20201216083539463](https://i.loli.net/2020/12/16/qBLro7fP9u8MiUH.png)
+
+### Sponsors主页
+
+- ### sindresorhus：https://github.com/sponsors/sindresorhus?sponsor=sulenn
+
+  ![image-20201217143618891](https://i.loli.net/2020/12/17/V8tukb2FNDnhz63.png)
+
+- ljharb：https://github.com/sponsors/ljharb?sponsor=sulenn
+
+  ![image-20201217144239444](https://i.loli.net/2020/12/17/z8usdmKEFWb9NYG.png)
