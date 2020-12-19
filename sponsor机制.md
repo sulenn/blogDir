@@ -237,7 +237,7 @@ alter table TABLE_NAME convert to character set utf8mb4 collate utf8mb4_bin;
 
   | percent | type  | mean   | std    | min  | 25%  | 50%  | 75%   | max  | count | p                      | Cliff's Delta   | effective  |
   | ------- | ----- | ------ | ------ | ---- | ---- | ---- | ----- | ---- | ----- | ---------------------- | --------------- | ---------- |
-  | 33%     | data1 | 2.645  | 2.282  | 0    | 1    | 2    | 4     | 7    | 462   | 2359265382374e-14      | -0.228036393621 | small      |
+  | 33%     | data1 | 2.645  | 2.282  | 0    | 1    | 2    | 4     | 7    | 462   | 2.0142359265382374e-14 | -0.228036393621 | small      |
   |         | data2 | 4.920  | 4.948  | 0    | 1    | 3    | 8     | 21   |       |                        |                 |            |
   | 67%     | data1 | 18.648 | 8.146  | 8    | 12   | 17   | 25    | 36   | 650   | 0.282562067145546      | 0.0249159763314 | negligible |
   |         | data2 | 20.506 | 15.673 | 0    | 8    | 17   | 29    | 73   |       |                        |                 |            |
@@ -297,10 +297,63 @@ alter table TABLE_NAME convert to character set utf8mb4 collate utf8mb4_bin;
 
 ### Sponsors主页
 
-- ### sindresorhus：https://github.com/sponsors/sindresorhus?sponsor=sulenn
+- sponsors profile 中表明接受 sponsor 会花费更多时间在开源贡献上
+  - ### sindresorhus
 
   ![image-20201217143618891](https://i.loli.net/2020/12/17/V8tukb2FNDnhz63.png)
 
-- ljharb：https://github.com/sponsors/ljharb?sponsor=sulenn
+  - ljharb：
 
   ![image-20201217144239444](https://i.loli.net/2020/12/17/z8usdmKEFWb9NYG.png)
+
+- funkypenguin（打赏人可以在出版的书中的标示）：https://github.com/sponsors/funkypenguin
+
+  ![image-20201219153519521](https://i.loli.net/2020/12/19/LukrhEo6HftnzcP.png)
+
+  ![image-20201219153707212](https://i.loli.net/2020/12/19/3mIqsGXnaJLfUVh.png)
+
+- vktr：
+
+  ![image-20201219191724382](https://i.loli.net/2020/12/19/kURjdSPpsua4lJ1.png)
+
+- vis2k：效果明显，Commit活动激增，被 sponsors 的次数也非常多
+
+  ![image-20201219195108680](https://i.loli.net/2020/12/19/wNWtQeXunGhirVo.png)
+
+- theotherp：comment比commit多
+
+  ![image-20201219195418091](https://i.loli.net/2020/12/19/YnTGlHLzNFOwvx9.png)
+
+  ![image-20201219195512570](https://i.loli.net/2020/12/19/nxoseizK6dBDAEw.png)
+
+- szmarczak：commit、issue comment、pr mixture上升都很明显
+
+  ![image-20201219195705819](https://i.loli.net/2020/12/19/XWUY526BIopxlCg.png)
+
+- davidhalter：同上
+
+  ![image-20201219201951453](https://i.loli.net/2020/12/19/8NXZok2DWlyiSvj.png)
+
+- superyusuke：很明显的commit曲线，sponsors 功能激励其做更多的贡献
+
+  ![image-20201219195911717](https://i.loli.net/2020/12/19/bJirstq93KdoyDv.png)
+
+- StephenBrown2：同样很明显的曲线，sponsors 功能激励其做更多的贡献
+
+  ![image-20201219200044615](https://i.loli.net/2020/12/19/KShmz3TAqrFGODV.png)
+
+- sprain：除了激励 commit 活动，issue comment、pr mixture等活动都有明显增加
+
+  ![image-20201219200159835](https://i.loli.net/2020/12/19/vpKeOkcbXQFSCIW.png)
+
+- rikvdkleij：issue comment比 commit 多的人
+
+  ![image-20201219200308145](https://i.loli.net/2020/12/19/fw6QjEF4yMlhZSH.png)
+
+- **ramsey**：又一个 commit 激励效果非常明显的案例，且受到 sponsors 次数较多
+
+  ![image-20201219200505914](https://i.loli.net/2020/12/19/xScaoKdUHO1Cj3m.png)
+
+- **lastzero**：很明显的 commit 和 issue comment 激励，且受到的 sponsors 次数较多
+
+  ![image-20201219201111975](https://i.loli.net/2020/12/19/AmFrUX7dtfsEoch.png)
