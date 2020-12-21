@@ -17,7 +17,9 @@
   - 被打赏人：
 
     - 金钱激励
-    - 一杯咖啡
+    - 一/多杯果汁、一/多杯咖啡、一/多杯啤酒、wifi
+    - 开源项目持续集成费用、云服务器费用、到处飞开会和宣传费用、云存储费用、个人电脑费用、付费软件费用、域名费用、分布式环境测试费用
+    - 写博客、出教学视频
 
   - 打赏人：
 
@@ -257,45 +259,115 @@ alter table TABLE_NAME convert to character set utf8mb4 collate utf8mb4_bin;
 4. 从开发者创建 github 账号开始，从什么时候开始获得 sponsor 打赏对开发者的激励作用越明显。（往往在 github 上开发活动很频繁的用户在获得 sponsor 激励后并不会对开发者的造成实际影响。而对于那些在github上开发活动很少的开发者或新创建的开发者来说，sponsor 激励可能会在短时间内对开发者的开发活动产生很大的正面影响）
 5. 使用随机线性回归验证**sponsor 可以激励开发者，使开发者开发活动更加活跃**
 
-## 活动下降的原因分析
+## 活动上升、下降的原因分析
 
-### commit
+- xabbuh：
 
-- jodal，打赏之前878活动量，打赏之后212活动量，sponsorlisting 创建时间为2020.01.02，sponsored 创建时间为2020.10.22，1个打赏人
+  ![image-20201221150711643](https://i.loli.net/2020/12/21/udG3QvWLIc5N4iS.png)-
 
-  ![image-20201215214525506](https://i.loli.net/2020/12/15/XYwKE7gVrkMtnQp.png)
+- vertexclique：
+
+  ![image-20201221151954864](https://i.loli.net/2020/12/21/qbWSoHzx5J29efD.png)
+
+- terrytangyuan：
+
+  ![image-20201221154404077](https://i.loli.net/2020/12/21/UJaGc12NYe6o5KC.png)
+
+- stancl：
+
+  ![image-20201221155849804](https://i.loli.net/2020/12/21/imTAhXHkcvto3W6.png)
+
+- shiftkey：
+
+  ![image-20201221160312159](https://i.loli.net/2020/12/21/V5681cyd7XTNIJb.png)
+
+- sharkdp：
+
+  ![image-20201221161824433](https://i.loli.net/2020/12/21/SCNlLxFnYZgvO28.png)
+
+- reinink：
+
+  ![image-20201221195516417](https://i.loli.net/2020/12/21/hcOpYzfntArQqNL.png)
+
+- phil-opp：https://os.phil-opp.com/ 个人博客
+
+  ![image-20201221201417797](https://i.loli.net/2020/12/21/VO1eP3FKfypo5ma.png)
+
+- ondrejmirtes：
+
+  ![image-20201221202404205](https://i.loli.net/2020/12/21/q9GtYNU4aibAuFJ.png)
+
+- olilarkin：
+
+  ![image-20201221203111672](https://i.loli.net/2020/12/21/YcbArMwUgaoE3OL.png)
+
+- msurguy：
+
+  ![image-20201221205303773](https://i.loli.net/2020/12/21/N7lmpsFh1Aaotcx.png)
+
+- mstksg：
+
+  ![image-20201221205946863](https://i.loli.net/2020/12/21/ZLEAiCbRh87wNs1.png)
+
+- MikeMcQuaid：
+
+  ![image-20201221210951469](https://i.loli.net/2020/12/21/FCRcw3BgqfVvHLk.png)
+
+### 100%类型用户特征分析
 
 - mfix22，打赏之前984活动量，打赏之后308活动量，sponsorlisting 创建时间为2019-09-21 05:18:43，sponsored 创建时间为2019-11-13 06:46:31，1个打赏人
 
-  ![image-20201215215851760](https://i.loli.net/2020/12/15/26SUMy4xhbP1fcD.png)
+  ![image-20201221124512356](https://i.loli.net/2020/12/21/ONDXCvTV5R3rpWl.png)
 
-- vijaycs85，打赏之前348活动量，打赏之后74活动量，sponsorlisting 创建时间为2019-10-28 18:07:36，sponsored 创建时间为2020-11-03 12:59:40，1个打赏人
+- zaeph：打赏之前651活动量，打赏之后240活动量，sponsorlisting 创建时间为2020-05-05 22:40:46，sponsored 创建时间为2020-05-28 13:58:17，11个打赏人
 
-  ![image-20201215220616707](https://i.loli.net/2020/12/15/QnuVregh8KxG4vF.png)
+  ![image-20201221124308274](https://i.loli.net/2020/12/21/ghEBurCPQw2fKlF.png)
 
-- zyrolasting，打赏之前397活动量，打赏之后247活动量，sponsorlisting 创建时间为2019-11-26 22:44:46，sponsored 创建时间为2020-01-27 12:32:05，4个打赏人
+- walaura：打赏之前368活动量，打赏之后32活动量，sponsorlisting 创建时间为2019-10-24 17:28:05，sponsored 创建时间为2019-10-25 15:06:47，11个打赏人
 
-  ![image-20201215225321444](https://i.loli.net/2020/12/15/RjVtTNz5gSbeJBv.png)
+  ![image-20201221124152850](https://i.loli.net/2020/12/21/ZeGJxWQtamLTszE.png)
 
-- zx2c4，打赏之前620活动量，打赏之后384活动量，sponsorlisting 创建时间为2019-10-24 18:29:45，sponsored 创建时间为2019-10-27 08:06:52，47个打赏人
+- tpope：*这个人的活动曲线非常有意思*
 
-  ![image-20201215225637745](https://i.loli.net/2020/12/15/CGQLR5yzVcpSMjW.png)
+  ![image-20201221152649486](https://i.loli.net/2020/12/21/aOoK62Xx5EJIfbl.png)
 
-- zaeph，打赏之前651活动量，打赏之后240活动量，sponsorlisting 创建时间为2020-05-05 22:40:46，sponsored 创建时间为2020-05-28 13:58:17，11个打赏人
+- tj：开通Sponsors功能之前的Commit活动数为711，开通之后为486。开发者活动数量比较多，活动变化通过曲线反应不明显
 
-  ![image-20201215225916783](https://i.loli.net/2020/12/15/jiUZFL5ayue7l2Y.png)
+  ![image-20201221153754580](https://i.loli.net/2020/12/21/t3zXkdypTL2JGas.png)
 
-- walaura，打赏之前368活动量，打赏之后32活动量，sponsorlisting 创建时间为2019-10-24 17:28:05，sponsored 创建时间为2019-10-25 15:06:47，11个打赏人
+- thestinger：
 
-  ![image-20201216082229031](https://i.loli.net/2020/12/16/wCf4IFGR2tBJZTo.png)
+  ![image-20201221154122848](https://i.loli.net/2020/12/21/Tcrb7f8LjF9zaks.png)
 
-- vaidehijoshi，打赏之前242活动量，打赏之后196活动量，sponsorlisting 创建时间为2019-05-22 00:16:58，sponsored 创建时间为2019-05-24 01:21:06，27个打赏人
+- revertdata：
 
-  ![image-20201216083520895](https://i.loli.net/2020/12/16/ZBluXczGViqeFSJ.png)
+  ![image-20201221163837481](https://i.loli.net/2020/12/21/JvnBOWlmLzTuce3.png)
 
-  ![image-20201216083539463](https://i.loli.net/2020/12/16/qBLro7fP9u8MiUH.png)
+- potatoqualitee：
 
-### Sponsors主页
+  ![image-20201221200844225](https://i.loli.net/2020/12/21/tWPANS68pkBoGa1.png)
+
+- kjk：
+
+  ![image-20201221214220509](https://i.loli.net/2020/12/21/UvT5eJV28G7crxh.png)
+
+- jxnblk：
+
+  ![image-20201221214315790](https://i.loli.net/2020/12/21/zIsFQ4TvxLfjimZ.png)
+
+- johlju：
+
+  ![image-20201221214609640](https://i.loli.net/2020/12/21/3lHBT5ZJIUxpvhM.png)
+
+- indutny：
+
+  ![image-20201221215925888](https://i.loli.net/2020/12/21/O1RtxMWPoJK5Zrz.png)
+
+- desimaniac：
+
+  ![image-20201221222607717](https://i.loli.net/2020/12/21/9rGUFNVXalSB1ev.png)
+
+### 33%类型用户特征分析
 
 - sponsors profile 中表明接受 sponsor 会花费更多时间在开源贡献上
   - ### sindresorhus
@@ -310,50 +382,44 @@ alter table TABLE_NAME convert to character set utf8mb4 collate utf8mb4_bin;
 
   ![image-20201219153519521](https://i.loli.net/2020/12/19/LukrhEo6HftnzcP.png)
 
-  ![image-20201219153707212](https://i.loli.net/2020/12/19/3mIqsGXnaJLfUVh.png)
+  ![image-20201220084746217](https://i.loli.net/2020/12/20/eCoIgcUHPuG6DKw.png)
 
 - vktr：
 
-  ![image-20201219191724382](https://i.loli.net/2020/12/19/kURjdSPpsua4lJ1.png)
+  ![image-20201220120653123](https://i.loli.net/2020/12/20/3KVG19PXDImtSgu.png)
 
 - vis2k：效果明显，Commit活动激增，被 sponsors 的次数也非常多
 
-  ![image-20201219195108680](https://i.loli.net/2020/12/19/wNWtQeXunGhirVo.png)
-
-- theotherp：comment比commit多
-
-  ![image-20201219195418091](https://i.loli.net/2020/12/19/YnTGlHLzNFOwvx9.png)
-
-  ![image-20201219195512570](https://i.loli.net/2020/12/19/nxoseizK6dBDAEw.png)
+  ![image-20201220120605430](https://i.loli.net/2020/12/20/Hv8l32MtujrkDNL.png)
 
 - szmarczak：commit、issue comment、pr mixture上升都很明显
 
-  ![image-20201219195705819](https://i.loli.net/2020/12/19/XWUY526BIopxlCg.png)
-
-- davidhalter：同上
-
-  ![image-20201219201951453](https://i.loli.net/2020/12/19/8NXZok2DWlyiSvj.png)
-
-- superyusuke：很明显的commit曲线，sponsors 功能激励其做更多的贡献
-
-  ![image-20201219195911717](https://i.loli.net/2020/12/19/bJirstq93KdoyDv.png)
-
-- StephenBrown2：同样很明显的曲线，sponsors 功能激励其做更多的贡献
-
-  ![image-20201219200044615](https://i.loli.net/2020/12/19/KShmz3TAqrFGODV.png)
-
-- sprain：除了激励 commit 活动，issue comment、pr mixture等活动都有明显增加
-
-  ![image-20201219200159835](https://i.loli.net/2020/12/19/vpKeOkcbXQFSCIW.png)
-
-- rikvdkleij：issue comment比 commit 多的人
-
-  ![image-20201219200308145](https://i.loli.net/2020/12/19/fw6QjEF4yMlhZSH.png)
+  ![image-20201220120502002](https://i.loli.net/2020/12/20/FqZEWeDiUA9o1gu.png)
 
 - **ramsey**：又一个 commit 激励效果非常明显的案例，且受到 sponsors 次数较多
 
-  ![image-20201219200505914](https://i.loli.net/2020/12/19/xScaoKdUHO1Cj3m.png)
+  ![image-20201220115848052](https://i.loli.net/2020/12/20/cPQeEUsV2xvOTki.png)
 
 - **lastzero**：很明显的 commit 和 issue comment 激励，且受到的 sponsors 次数较多
 
-  ![image-20201219201111975](https://i.loli.net/2020/12/19/AmFrUX7dtfsEoch.png)
+  ![image-20201220115723324](https://i.loli.net/2020/12/20/OvPezbBLwNpA4yQ.png)
+
+**Sponsors激励机制下开发活动呈显著上升的开发者特征**：
+
+- 开通Sponsors激励机制之前一段时间内开发者开发活动较少
+
+- 开发者均参与贡献最少一个Star数很高、很活跃的开源项目
+
+- 开发者主要开发活动为Commit，极少数用户的Issue Comment开发活动比Commit高
+
+- 开发者在Sponsors Profile或Sponsors tiers中表示打赏会激励开发者为开源社区做更多的贡献，比如花更多的时间、优先回答打赏人的问题、及时处理feature和bug等
+
+  ![image-20201221123503144](https://i.loli.net/2020/12/21/Zy5PuN1W9jGp3iX.png)
+
+![image-20201221120758411](https://i.loli.net/2020/12/21/UoeirJgWOBhIFCd.png)
+
+![image-20201221120834599](https://i.loli.net/2020/12/21/djPH1T5ekSKmch6.png)
+
+![image-20201221123700460](https://i.loli.net/2020/12/21/iyE4Djuo3pmlY5H.png)
+
+![image-20201221123804628](https://i.loli.net/2020/12/21/eVFr5YcXQvSMxAd.png)
