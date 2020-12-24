@@ -20,6 +20,7 @@
     - 一/多杯果汁、一/多杯咖啡、一/多杯啤酒、wifi
     - 开源项目持续集成费用、云服务器费用、到处飞开会和宣传费用、云存储费用、个人电脑费用、付费软件费用、域名费用、分布式环境测试费用
     - 写博客、出教学视频
+    - 按照不同打赏金额，在24小时内或12小时内响应打赏人请求
 
   - 打赏人：
 
@@ -263,35 +264,35 @@ alter table TABLE_NAME convert to character set utf8mb4 collate utf8mb4_bin;
 
 - xabbuh：
 
-  ![image-20201221150711643](https://i.loli.net/2020/12/21/udG3QvWLIc5N4iS.png)-
+  ![image-20201223101645305](https://i.loli.net/2020/12/23/MZUpo3IE7vugVLP.png)-
 
 - vertexclique：
 
-  ![image-20201221151954864](https://i.loli.net/2020/12/21/qbWSoHzx5J29efD.png)
+  ![image-20201223102601698](https://i.loli.net/2020/12/23/gnMX4adpjyJCOos.png)
 
 - terrytangyuan：
 
-  ![image-20201221154404077](https://i.loli.net/2020/12/21/UJaGc12NYe6o5KC.png)
+  ![image-20201223105548451](https://i.loli.net/2020/12/23/COGQgT5IFi6XwSs.png)
 
 - stancl：
 
-  ![image-20201221155849804](https://i.loli.net/2020/12/21/imTAhXHkcvto3W6.png)
+  ![image-20201223120404848](https://i.loli.net/2020/12/23/AFnj17HhEOJdsva.png)
 
 - shiftkey：
 
-  ![image-20201221160312159](https://i.loli.net/2020/12/21/V5681cyd7XTNIJb.png)
+  ![image-20201223120646491](https://i.loli.net/2020/12/23/3cjQC9agf8Rd2VW.png)
 
 - sharkdp：
 
-  ![image-20201221161824433](https://i.loli.net/2020/12/21/SCNlLxFnYZgvO28.png)
+  ![image-20201223120806007](https://i.loli.net/2020/12/23/91XKjabVkWZ2S6q.png)
 
 - reinink：
 
-  ![image-20201221195516417](https://i.loli.net/2020/12/21/hcOpYzfntArQqNL.png)
+  ![image-20201223121022740](https://i.loli.net/2020/12/23/pSqaEOlL3KjyhAV.png)
 
 - phil-opp：https://os.phil-opp.com/ 个人博客
 
-  ![image-20201221201417797](https://i.loli.net/2020/12/21/VO1eP3FKfypo5ma.png)
+  ![image-20201223121143778](https://i.loli.net/2020/12/23/YU39Re6f7hsTIpX.png)
 
 - ondrejmirtes：
 
@@ -313,15 +314,41 @@ alter table TABLE_NAME convert to character set utf8mb4 collate utf8mb4_bin;
 
   ![image-20201221210951469](https://i.loli.net/2020/12/21/FCRcw3BgqfVvHLk.png)
 
+- akyoto：
+
+  ![image-20201222105109829](https://i.loli.net/2020/12/22/8mLNTejiZ41ChvG.png)
+
+- antelle：
+
+  ![image-20201222142240153](https://i.loli.net/2020/12/22/iyOpSvzjIsN9hm6.png)
+
+- bbatsov：
+
+  ![image-20201222143214091](https://i.loli.net/2020/12/22/jEnuIUJBxraZ9Rs.png)
+
+  ![image-20201222144023473](https://i.loli.net/2020/12/22/jh2gWSbNAxz1VF7.png)
+
+- cart：
+
+  ![image-20201222145028223](https://i.loli.net/2020/12/22/w2CQPxVueKcm4WY.png)
+
+- ioquatix：
+
+  ![image-20201222152501725](https://i.loli.net/2020/12/22/tdVsOqRkL59erpy.png)
+
+- hueniverse：
+
+  ![image-20201222153016338](https://i.loli.net/2020/12/22/M7TpIGS1lhyL9Uv.png)
+
+- foosel：
+
+  ![image-20201222153640061](https://i.loli.net/2020/12/22/KEBafW87NCb9p4l.png)
+
 ### 100%类型用户特征分析
 
 - mfix22，打赏之前984活动量，打赏之后308活动量，sponsorlisting 创建时间为2019-09-21 05:18:43，sponsored 创建时间为2019-11-13 06:46:31，1个打赏人
 
   ![image-20201221124512356](https://i.loli.net/2020/12/21/ONDXCvTV5R3rpWl.png)
-
-- zaeph：打赏之前651活动量，打赏之后240活动量，sponsorlisting 创建时间为2020-05-05 22:40:46，sponsored 创建时间为2020-05-28 13:58:17，11个打赏人
-
-  ![image-20201221124308274](https://i.loli.net/2020/12/21/ghEBurCPQw2fKlF.png)
 
 - walaura：打赏之前368活动量，打赏之后32活动量，sponsorlisting 创建时间为2019-10-24 17:28:05，sponsored 创建时间为2019-10-25 15:06:47，11个打赏人
 
@@ -329,23 +356,11 @@ alter table TABLE_NAME convert to character set utf8mb4 collate utf8mb4_bin;
 
 - tpope：*这个人的活动曲线非常有意思*
 
-  ![image-20201221152649486](https://i.loli.net/2020/12/21/aOoK62Xx5EJIfbl.png)
-
-- tj：开通Sponsors功能之前的Commit活动数为711，开通之后为486。开发者活动数量比较多，活动变化通过曲线反应不明显
-
-  ![image-20201221153754580](https://i.loli.net/2020/12/21/t3zXkdypTL2JGas.png)
-
-- thestinger：
-
-  ![image-20201221154122848](https://i.loli.net/2020/12/21/Tcrb7f8LjF9zaks.png)
+  ![image-20201223152521555](https://i.loli.net/2020/12/23/ApWu1lBaI2YvTQP.png)
 
 - revertdata：
 
   ![image-20201221163837481](https://i.loli.net/2020/12/21/JvnBOWlmLzTuce3.png)
-
-- potatoqualitee：
-
-  ![image-20201221200844225](https://i.loli.net/2020/12/21/tWPANS68pkBoGa1.png)
 
 - kjk：
 
@@ -355,10 +370,6 @@ alter table TABLE_NAME convert to character set utf8mb4 collate utf8mb4_bin;
 
   ![image-20201221214315790](https://i.loli.net/2020/12/21/zIsFQ4TvxLfjimZ.png)
 
-- johlju：
-
-  ![image-20201221214609640](https://i.loli.net/2020/12/21/3lHBT5ZJIUxpvhM.png)
-
 - indutny：
 
   ![image-20201221215925888](https://i.loli.net/2020/12/21/O1RtxMWPoJK5Zrz.png)
@@ -366,6 +377,12 @@ alter table TABLE_NAME convert to character set utf8mb4 collate utf8mb4_bin;
 - desimaniac：
 
   ![image-20201221222607717](https://i.loli.net/2020/12/21/9rGUFNVXalSB1ev.png)
+
+**导致100%类型开发者开发活动下降的可能原因**：
+
+- Commit开发活动降低，issue comment开发活动升高（开源项目趋向成熟，开发者只需要维护，但是修复bug比开发新功能更耗时，所以commit贡献数量下降）
+- 未到达设定的 Sponsors Goal 
+- 主要参与javascript类型开源项目（不一定，可能和数据爬取时使用的策略有关，前端开发工程师互相打赏、扎堆爬取。验证：爬取所有开发者参与的最活跃的开源项目所使用的语言）
 
 ### 33%类型用户特征分析
 
