@@ -1,9 +1,5 @@
-# 把博文挂在github上的原因
+**motto**：*植根于内心的修养 无需提醒的自觉 以约束为前提的自由 以及为他人着想的善良*
 
-1. 网络问题：当我的电脑用ubuntu16.04通过DSL方式联网（同时开vpn连外网时）时，无法通过csdn和简书等社区正常发布博文（每次编辑完文章，更新时提交不了）
+ 
 
-2. 熟练使用markdown编辑文章，熟悉git操作，熟悉vscode操作git，熟悉github基本使用
-
-3. 养成总结知识点的习惯，积累编辑文档的经验
-
-4. 如果博文能在一定程度上帮助到其它朋友，那就更棒了。可以互相学习
+![Sulenn's github stats](https://github-readme-stats.vercel.app/api?username=sulenn&count_private=true&show_icons=true&theme=radical)
