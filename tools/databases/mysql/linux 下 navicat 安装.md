@@ -1,5 +1,7 @@
 # linux 下 navicat 安装
 
+**纯破解版参考（不会过期）**：https://www.cnblogs.com/kaerxifa/p/12048976.html
+
 **下载**：[https://www.navicat.com.cn/](https://www.navicat.com.cn/)
 
 - 最新 navicat 15 是 .appimage 格式，可以直接双击运行（右键属性赋予可执行权限）
