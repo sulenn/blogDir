@@ -22,6 +22,8 @@
 
 *统一请求接口：*/trustie/fiscobcos
 
+### 项目相关
+
 1. 创建项目
 
    **参数**：
@@ -60,7 +62,9 @@
    }
    ```
 
-3. 查询用户单个项目余额
+### 用户相关
+
+1. 查询用户单个项目余额
 
    **参数**：
 
@@ -80,7 +84,7 @@
    }
    ```
 
-4. 查询用户所有项目余额
+2. 查询用户所有项目余额
 
    **参数**：
 
@@ -116,5 +120,41 @@
    }
    ```
 
+
+3. 新增用户某一项目余额
+
+   **参数**：
+
+   ```json
+   {"request-type":"add user balance","username":"qiubing1", "token_name":"pdl4", "amount":500}
+   ```
+
+   **响应**：
+
+   ```json
+   {
+       "status": 0,
+       "message": "user adds amount successfully!"
+   }
+   ```
+
+4. 减少用户某一项目余额
+
+   **参数**：
+
+   ```json
+   {"request-type":"minus user balance","username":"qiubing1", "token_name":"pdl8", "amount":50}
+   ```
+
+   **响应**：
+
+   ```json
+   {
+       "status": 0,
+       "message": "user minus amount successfully!"
+   }
+   ```
+
    
 
+   
