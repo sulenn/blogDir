@@ -157,4 +157,23 @@
 
    
 
+5. 用户转账
+
+   **参数**：
+
+   ```json
+   {"request-type":"transfer amount","payer":"qiubing1", "payee":"qiubing2", "token_name":"pdl8", "amount":50}
+   ```
+
+   **响应**：
+
+   ```json
+   {
+       "status": 0,
+       "message": "user transfers amount successfully!"
+   }
+   ```
+
+   
+
    
