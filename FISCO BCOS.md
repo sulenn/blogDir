@@ -174,6 +174,38 @@
    }
    ```
 
-   
+6. 用户余额锁定
+
+   **参数**：
+
+   ```json
+   {"request-type":"lock user balance","username":"qiubing1", "token_name":"pdl4", "amount":50}
+   ```
+
+   **响应**：
+
+   ```json
+   {
+       "status": 0,
+       "message": "user locks amount successfully!"
+   }
+   ```
+
+7. 用户余额解锁
+
+   **参数**：
+
+   ```json
+   {"request-type":"unlock user balance","username":"qiubing1", "token_name":"pdl4", "amount":50}
+   ```
+
+   **响应**：
+
+   ```json
+   {
+       "status": 0,
+       "message": "user unlocks amount successfully!"
+   }
+   ```
 
    
