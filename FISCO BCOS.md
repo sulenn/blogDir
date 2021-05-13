@@ -442,7 +442,7 @@
         **参数**：
 
         ```json
-        {"request-type":"upload pull request comment info","pull_request_comment_id":"trustie-00000002","pull_request_comment_number":1,"pull_request_number":1,"repo_id":"00000001","parent_id":"00000001","reponame":"go-sdk","ownername":"qiubing","username":"sulenn","action":"created","content":"nice tip!","created_at":"Wed Sep 9 22:42:48 2020 +0800","updated_at":"Fri Sep 11 19:54:22 2020 +0800"}
+        {"request-type":"upload pull request comment info","pull_request_comment_id":"trustie-00000002","pull_request_id":"trustie-00000002","pull_request_comment_number":1,"pull_request_number":1,"repo_id":"00000001","parent_id":"00000001","reponame":"go-sdk","ownername":"qiubing","username":"sulenn","action":"created","content":"nice tip!","created_at":"Wed Sep 9 22:42:48 2020 +0800","updated_at":"Fri Sep 11 19:54:22 2020 +0800"}
         ```
 
         **确权**：
@@ -470,6 +470,7 @@
             "pull_request_comment_number": 1,
             "parent_id": "00000001",
             "pull_request_number": 1,
+            "pull_request_id": "trustie-00000002",
             "repo_id": "00000001",
             "reponame": "go-sdk",
             "ownername": "qiubing",
@@ -481,18 +482,18 @@
             "status": 0,
             "message": "query success!"
         }
-        ```
-
-      - 确权所有历史数据
-
-        **参数**：
-
+     ```
+   
+   - 确权所有历史数据
+   
+     **参数**：
+   
         ```json
         {"request-type":"query pull request comment all info","pull_request_comment_id":"trustie-00000002"}
-        ```
-
-        **响应**：
-
+     ```
+   
+     **响应**：
+   
         ```json
         {
             "UploadPullReuqestCommentOptionArr": [
@@ -501,6 +502,7 @@
                     "pull_request_comment_number": 1,
                     "parent_id": "00000001",
                     "pull_request_number": 1,
+                    "pull_request_id": "",
                     "repo_id": "00000001",
                     "reponame": "go-sdk",
                     "ownername": "qiubing",
@@ -514,7 +516,8 @@
                     "pull_request_comment_id": "trustie-00000002",
                     "pull_request_comment_number": 1,
                     "parent_id": "00000001",
-                    "pull_request_number": 1,
+                    "pull_request_number": 1,cd 
+                    "pull_request_id": "trustie-00000002",
                     "repo_id": "00000001",
                     "reponame": "go-sdk",
                     "ownername": "qiubing",
@@ -526,39 +529,39 @@
                 }
             ],
             "status": 0,
-            "message": "query success!"
+         "message": "query success!"
         }
-        ```
-
-   5. issue 数据
-
-      - 存证
-
+     ```
+   
+5. issue 数据
+   
+   - 存证
+   
         **参数**：
-
-        ```json
+   
+     ```json
         {"request-type":"upload issue info","issue_id":"trustie-00000002","issue_number":1,"repo_id":"00000001","reponame":"go-sdk","ownername":"qiubing","username":"sulenn","action":"opened","title":"Issue creating fixtures ActiveRecord::FixtureSet","content":"after update from rails 5 to 6 and only running rspec","created_at":"Wed Sep 9 22:42:48 2020 +0800","updated_at":"Fri Sep 11 19:54:22 2020 +0800"}
-        ```
-
+     ```
+   
         **响应**：
-
+   
         ```json
         {
             "status": 0,
-            "message": "issue upload successfully!"
+         "message": "issue upload successfully!"
         }
-        ```
-
-      - 确权最新数据
-
+     ```
+   
+   - 确权最新数据
+   
         **参数**：
-
-        ```json
+   
+     ```json
         {"request-type":"query issue latest info","issue_id":"trustie-00000002"}
-        ```
-
+     ```
+   
         **响应**：
-
+   
         ```json
         {
             "issue_id": "trustie-00000002",
@@ -573,20 +576,20 @@
             "created_at": "Wed Sep 9 22:42:48 2020 +0800",
             "updated_at": "Fri Sep 11 19:54:22 2020 +0800",
             "status": 0,
-            "message": "query success!"
+         "message": "query success!"
         }
-        ```
-
-      - 确权所有历史数据
-
+     ```
+   
+   - 确权所有历史数据
+   
         **参数**：
-
-        ```json
+   
+     ```json
         {"request-type":"query issue all info","issue_id":"trustie-00000002"}
-        ```
-
+     ```
+   
         **响应**：
-
+   
         ```json
         {
             "UploadIssueOptionArr": [
@@ -618,44 +621,45 @@
                 }
             ],
             "status": 0,
-            "message": "query success!"
+         "message": "query success!"
         }
-        ```
-
-   6. issue comment 数据
-
-      - 存证
-
+     ```
+   
+6. issue comment 数据
+   
+   - 存证
+   
         **参数**：
-
-        ```json
-        {"request-type":"upload issue comment info","issue_comment_id":"trustie-00000002","issue_comment_number":1,"issue_number":1,"repo_id":"00000001","parent_id":"00000001","reponame":"go-sdk","ownername":"qiubing","username":"sulenn","action":"created","content":"nice tip!","created_at":"Wed Sep 9 22:42:48 2020 +0800","updated_at":"Fri Sep 11 19:54:22 2020 +0800"}
-        ```
-
+   
+     ```json
+        {"request-type":"upload issue comment info","issue_comment_id":"trustie-00000002","issue_id":"trustie-00000002","issue_comment_number":1,"issue_number":1,"repo_id":"00000001","parent_id":"00000001","reponame":"go-sdk","ownername":"qiubing","username":"sulenn","action":"created","content":"nice tip!","created_at":"Wed Sep 9 22:42:48 2020 +0800","updated_at":"Fri Sep 11 19:54:22 2020 +0800"}
+     ```
+   
         **响应**：
-
+   
         ```json
         {
             "status": 0,
-            "message": "issue comment upload successfully!"
+         "message": "issue comment upload successfully!"
         }
-        ```
-
-      - 确权最新数据
-
+     ```
+   
+   - 确权最新数据
+   
         **参数**：
-
-        ```json
+   
+     ```json
         {"request-type":"query issue comment latest info","issue_comment_id":"trustie-00000002"}
-        ```
-
+     ```
+   
         **响应**：
-
+   
         ```json
         {
             "issue_comment_id": "trustie-00000002",
             "issue_comment_number": 1,
             "issue_number": 1,
+            "issue_id": "trustie-00000002",
             "repo_id": "00000001",
             "parent_id": "00000001",
             "reponame": "go-sdk",
@@ -665,21 +669,21 @@
             "content": "nice tip!",
             "created_at": "Wed Sep 9 22:42:48 2020 +0800",
             "updated_at": "Fri Sep 11 19:54:22 2020 +0800",
-            "status": 0,
+         "status": 0,
             "message": "query success!"
-        }
-        ```
-
-      - 确权所有历史数据
-
-        **参数**：
-
+     }
+     ```
+   
+   - 确权所有历史数据
+      
+     **参数**：
+   
         ```json
-        {"request-type":"query issue comment all info","issue_comment_id":"trustie-00000002"}
-        ```
-
-        **响应**：
-
+     {"request-type":"query issue comment all info","issue_comment_id":"trustie-00000002"}
+     ```
+      
+     **响应**：
+      
         ```json
         {
             "UploadIssueCommentOptionArr": [
@@ -687,6 +691,7 @@
                     "issue_comment_id": "trustie-00000002",
                     "issue_comment_number": 1,
                     "issue_number": 1,
+                    "issue_id": "",
                     "repo_id": "00000001",
                     "parent_id": "00000001",
                     "reponame": "go-sdk",
@@ -701,20 +706,7 @@
                     "issue_comment_id": "trustie-00000002",
                     "issue_comment_number": 1,
                     "issue_number": 1,
-                    "repo_id": "00000001",
-                    "parent_id": "00000001",
-                    "reponame": "go-sdk",
-                    "ownername": "qiubing",
-                    "username": "sulenn",
-                    "action": "created",
-                    "content": "nice tip!",
-                    "created_at": "Wed Sep 9 22:42:48 2020 +0800",
-                    "updated_at": "Fri Sep 11 19:54:22 2020 +0800"
-                },
-                {
-                    "issue_comment_id": "trustie-00000002",
-                    "issue_comment_number": 1,
-                    "issue_number": 1,
+                    "issue_id": "trustie-00000002",
                     "repo_id": "00000001",
                     "parent_id": "00000001",
                     "reponame": "go-sdk",
@@ -730,6 +722,6 @@
             "message": "query success!"
         }
         ```
-
+        
         
 
