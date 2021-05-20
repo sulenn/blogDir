@@ -1,3 +1,5 @@
+[toc]
+
 # zsh与oh-my-zsh
 
 ## 1. ubuntu中默认安装了哪些shell
@@ -62,3 +64,41 @@ fc -R .zsh_history
 ```
 
 **参考**：[https://shapeshed.com/zsh-corrupt-history-file/](https://shapeshed.com/zsh-corrupt-history-file/)
+
+## Mac 
+
+接着下载两个命令行插件，一个是历史命令自动补全
+
+```
+git clone git:``//github``.com``/zsh-users/zsh-autosuggestions` `$ZSH_CUSTOM``/plugins/zsh-autosuggestions
+```
+
+一个是高亮显示
+
+```
+git clone git:``//github``.com``/zsh-users/zsh-syntax-highlighting` `$ZSH_CUSTOM``/plugins/zsh-syntax-highlighting
+```
+
+安装完改一下配置文件
+
+```
+vim ~/.zshrc<br>``#或者<br>gedit ~/.zshrc
+```
+
+把plugins中两个刚刚下载好的插件名字加进去，然后保存退出
+
+```
+plugins=(`` ``git`` ``zsh-autosuggestions`` ``zsh-syntax-highlighting``)
+```
+
+最后更新一下配置文件
+
+```
+source` `.zshrc
+```
+
+安装成功
+
+1. https://blog.csdn.net/weixin_43847957/article/details/115395696
+
+2. https://www.cnblogs.com/voyage1969/p/13717296.html
