@@ -51,4 +51,3 @@ sudo apt-get install typora
 - 主题使用：Barfi，暗黑风格
 
 - 通用设置：![image-20200727130108232](https://i.loli.net/2020/07/27/8i4bTMIEWRFcLHw.png)
-
