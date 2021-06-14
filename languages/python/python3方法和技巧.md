@@ -119,3 +119,36 @@ No:    # Stuff on first line forbidden
 
 **参考**：https://zh-google-styleguide.readthedocs.io/en/latest/google-python-styleguide/python_language_rules/
 
+## 日志
+
+**logging 模块提供了两种记录日志的方式**：
+
+- 第一种方式是使用logging提供的模块级别的函数
+- 第二种方式是使用Logging日志系统的四大组件
+
+### 日志组件
+
+logging 模块的四大组件：
+
+| 组件名称 | 对应类名  | 功能描述                                                     |
+| -------- | --------- | ------------------------------------------------------------ |
+| 日志器   | Logger    | 提供了应用程序可一直使用的接口                               |
+| 处理器   | Handler   | 将logger创建的日志记录发送到合适的目的输出                   |
+| 过滤器   | Filter    | 提供了更细粒度的控制工具来决定输出哪条日志记录，丢弃哪条日志记录 |
+| 格式器   | Formatter | 决定日志记录的最终输出格式                                   |
+
+**组件之间的关系描述**：
+
+- 日志器（logger）需要通过处理器（handler）将日志信息输出到目标位置，如：文件、sys.stdout、网络等；
+- 不同的处理器（handler）可以将日志输出到不同的位置；
+- 日志器（logger）可以设置多个处理器（handler）将同一条日志记录输出到不同的位置；
+- 每个处理器（handler）都可以设置自己的过滤器（filter）实现日志过滤，从而只保留感兴趣的日志；
+- 每个处理器（handler）都可以设置自己的格式器（formatter）实现同一条日志以不同的格式输出到不同的地方。
+
+简单点说就是：日志器（logger）是入口，真正干活儿的是处理器（handler），处理器（handler）还可以通过过滤器（filter）和格式器（formatter）对要输出的日志内容做过滤和格式化等处理操作。
+
+**注意**：日志器中重复添加处理器会导致重复输出问题，可以通过 *not self.logger.handlers* 判断处理器是否存在
+
+**参考**：
+
+- https://www.cnblogs.com/yyds/p/6901864.html
